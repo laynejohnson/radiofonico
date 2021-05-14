@@ -13,6 +13,8 @@
 		E8D5AAB5264EF74B00F231B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D5AAB3264EF74B00F231B1 /* Main.storyboard */; };
 		E8D5AAB7264EF74E00F231B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D5AAB6264EF74E00F231B1 /* Assets.xcassets */; };
 		E8D5AABA264EF74E00F231B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D5AAB8264EF74E00F231B1 /* LaunchScreen.storyboard */; };
+		E8D5AAC5264EF88C00F231B1 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAC4264EF88C00F231B1 /* AudioPlayer.swift */; };
+		E8D5AAC7264EF89D00F231B1 /* ItalianRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E8D5AAB6264EF74E00F231B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D5AAB9264EF74E00F231B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D5AABB264EF74E00F231B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D5AAC4264EF88C00F231B1 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianRadioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		E8D5AAC1264EF7DC00F231B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E8D5AAC4264EF88C00F231B1 /* AudioPlayer.swift */,
+				E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */,
+				E8D5AAC7264EF89D00F231B1 /* ItalianRadioModel.swift in Sources */,
 				E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */,
 				E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */,
+				E8D5AAC5264EF88C00F231B1 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
