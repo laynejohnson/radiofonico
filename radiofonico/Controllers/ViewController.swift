@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
 
     let audioPlayer = AudioPlayer()
     let italianRadio = ItalianRadioModel()
@@ -23,7 +25,8 @@ class ViewController: UIViewController {
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
-        italianRadio.playPreviousSong()
+        let song = italianRadio.playPreviousSong()
+        italianRadio.setSongLabel(song: <#T##String#>)
     }
     
     @IBAction func playPauseRadio(_ sender: UIButton) {

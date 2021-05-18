@@ -18,6 +18,8 @@ class ItalianRadioModel {
     
     var song = ""
     
+    var songLabel = ""
+    
     var isPlaying = false
     
     func chooseSong() -> String {
@@ -25,14 +27,14 @@ class ItalianRadioModel {
         return song
     }
     
-//    func setSongLabel(song: String) {
-//        // Modify song name string for display
-//        let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
-//        // Set song label
-//        songLabel.text = modifiedSong
-//    }
+    func setSongLabel(song: String) {
+        // Modify song name string for display
+        let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
+        // Set song label
+        songLabel.text = modifiedSong
+    }
     
-    func playPreviousSong() {
+    func playPreviousSong() -> String {
         
         if isPlaying == true {
             
@@ -71,6 +73,9 @@ class ItalianRadioModel {
             // Add animation to "Press play to vibe"
             print(defaultSongLabel)
         }
+        
+        print("Returned song: \(song)")
+        return song
     }
     
     func radioOnOff(sender: UIButton) {
