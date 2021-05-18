@@ -73,22 +73,22 @@ class ItalianRadioModel {
         }
     }
     
-//    func radioOnOff() {
-//
-//        // Toggle radio state
-//        sender.isSelected.toggle()
-//
-//        if sender.isSelected == true {
-//            isPlaying = true
-//            song = italianRadioSongs[0]
-////            setSongLabel(song: song)
-//            audioPlayer.playSound(song)
-//        } else if sender.isSelected == false {
-//            isPlaying = false
-//            audioPlayer.audioPlayer?.pause()
-////            setSongLabel(song: defaultSongLabel)
-//        }
-//    }
+    func radioOnOff(sender: UIButton) {
+
+        // Toggle radio state
+        sender.isSelected.toggle()
+
+        if sender.isSelected == true {
+            isPlaying = true
+            song = italianRadioSongs[0]
+//            setSongLabel(song: song)
+            audioPlayer.playSound(song)
+        } else if sender.isSelected == false {
+            isPlaying = false
+            audioPlayer.audioPlayer?.pause()
+//            setSongLabel(song: defaultSongLabel)
+        }
+    }
     
     func playNextSong() {
         
