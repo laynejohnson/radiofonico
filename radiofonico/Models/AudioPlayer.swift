@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import AVFoundation
 
-// MARK: - Audio Player
+class AudioPlayer {
 
 var audioPlayer: AVAudioPlayer?
 
@@ -25,4 +26,6 @@ func playSound(_ soundName: String) {
    } catch {
        print("Could not summon audio player")
    }
+}
+
 }
