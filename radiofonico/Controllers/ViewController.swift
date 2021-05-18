@@ -19,7 +19,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
-
+    
+    
+    @IBAction func playPreviousSong(_ sender: UIButton) {
+        
+        italianRadio.playPreviousSong()
+    }
+    
+    @IBAction func playPauseRadio(_ sender: UIButton) {
+        
+//        italianRadio.
+    }
+    
+    @IBAction func playNextSong(_ sender: UIButton) {
+        
+        italianRadio.playNextSong()
+    }
+    
+    
+    
 
 }
 

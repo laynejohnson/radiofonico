@@ -23,16 +23,22 @@
                                         <rect key="frame" x="0.0" y="0.0" width="124" height="85"/>
                                         <state key="normal" title="Button" image="previous_button"/>
                                         <connections>
-                                            <action selector="playPreviousSong:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="OFy-1u-O4R"/>
+                                            <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uti-z4-ZKF"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-2l-Ziq" userLabel="Play/Pause Button">
                                         <rect key="frame" x="124" y="0.0" width="139" height="85"/>
                                         <state key="normal" title="Button" image="play_pause_button"/>
+                                        <connections>
+                                            <action selector="playPauseRadio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D41-5J-4Hd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-SI-nJZ" userLabel="Next Button">
                                         <rect key="frame" x="263" y="0.0" width="124" height="85"/>
                                         <state key="normal" title="Button" image="next_button"/>
+                                        <connections>
+                                            <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ig-pf-wwU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

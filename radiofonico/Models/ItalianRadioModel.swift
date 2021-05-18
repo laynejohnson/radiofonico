@@ -32,7 +32,7 @@ class ItalianRadioModel {
 //        songLabel.text = modifiedSong
 //    }
     
-    @IBAction func playPreviousSong(_ sender: UIButton) {
+    func playPreviousSong() {
         
         if isPlaying == true {
             
@@ -72,26 +72,25 @@ class ItalianRadioModel {
             print(defaultSongLabel)
         }
     }
-
     
-    @IBAction func radioOnOff(_ sender: UIButton) {
-        
-        // Toggle radio state
-        sender.isSelected.toggle()
-        
-        if sender.isSelected == true {
-            isPlaying = true
-            song = italianRadioSongs[0]
-//            setSongLabel(song: song)
-            audioPlayer.playSound(song)
-        } else if sender.isSelected == false {
-            isPlaying = false
-            audioPlayer.audioPlayer?.pause()
-//            setSongLabel(song: defaultSongLabel)
-        }
-    }
+//    func radioOnOff() {
+//
+//        // Toggle radio state
+//        sender.isSelected.toggle()
+//
+//        if sender.isSelected == true {
+//            isPlaying = true
+//            song = italianRadioSongs[0]
+////            setSongLabel(song: song)
+//            audioPlayer.playSound(song)
+//        } else if sender.isSelected == false {
+//            isPlaying = false
+//            audioPlayer.audioPlayer?.pause()
+////            setSongLabel(song: defaultSongLabel)
+//        }
+//    }
     
-    @IBAction func playNextSong(_ sender: UIButton) {
+    func playNextSong() {
         
         if isPlaying == true {
             // Get index of current song
