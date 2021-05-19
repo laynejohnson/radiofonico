@@ -17,9 +17,7 @@ class ItalianRadioModel {
     let defaultSongLabel = "Press play to vibe"
     
     var song = ""
-    
-    var songLabel = ""
-    
+
     var isPlaying = false
     
     func chooseSong() -> String {
@@ -27,11 +25,12 @@ class ItalianRadioModel {
         return song
     }
     
-    func setSongLabel(song: String) {
+    func setSongLabel(song: String, label: UILabel) {
+        
         // Modify song name string for display
         let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
-        // Set song label
-        songLabel.text = modifiedSong
+        
+        label.text = modifiedSong
     }
     
     func playPreviousSong() -> String {
@@ -91,7 +90,7 @@ class ItalianRadioModel {
         } else if sender.isSelected == false {
             isPlaying = false
             audioPlayer.audioPlayer?.pause()
-//            setSongLabel(song: defaultSongLabel)
+//            setSongLabel(song: defaultSongLabel, label: <#UILabel#>)
         }
     }
     

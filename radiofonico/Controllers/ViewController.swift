@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var songLabel: UILabel!
     
-
+    
     let audioPlayer = AudioPlayer()
     let italianRadio = ItalianRadioModel()
     
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
         let song = italianRadio.playPreviousSong()
-        italianRadio.setSongLabel(song: <#T##String#>)
+        italianRadio.setSongLabel(song: song, label: songLabel)
     }
     
     @IBAction func playPauseRadio(_ sender: UIButton) {
