@@ -7,10 +7,11 @@
 
 import Foundation
 import UIKit
+import AVFoundation
+
+var audioPlayer: AVAudioPlayer?
 
 class ItalianRadioModel {
-    
-    let audioPlayer = AudioPlayer()
     
     let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
     
