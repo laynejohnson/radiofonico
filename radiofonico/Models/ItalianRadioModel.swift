@@ -11,7 +11,12 @@ import AVFoundation
 
 var audioPlayer: AVAudioPlayer?
 
+
 class ItalianRadioModel {
+    
+    @IBOutlet weak var songLabel: UILabel!
+    
+    
     
     let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
     
@@ -26,12 +31,28 @@ class ItalianRadioModel {
         return song
     }
     
-    func setSongLabel(song: String, label: UILabel) {
+    func setSongLabel(song: String) {
         
         // Modify song name string for display
         let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
         
-        label.text = modifiedSong
+        songLabel.text = modifiedSong
+    }
+    
+    func playSound(_ soundName: String) {
+
+       let path = Bundle.main.path(forResource: soundName, ofType:nil)!
+
+       let url = URL(fileURLWithPath: path)
+
+       do {
+           // Create the audio player
+           audioPlayer = try AVAudioPlayer(contentsOf: url)
+           // Play the sound effect
+           audioPlayer?.play()
+       } catch {
+           print("Could not summon audio player")
+       }
     }
     
     func playPreviousSong() -> String {
@@ -53,8 +74,8 @@ class ItalianRadioModel {
                 previousSongIndex = italianRadioSongs.endIndex - 1
                 let previousSong = italianRadioSongs[previousSongIndex]
                 song = previousSong
-                audioPlayer.playSound(song)
-//                setSongLabel(song: song)
+                playSound(song)
+                setSongLabel(song: song)
             } else {
                 
                 // Play previous song
@@ -62,11 +83,10 @@ class ItalianRadioModel {
                 print("previous song: \(previousSong)")
                 song = previousSong
                 print("New Current Song: \(song)")
-                audioPlayer.playSound(song)
+                playSound(song)
                 
                 // Set song label for next song
-                // TODO: Refactor; add setSongLabel label function to playSound function
-//                setSongLabel(song: previousSong)
+                setSongLabel(song: previousSong)
             }
         } else {
             
@@ -86,12 +106,12 @@ class ItalianRadioModel {
         if sender.isSelected == true {
             isPlaying = true
             song = italianRadioSongs[0]
-//            setSongLabel(song: song)
-            audioPlayer.playSound(song)
+            setSongLabel(song: song)
+            playSound(song)
         } else if sender.isSelected == false {
             isPlaying = false
-            audioPlayer.audioPlayer?.pause()
-//            setSongLabel(song: defaultSongLabel, label: <#UILabel#>)
+           audioPlayer?.pause()
+            setSongLabel(song: defaultSongLabel)
         }
     }
     
@@ -112,19 +132,19 @@ class ItalianRadioModel {
                 nextSongIndex = 0
                 let nextSong = italianRadioSongs[nextSongIndex]
                 song = nextSong
-                audioPlayer.playSound(song)
-//                setSongLabel(song: song)
+                playSound(song)
+                setSongLabel(song: song)
             } else {
                 // Play next song
                 let nextSong = italianRadioSongs[nextSongIndex]
                 print("Next song: \(nextSong)")
                 song = nextSong
                 print("New Current Song: \(song)")
-                audioPlayer.playSound(song)
+                playSound(song)
                 
                 // Set song label for next song
                 // TODO: Refactor; add setSongLabel label function to playSound function
-//                setSongLabel(song: nextSong)
+                setSongLabel(song: nextSong)
             }
         } else {
             // Add animation to "Press play to vibe"

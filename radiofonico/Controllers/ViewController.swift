@@ -25,29 +25,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        func playSound(_ soundName: String) {
-
-           let path = Bundle.main.path(forResource: soundName, ofType:nil)!
-
-           let url = URL(fileURLWithPath: path)
-
-           do {
-               // Create the audio player
-               audioPlayer = try AVAudioPlayer(contentsOf: url)
-               // Play the sound effect
-               audioPlayer?.play()
-           } catch {
-               print("Could not summon audio player")
-           }
-        }
-        
     }
+    
+
     
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
-        let song = italianRadio.playPreviousSong()
-        italianRadio.setSongLabel(song: song, label: songLabel)
+        italianRadio.playPreviousSong()
     }
     
     @IBAction func playPauseRadio(_ sender: UIButton) {
@@ -59,9 +44,6 @@ class ViewController: UIViewController {
         
         italianRadio.playNextSong()
     }
-    
-    
-    
 
 }
 

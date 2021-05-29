@@ -54,7 +54,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="songLabel" destination="840-j1-BKL" id="qkB-nw-nAG"/>
+                        <outlet property="songLabel" destination="840-j1-BKL" id="NOM-fa-I01"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
