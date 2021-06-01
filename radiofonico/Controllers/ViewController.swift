@@ -5,11 +5,13 @@
 //  Created by Layne Johnson on 5/14/21.
 //
 
-// italian radio functions should return song and pass to view controller
-//view controller sets song label
-
 import UIKit
 import AVFoundation
+
+// MARK: - Development TODOs:
+
+// TODO: Add song timer
+// TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 
 class ViewController: UIViewController {
     
@@ -20,8 +22,11 @@ class ViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
     let italianRadio = ItalianRadioModel()
-    let defaultSongLabel = "Press play to vibe..."
-    let defaultArtistLabel = "✨"
+    
+    let defaultSongLabel = " "
+    let defaultArtistLabel = "Press play to vibe ✨"
+    
+    let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
@@ -37,8 +42,14 @@ class ViewController: UIViewController {
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
-        let song = italianRadio.playPreviousSong()
-        italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+        if italianRadio.isPlaying == false {
+            artistLabel.text = defaultArtistLabel
+            artistLabel.backgroundColor = radioPink
+            
+        } else {
+            let song = italianRadio.playPreviousSong()
+            italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+        }
     }
     
     @IBAction func playPauseRadio(_ sender: UIButton) {

@@ -15,7 +15,8 @@ class ItalianRadioModel {
     
     let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
-    let defaultSongLabel = "Press play to vibe 🤙"
+    let defaultSongLabel = " "
+    let defaultArtistLabel = "Press play to vibe ✨"
     
     var song = ""
     
@@ -113,13 +114,13 @@ class ItalianRadioModel {
         
         // Toggle radio state
         sender.isSelected.toggle()
-        
+
         if sender.isSelected == true {
             isPlaying = true
             song = italianRadioSongs[0]
             playSound(song)
             return song
-            
+
         } else if sender.isSelected == false {
             isPlaying = false
             audioPlayer?.pause()
