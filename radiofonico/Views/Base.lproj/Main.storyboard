@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -35,7 +34,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerX" secondItem="yJT-R6-uLa" secondAttribute="centerX" id="4DA-yT-Ifh"/>
                                             <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerY" secondItem="yJT-R6-uLa" secondAttribute="centerY" id="7AM-T6-zZN"/>
@@ -44,23 +43,28 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-cN-LPP" userLabel="Right Screen">
                                         <rect key="frame" x="404" y="0.0" width="404" height="393"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-bm-KYI">
-                                                <rect key="frame" x="63.5" y="69" width="277" height="255"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-bm-KYI">
+                                                <rect key="frame" x="63.5" y="114.5" width="277" height="164"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer on a Solitary Beach" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="85"/>
-                                                        <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
-                                                        <rect key="frame" x="0.0" y="85" width="277" height="85"/>
-                                                        <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Stack View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="69"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="277" height="32"/>
+                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="20"/>
+                                                                <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
+                                                                <rect key="frame" x="0.0" y="37" width="277" height="32"/>
+                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="20"/>
+                                                                <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-Lr-wv2" userLabel="Radio Controls Stack View">
-                                                        <rect key="frame" x="0.0" y="170" width="277" height="85"/>
+                                                        <rect key="frame" x="0.0" y="79" width="277" height="85"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
@@ -91,23 +95,20 @@
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="gMN-PD-bEK" firstAttribute="centerX" secondItem="YOM-bm-KYI" secondAttribute="centerX" id="Ras-IX-FTK"/>
-                                                    <constraint firstItem="zrF-bp-D9Q" firstAttribute="centerX" secondItem="YOM-bm-KYI" secondAttribute="centerX" id="XSO-Iw-wzb"/>
-                                                </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="YOM-bm-KYI" firstAttribute="centerX" secondItem="gIe-cN-LPP" secondAttribute="centerX" id="HBA-kq-8XO"/>
                                             <constraint firstItem="YOM-bm-KYI" firstAttribute="centerY" secondItem="gIe-cN-LPP" secondAttribute="centerY" id="NcQ-PS-yFb"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZTH-2L-ZRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3mZ-GI-haf"/>
                             <constraint firstItem="ZTH-2L-ZRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="opa-vp-noe"/>
@@ -130,8 +131,5 @@
         <image name="pause_button" width="85" height="85"/>
         <image name="play_pause_button" width="85" height="85"/>
         <image name="previous_button" width="70" height="70"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
