@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
 		E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAB1264EF74B00F231B1 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +47,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E885545E266660A30056279C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E8D5AAA1264EF74B00F231B1 = {
 			isa = PBXGroup;
 			children = (
+				E885545E266660A30056279C /* Fonts */,
 				E8D5AAAC264EF74B00F231B1 /* radiofonico */,
 				E8D5AAAB264EF74B00F231B1 /* Products */,
 			);
@@ -174,6 +185,7 @@
 				E8D5AAEE2654422100F231B1 /* Franco Battiato - Summer On A Solitary Beach.mp3 in Resources */,
 				E8D5AAEC2654421A00F231B1 /* Mango - Bella d'Estate.mp3 in Resources */,
 				E8D5AAEA2654419E00F231B1 /* Lucio Dalla - Washington.mp3 in Resources */,
+				E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
