@@ -12,14 +12,30 @@ import AVFoundation
 
 // TODO: Add song timer
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
+// TODO: Add stars and scale animation for press play to vibe
 
 class ViewController: UIViewController {
     
-    
+    // MARK: - IBOutlets
+    // ---------------------------------- //
+    // - - - - - - -  OUTLETS - - - - - - //
+    // ---------------------------------- //
+
     @IBOutlet weak var songLabel: UILabel!
     
     @IBOutlet weak var artistLabel: UILabel!
     
+    @IBOutlet weak var previousButton: UIButton!
+    
+    @IBOutlet weak var playPauseButton: UIButton!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
+    // MARK: - Variables
+    // ---------------------------------- //
+    // - - - - - - -  VARS - - - - - - -  //
+    // ---------------------------------- //
+
     var audioPlayer: AVAudioPlayer?
     let italianRadio = ItalianRadioModel()
     
@@ -29,7 +45,8 @@ class ViewController: UIViewController {
     let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
     let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
     
-    // MARK: viewDidLoad
+    // MARK: - viewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,15 +55,17 @@ class ViewController: UIViewController {
         artistLabel.text = defaultArtistLabel
         
     }
-    
-    // IBAction Functions
+    // MARK: - IBOutlets
+    // ---------------------------------- //
+    // - - - - - - - ACTIONS - - - - - - - //
+    // ---------------------------------- //
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
         if italianRadio.isPlaying == false {
             songLabel.text = " "
             artistLabel.text = defaultArtistLabel
-    
+            
             // Text animation
             UIView.animate(withDuration: 0.4, animations: { () -> Void in
                 self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
@@ -76,7 +95,7 @@ class ViewController: UIViewController {
         if italianRadio.isPlaying == false {
             songLabel.text = " "
             artistLabel.text = defaultArtistLabel
-    
+            
             // Text animation
             UIView.animate(withDuration: 0.4, animations: { () -> Void in
                 self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
@@ -89,12 +108,10 @@ class ViewController: UIViewController {
             }
             
         } else {
+            
             let song = italianRadio.playNextSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         }
-        
-    
     }
-    
 }
 

@@ -19,7 +19,6 @@ class ItalianRadioModel {
     let defaultArtistLabel = "Press play to vibe ✨"
     
     var song = ""
-    
     var isPlaying = false
     
     func setSongLabel(song: String, songLabel: UILabel, artistLabel: UILabel) {
@@ -114,13 +113,13 @@ class ItalianRadioModel {
         
         // Toggle radio state
         sender.isSelected.toggle()
-
+        
         if sender.isSelected == true {
             isPlaying = true
             song = italianRadioSongs[0]
             playSound(song)
             return song
-
+            
         } else if sender.isSelected == false {
             isPlaying = false
             audioPlayer?.pause()
@@ -163,5 +162,4 @@ class ItalianRadioModel {
             return defaultSongLabel
         }
     }
-    
 }
