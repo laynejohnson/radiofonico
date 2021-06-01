@@ -24,9 +24,10 @@ class ViewController: UIViewController {
     let italianRadio = ItalianRadioModel()
     
     let defaultSongLabel = " "
-    let defaultArtistLabel = "Press play to vibe ✨"
+    let defaultArtistLabel = "Press play to vibe. . ."
     
     let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
+    let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
@@ -43,8 +44,19 @@ class ViewController: UIViewController {
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
         if italianRadio.isPlaying == false {
+            songLabel.text = " "
             artistLabel.text = defaultArtistLabel
-            artistLabel.backgroundColor = radioPink
+    
+            // Text animation
+            UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
+                self.artistLabel.textColor = self.radioPink
+            }) { (finished: Bool) -> Void in
+                self.artistLabel.textColor = self.radioSquid
+                UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                    self.artistLabel.transform = .identity
+                })
+            }
             
         } else {
             let song = italianRadio.playPreviousSong()
@@ -61,8 +73,27 @@ class ViewController: UIViewController {
     
     @IBAction func playNextSong(_ sender: UIButton) {
         
-        let song = italianRadio.playNextSong()
-        italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+        if italianRadio.isPlaying == false {
+            songLabel.text = " "
+            artistLabel.text = defaultArtistLabel
+    
+            // Text animation
+            UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
+                self.artistLabel.textColor = self.radioPink
+            }) { (finished: Bool) -> Void in
+                self.artistLabel.textColor = self.radioSquid
+                UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                    self.artistLabel.transform = .identity
+                })
+            }
+            
+        } else {
+            let song = italianRadio.playNextSong()
+            italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+        }
+        
+    
     }
     
 }
