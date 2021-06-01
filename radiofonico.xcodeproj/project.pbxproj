@@ -99,7 +99,7 @@
 		E8D5AAAC264EF74B00F231B1 /* radiofonico */ = {
 			isa = PBXGroup;
 			children = (
-				E8D5AAE82654416900F231B1 /* Sounds */,
+				E8D5AAE82654416900F231B1 /* Songs */,
 				E8D5AAC1264EF7DC00F231B1 /* Models */,
 				E8D5AAC2264EF7EB00F231B1 /* Views */,
 				E8D5AAC3264EF7ED00F231B1 /* Controllers */,
@@ -136,14 +136,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		E8D5AAE82654416900F231B1 /* Sounds */ = {
+		E8D5AAE82654416900F231B1 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
 				E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */,
 				E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */,
 				E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */,
 			);
-			path = Sounds;
+			path = Songs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

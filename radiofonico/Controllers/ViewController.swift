@@ -20,16 +20,16 @@ class ViewController: UIViewController {
     
     var audioPlayer: AVAudioPlayer?
     let italianRadio = ItalianRadioModel()
-    let defaultSongLabel = "Press play to vibe 🤙"
+    let defaultSongLabel = "Press play to vibe..."
+    let defaultArtistLabel = "✨"
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        italianRadio.setSongLabel(song: defaultSongLabel, songLabel: songLabel, artistLabel: artistLabel)
-        
-        
+        songLabel.text = defaultSongLabel
+        artistLabel.text = defaultArtistLabel
         
     }
     

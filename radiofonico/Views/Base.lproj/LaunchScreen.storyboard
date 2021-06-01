@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +24,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OLG-XK-1jO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qfy-PQ-Agt"/>
                             <constraint firstItem="OLG-XK-1jO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ln0-oo-3zZ"/>
@@ -39,8 +38,5 @@
     </scenes>
     <resources>
         <image name="radio_fonico_logo_4.02" width="484" height="367"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
