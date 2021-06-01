@@ -11,11 +11,9 @@ import AVFoundation
 
 var audioPlayer: AVAudioPlayer?
 
-
 class ItalianRadioModel {
     
     @IBOutlet weak var songLabel: UILabel!
-    
     
     
     let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
@@ -55,7 +53,7 @@ class ItalianRadioModel {
        }
     }
     
-    func playPreviousSong() -> String {
+    func playPreviousSong() {
         
         if isPlaying == true {
             
@@ -93,9 +91,6 @@ class ItalianRadioModel {
             // Add animation to "Press play to vibe"
             print(defaultSongLabel)
         }
-        
-        print("Returned song: \(song)")
-        return song
     }
     
     func radioOnOff(sender: UIButton) {

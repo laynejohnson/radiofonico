@@ -10,25 +10,21 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-   // MARK: IBOutlets
-    
-    @IBOutlet weak var songLabel: UILabel!
-    
-    // MARK: Initializers
-    
-//    var audioPlayer = AVAudioPlayer()
+
     var audioPlayer: AVAudioPlayer?
     let italianRadio = ItalianRadioModel()
+    let defaultSongLabel = "Press play to vibe 🤙"
     
 // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
+        italianRadio.setSongLabel(song: defaultSongLabel)
         
     }
     
-
-    
+// IBAction Functions
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
