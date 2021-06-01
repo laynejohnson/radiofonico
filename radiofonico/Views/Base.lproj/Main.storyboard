@@ -52,10 +52,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="songLabel" destination="gMN-PD-bEK" id="d0c-Ue-bOq"/>
-                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="songLabel" destination="gMN-PD-bEK" id="zcH-mH-4Wv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
