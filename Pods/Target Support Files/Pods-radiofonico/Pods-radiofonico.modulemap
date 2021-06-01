@@ -1,0 +1,6 @@
+framework module Pods_radiofonico {
+  umbrella header "Pods-radiofonico-umbrella.h"
+
+  export *
+  module * { export * }
+}

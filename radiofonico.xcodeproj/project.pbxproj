@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35BCC5217921C5A5F00D24AB /* Pods_radiofonico.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */; };
 		E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A23E89C49CB8A9878C55290 /* Pods-radiofonico.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radiofonico.release.xcconfig"; path = "Target Support Files/Pods-radiofonico/Pods-radiofonico.release.xcconfig"; sourceTree = "<group>"; };
+		A0B731F3374B09F55CC69B43 /* Pods-radiofonico.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radiofonico.debug.xcconfig"; path = "Target Support Files/Pods-radiofonico/Pods-radiofonico.debug.xcconfig"; sourceTree = "<group>"; };
+		CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_radiofonico.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,12 +45,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BCC5217921C5A5F00D24AB /* Pods_radiofonico.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		579C5815063B1AA41C737D3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CBBAFF35BCDC9DF9414B734 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0B731F3374B09F55CC69B43 /* Pods-radiofonico.debug.xcconfig */,
+				6A23E89C49CB8A9878C55290 /* Pods-radiofonico.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E885545E266660A30056279C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +84,8 @@
 				E885545E266660A30056279C /* Fonts */,
 				E8D5AAAC264EF74B00F231B1 /* radiofonico */,
 				E8D5AAAB264EF74B00F231B1 /* Products */,
+				6CBBAFF35BCDC9DF9414B734 /* Pods */,
+				579C5815063B1AA41C737D3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8D5AABE264EF74E00F231B1 /* Build configuration list for PBXNativeTarget "radiofonico" */;
 			buildPhases = (
+				76A150DA05F5FA5A2285E561 /* [CP] Check Pods Manifest.lock */,
 				E8D5AAA6264EF74B00F231B1 /* Sources */,
 				E8D5AAA7264EF74B00F231B1 /* Frameworks */,
 				E8D5AAA8264EF74B00F231B1 /* Resources */,
+				4D6CA45E4BC00275F8DB61C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +217,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D6CA45E4BC00275F8DB61C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-radiofonico/Pods-radiofonico-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-radiofonico/Pods-radiofonico-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-radiofonico/Pods-radiofonico-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76A150DA05F5FA5A2285E561 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-radiofonico-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8D5AAA6264EF74B00F231B1 /* Sources */ = {
@@ -343,6 +412,7 @@
 		};
 		E8D5AABF264EF74E00F231B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0B731F3374B09F55CC69B43 /* Pods-radiofonico.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -363,6 +433,7 @@
 		};
 		E8D5AAC0264EF74E00F231B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A23E89C49CB8A9878C55290 /* Pods-radiofonico.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
