@@ -13,7 +13,7 @@ var audioPlayer: AVAudioPlayer?
 
 class ItalianRadioModel {
     
-    let italianRadioSongs = ["Lucio Dalla - Washington.mp3", "Mango - Bella d'Estate.mp3", "Franco Battiato - Summer On A Solitary Beach.mp3" ]
+    let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
     let defaultSongLabel = "Press play to vibe 🤙"
     
@@ -21,12 +21,32 @@ class ItalianRadioModel {
     
     var isPlaying = false
     
-    func setSongLabel(song: String, songLabel: UILabel) {
+    func setSongLabel(song: String, songLabel: UILabel, artistLabel: UILabel) {
         
-        // Modify song name string for display
+        if song.contains("-") {
+        
+        let delimiter = "-"
+        
+        // Song filename format: Lucio Dalla - Washington.mp3
+        let songInfo = song.components(separatedBy: delimiter)
+        print(songInfo)
+        
+        let song = songInfo[1]
+        print(song)
+
+        let artist = songInfo[0]
+        print(artist)
+        
+        // Remove .mp3 from song string
         let modifiedSong = song.replacingOccurrences(of: ".mp3", with: "", options: [.caseInsensitive, .regularExpression])
+            print(modifiedSong)
         
+        // Set UILabel test
+
         songLabel.text = modifiedSong
+        artistLabel.text = artist
+        }
+  
     }
     
     func chooseSong() -> String {

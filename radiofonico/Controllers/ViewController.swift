@@ -27,7 +27,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        italianRadio.setSongLabel(song: defaultSongLabel, songLabel: songLabel)
+        italianRadio.setSongLabel(song: defaultSongLabel, songLabel: songLabel, artistLabel: artistLabel)
+        
         
         
     }
@@ -37,20 +38,20 @@ class ViewController: UIViewController {
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
         let song = italianRadio.playPreviousSong()
-        italianRadio.setSongLabel(song: song, songLabel: songLabel)
+        italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
     }
     
     @IBAction func playPauseRadio(_ sender: UIButton) {
         
         let song = italianRadio.radioOnOff(sender: sender)
-        italianRadio.setSongLabel(song: song, songLabel: songLabel)
+        italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
     }
     
     @IBAction func playNextSong(_ sender: UIButton) {
         
         let song = italianRadio.playNextSong()
-        italianRadio.setSongLabel(song: song, songLabel: songLabel)
+        italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
     }
     
 }
