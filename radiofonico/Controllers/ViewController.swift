@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var songLabel: UILabel!
     
+    @IBOutlet weak var artistLabel: UILabel!
     
     var audioPlayer: AVAudioPlayer?
     let italianRadio = ItalianRadioModel()
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        italianRadio.setSongLabel(song: defaultSongLabel, songLabel: songLabel)
         
         
     }

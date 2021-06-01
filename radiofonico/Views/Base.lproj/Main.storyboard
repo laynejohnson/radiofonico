@@ -49,7 +49,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="277" height="78"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                 <rect key="frame" x="0.0" y="0.0" width="277" height="33.5"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="21"/>
                                                                 <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,13 +58,21 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
                                                                         <real key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                 <rect key="frame" x="0.0" y="44.5" width="277" height="33.5"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="21"/>
                                                                 <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                                                        <real key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
                                                         </subviews>
                                                     </stackView>
@@ -122,6 +130,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="artistLabel" destination="zrF-bp-D9Q" id="trf-nf-e8h"/>
                         <outlet property="songLabel" destination="gMN-PD-bEK" id="zcH-mH-4Wv"/>
                     </connections>
                 </viewController>
