@@ -32,6 +32,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var pinkItaly: UIImageView!
+    
+    
     // MARK: - Variables
     // ---------------------------------- //
     // - - - - - - -  VARS - - - - - - -  //
@@ -54,8 +57,24 @@ class ViewController: UIViewController {
         
         songLabel.text = defaultSongLabel
         artistLabel.text = defaultArtistLabel
+    
         
     }
+    
+    //MARK: - Functions
+    
+    func animatedImages(for name: String) -> [UIImage] {
+        
+        var i = 0
+        var images = [UIImage]()
+        
+        while let image = UIImage(named: "\(name)/\(i)") {
+            images.append(image)
+            i += 1
+        }
+        return images
+    }
+    
     // MARK: - IBOutlets
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - - - //
@@ -89,6 +108,13 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
+        // Italy Animation
+        pinkItaly.animationImages = animatedImages(for: "ItalyAnimation")
+        pinkItaly.animationDuration = 0.9
+        pinkItaly.animationRepeatCount = 0
+        pinkItaly.image = pinkItaly.animationImages?.first
+        pinkItaly.startAnimating()
+        
     }
     
     @IBAction func playNextSong(_ sender: UIButton) {
@@ -114,5 +140,7 @@ class ViewController: UIViewController {
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         }
     }
-}
+
+    
+} // End ViewController Class
 
