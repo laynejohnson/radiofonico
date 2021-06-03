@@ -68,10 +68,24 @@ class ViewController: UIViewController {
         var i = 0
         var images = [UIImage]()
         
-        while let image = UIImage(named: "\(name)/\(i)") {
+        while let image = UIImage(named: "\(i)") {
             images.append(image)
             i += 1
         }
+        
+        return images
+    }
+    
+    func animatedImagesReverse(for name: String) -> [UIImage] {
+        
+        var i = 0
+        var images = [UIImage]()
+        
+        while let image = UIImage(named: "\(i)") {
+            images.append(image)
+            i -= 1
+        }
+        
         return images
     }
     
@@ -109,11 +123,13 @@ class ViewController: UIViewController {
         italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
         // Italy Animation
-        pinkItaly.animationImages = animatedImages(for: "ItalyAnimation")
-        pinkItaly.animationDuration = 0.9
+        pinkItaly.animationImages = animatedImages(for: "radiofonico")
+        pinkItaly.animationDuration = 5
         pinkItaly.animationRepeatCount = 0
         pinkItaly.image = pinkItaly.animationImages?.first
         pinkItaly.startAnimating()
+        
+        // TODO: Add reverse images
         
     }
     
