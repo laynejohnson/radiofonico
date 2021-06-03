@@ -130,6 +130,7 @@ class ViewController: UIViewController {
         pinkItaly.startAnimating()
         
         // TODO: Add reverse images
+        // TODO: Stop animation on pause
         
     }
     
