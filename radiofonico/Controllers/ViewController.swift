@@ -122,15 +122,17 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
-        // Italy Animation
+        // Start animation on play
         pinkItaly.animationImages = animatedImages(for: "radiofonico")
-        pinkItaly.animationDuration = 5
+        pinkItaly.animationDuration = 13
         pinkItaly.animationRepeatCount = 0
         pinkItaly.image = pinkItaly.animationImages?.first
         pinkItaly.startAnimating()
         
-        // TODO: Add reverse images
-        // TODO: Stop animation on pause
+        // Stop animation on pause
+        if italianRadio.isPlaying == false {
+            pinkItaly.stopAnimating()
+        }
         
     }
     
