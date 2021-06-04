@@ -13,7 +13,8 @@ import AVFoundation
 // TODO: Add song timer
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Add stars and scale animation for press play to vibe
-// TODO: Change button color when pressing previous/next buttons
+// TODO: Center label text over buttons
+// TODO: Add color options
 
 class ViewController: UIViewController {
     
