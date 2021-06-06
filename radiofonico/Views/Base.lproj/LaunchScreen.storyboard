@@ -15,19 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_fonico_logo_4.02" translatesAutoresizingMaskIntoConstraints="NO" id="OLG-XK-1jO">
-                                <rect key="frame" x="242" y="51" width="412" height="312"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="412" id="PXE-bk-kVe"/>
-                                    <constraint firstAttribute="height" constant="312" id="hNB-Xx-I01"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italy_squid" translatesAutoresizingMaskIntoConstraints="NO" id="XqQ-0q-SAT">
+                                <rect key="frame" x="304" y="36.5" width="288" height="341"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98823529409999999" green="0.93333333330000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="OLG-XK-1jO" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qfy-PQ-Agt"/>
-                            <constraint firstItem="OLG-XK-1jO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ln0-oo-3zZ"/>
+                            <constraint firstItem="XqQ-0q-SAT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4Bl-Co-vk3"/>
+                            <constraint firstItem="XqQ-0q-SAT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="9T2-Sp-7zP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +33,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="radio_fonico_logo_4.02" width="484" height="367"/>
+        <image name="italy_squid" width="288" height="341"/>
     </resources>
 </document>

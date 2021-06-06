@@ -26,8 +26,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJT-R6-uLa" userLabel="Left Screen">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="393"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-bg-Kl1" userLabel="pink_italy_2.02">
-                                                <rect key="frame" x="63.666666666666686" y="41.666666666666657" width="277" height="310"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italy_squid" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-bg-Kl1" userLabel="pink_italy_2.02">
+                                                <rect key="frame" x="58" y="26" width="288" height="341"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="273" id="KDd-uQ-vMd"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="306" id="Sed-Hr-dru"/>
@@ -81,7 +81,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
-                                                                <state key="normal" image="previous_button"/>
+                                                                <state key="normal" image="previous_button_unselected"/>
                                                                 <state key="highlighted" image="previous_pink"/>
                                                                 <connections>
                                                                     <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uti-z4-ZKF"/>
@@ -89,7 +89,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-2l-Ziq" userLabel="Play/Pause Button">
                                                                 <rect key="frame" x="95.999999999999943" y="0.0" width="85" height="85"/>
-                                                                <state key="normal" image="play_pause_button"/>
+                                                                <state key="normal" image="play_button_unselected"/>
                                                                 <state key="selected" image="pause_button"/>
                                                                 <connections>
                                                                     <action selector="playPauseRadio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D41-5J-4Hd"/>
@@ -97,7 +97,7 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-SI-nJZ" userLabel="Next Button">
                                                                 <rect key="frame" x="191.99999999999994" y="0.0" width="85" height="85"/>
-                                                                <state key="normal" image="next_button"/>
+                                                                <state key="normal" image="next_button_unselected"/>
                                                                 <state key="highlighted" image="next_pink"/>
                                                                 <connections>
                                                                     <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ig-pf-wwU"/>
@@ -157,12 +157,12 @@
         </designable>
     </designables>
     <resources>
-        <image name="0" width="277" height="310"/>
-        <image name="next_button" width="70" height="70"/>
+        <image name="italy_squid" width="288" height="341"/>
+        <image name="next_button_unselected" width="68" height="68"/>
         <image name="next_pink" width="70" height="70"/>
         <image name="pause_button" width="85" height="85"/>
-        <image name="play_pause_button" width="85" height="85"/>
-        <image name="previous_button" width="70" height="70"/>
+        <image name="play_button_unselected" width="79" height="79"/>
+        <image name="previous_button_unselected" width="68" height="68"/>
         <image name="previous_pink" width="70" height="70"/>
     </resources>
 </document>
