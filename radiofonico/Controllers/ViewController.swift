@@ -125,7 +125,7 @@ class ViewController: UIViewController {
         
         // Start animation on play
         pinkItaly.animationImages = animatedImages(for: "radiofonico")
-        pinkItaly.animationDuration = 13
+        pinkItaly.animationDuration = 8
         pinkItaly.animationRepeatCount = 0
         pinkItaly.image = pinkItaly.animationImages?.first
         pinkItaly.startAnimating()

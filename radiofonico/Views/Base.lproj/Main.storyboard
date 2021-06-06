@@ -44,13 +44,13 @@
                                         <rect key="frame" x="404" y="0.0" width="404" height="393"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-bm-KYI" userLabel="Radio Stack View">
-                                                <rect key="frame" x="63.666666666666686" y="97.666666666666671" width="277" height="197.66666666666663"/>
+                                                <rect key="frame" x="63.666666666666686" y="108" width="277" height="177"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Info Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="87.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="67"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="0.0" y="0.0" width="277" height="38.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="277" height="28"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
                                                                 <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="0.0" y="49.333333333333329" width="277" height="38.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="39" width="277" height="28"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
                                                                 <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -77,7 +77,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-Lr-wv2" userLabel="Radio Controls Stack View">
-                                                        <rect key="frame" x="0.0" y="112.66666666666669" width="277" height="85"/>
+                                                        <rect key="frame" x="0.0" y="92" width="277" height="85"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
@@ -150,10 +150,10 @@
     </scenes>
     <designables>
         <designable name="gMN-PD-bEK">
-            <size key="intrinsicContentSize" width="344.66666666666669" height="38.333333333333336"/>
+            <size key="intrinsicContentSize" width="321.33333333333331" height="28"/>
         </designable>
         <designable name="zrF-bp-D9Q">
-            <size key="intrinsicContentSize" width="170" height="38.333333333333336"/>
+            <size key="intrinsicContentSize" width="160" height="28"/>
         </designable>
     </designables>
     <resources>
