@@ -26,7 +26,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJT-R6-uLa" userLabel="Left Screen">
                                         <rect key="frame" x="0.0" y="0.0" width="404" height="393"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italy_squid" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-bg-Kl1" userLabel="pink_italy_2.02">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italy_squid" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-bg-Kl1" userLabel="Italy">
                                                 <rect key="frame" x="58" y="26" width="288" height="341"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="273" id="KDd-uQ-vMd"/>
@@ -36,23 +36,23 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerX" secondItem="yJT-R6-uLa" secondAttribute="centerX" id="4DA-yT-Ifh"/>
-                                            <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerY" secondItem="yJT-R6-uLa" secondAttribute="centerY" id="7AM-T6-zZN"/>
+                                            <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerY" secondItem="yJT-R6-uLa" secondAttribute="centerY" id="Gh4-VC-3sK"/>
+                                            <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerX" secondItem="yJT-R6-uLa" secondAttribute="centerX" id="fPH-m7-l7K"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-cN-LPP" userLabel="Right Screen">
                                         <rect key="frame" x="404" y="0.0" width="404" height="393"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-bm-KYI" userLabel="Radio Stack View">
-                                                <rect key="frame" x="63.666666666666686" y="108" width="277" height="177"/>
+                                                <rect key="frame" x="63.666666666666686" y="74.666666666666671" width="277" height="243.66666666666663"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Info Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="67"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="133.66666666666666"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="0.0" y="0.0" width="277" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="277" height="38.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
-                                                                <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
@@ -63,24 +63,31 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="0.0" y="39" width="277" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
+                                                                <rect key="frame" x="0.0" y="49.333333333333329" width="277" height="38.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
-                                                                <color key="textColor" red="0.22352941176470587" green="0.22745098039215686" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
-                                                                        <real key="value" value="15"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-IV-EOT" userLabel="Time Stamp">
+                                                                <rect key="frame" x="0.0" y="98.666666666666671" width="277" height="35.000000000000014"/>
+                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="zrF-bp-D9Q" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="L1W-wZ-Ska"/>
+                                                            <constraint firstItem="dqm-IV-EOT" firstAttribute="centerX" secondItem="A1p-Tp-fuU" secondAttribute="centerX" id="RXa-Zh-NgA"/>
+                                                            <constraint firstItem="dqm-IV-EOT" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="Umx-AX-58G"/>
+                                                            <constraint firstItem="zrF-bp-D9Q" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="gg4-cP-Ep4"/>
+                                                        </constraints>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-Lr-wv2" userLabel="Radio Controls Stack View">
-                                                        <rect key="frame" x="0.0" y="92" width="277" height="85"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-Lr-wv2" userLabel="Radio Controls Stack View">
+                                                        <rect key="frame" x="0.0" y="158.66666666666669" width="277" height="85"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="85"/>
                                                                 <state key="normal" image="previous_button_unselected"/>
                                                                 <state key="highlighted" image="previous_pink"/>
                                                                 <connections>
@@ -88,15 +95,15 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-2l-Ziq" userLabel="Play/Pause Button">
-                                                                <rect key="frame" x="95.999999999999943" y="0.0" width="85" height="85"/>
+                                                                <rect key="frame" x="92.333333333333314" y="0.0" width="92.333333333333314" height="85"/>
                                                                 <state key="normal" image="play_button_unselected"/>
-                                                                <state key="selected" image="pause_button"/>
+                                                                <state key="selected" image="pause_button_black"/>
                                                                 <connections>
                                                                     <action selector="playPauseRadio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D41-5J-4Hd"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-SI-nJZ" userLabel="Next Button">
-                                                                <rect key="frame" x="191.99999999999994" y="0.0" width="85" height="85"/>
+                                                                <rect key="frame" x="184.66666666666669" y="0.0" width="92.333333333333314" height="85"/>
                                                                 <state key="normal" image="next_button_unselected"/>
                                                                 <state key="highlighted" image="next_pink"/>
                                                                 <connections>
@@ -111,14 +118,14 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="gMN-PD-bEK" firstAttribute="width" secondItem="YOM-bm-KYI" secondAttribute="width" id="Yrq-Z3-7ca"/>
+                                                    <constraint firstItem="k9W-2l-Ziq" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="Wa9-NJ-GHq"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="YOM-bm-KYI" firstAttribute="centerX" secondItem="gIe-cN-LPP" secondAttribute="centerX" id="HBA-kq-8XO"/>
-                                            <constraint firstItem="YOM-bm-KYI" firstAttribute="centerY" secondItem="gIe-cN-LPP" secondAttribute="centerY" id="NcQ-PS-yFb"/>
+                                            <constraint firstItem="YOM-bm-KYI" firstAttribute="centerX" secondItem="gIe-cN-LPP" secondAttribute="centerX" id="AGa-j5-lWO"/>
+                                            <constraint firstItem="YOM-bm-KYI" firstAttribute="centerY" secondItem="gIe-cN-LPP" secondAttribute="centerY" id="yqR-wn-NGE"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -128,16 +135,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3mZ-GI-haf"/>
-                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="opa-vp-noe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZTH-2L-ZRk" secondAttribute="bottom" id="pce-mH-2PH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZTH-2L-ZRk" secondAttribute="trailing" id="uYm-Dz-mLP"/>
+                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MMo-CD-KbT"/>
+                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PpL-N7-kQ6"/>
+                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wsb-j5-Irm"/>
+                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e0W-y9-gb0"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="zrF-bp-D9Q" id="trf-nf-e8h"/>
+                        <outlet property="imageItaly" destination="RIA-bg-Kl1" id="tMf-9t-5kJ"/>
                         <outlet property="nextButton" destination="sJW-SI-nJZ" id="zLG-ak-PPt"/>
-                        <outlet property="pinkItaly" destination="RIA-bg-Kl1" id="5VB-QH-L4m"/>
                         <outlet property="playPauseButton" destination="k9W-2l-Ziq" id="BB6-Kh-zvY"/>
                         <outlet property="previousButton" destination="W9A-ca-G46" id="qzs-Bk-79x"/>
                         <outlet property="songLabel" destination="gMN-PD-bEK" id="zcH-mH-4Wv"/>
@@ -150,17 +157,17 @@
     </scenes>
     <designables>
         <designable name="gMN-PD-bEK">
-            <size key="intrinsicContentSize" width="321.33333333333331" height="28"/>
+            <size key="intrinsicContentSize" width="329.66666666666669" height="38.333333333333336"/>
         </designable>
         <designable name="zrF-bp-D9Q">
-            <size key="intrinsicContentSize" width="160" height="28"/>
+            <size key="intrinsicContentSize" width="155" height="38.333333333333336"/>
         </designable>
     </designables>
     <resources>
         <image name="italy_squid" width="288" height="341"/>
         <image name="next_button_unselected" width="68" height="68"/>
         <image name="next_pink" width="70" height="70"/>
-        <image name="pause_button" width="85" height="85"/>
+        <image name="pause_button_black" width="79" height="79"/>
         <image name="play_button_unselected" width="79" height="79"/>
         <image name="previous_button_unselected" width="68" height="68"/>
         <image name="previous_pink" width="70" height="70"/>
