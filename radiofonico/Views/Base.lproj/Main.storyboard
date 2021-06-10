@@ -72,6 +72,9 @@
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
                                                                         <real key="value" value="15"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                                                        <real key="value" value="1"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-IV-EOT" userLabel="Time Stamp">
@@ -94,7 +97,8 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="85"/>
                                                                 <state key="normal" image="previous_button"/>
-                                                                <state key="highlighted" image="previous_pink"/>
+                                                                <state key="selected" image="previous_button_select"/>
+                                                                <state key="highlighted" image="previous_button_select"/>
                                                                 <connections>
                                                                     <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uti-z4-ZKF"/>
                                                                 </connections>
@@ -103,6 +107,7 @@
                                                                 <rect key="frame" x="92.333333333333314" y="0.0" width="92.333333333333314" height="85"/>
                                                                 <state key="normal" image="play_button"/>
                                                                 <state key="selected" image="pause_button"/>
+                                                                <state key="highlighted" image="pause_button"/>
                                                                 <connections>
                                                                     <action selector="playPauseRadio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D41-5J-4Hd"/>
                                                                 </connections>
@@ -110,7 +115,8 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-SI-nJZ" userLabel="Next Button">
                                                                 <rect key="frame" x="184.66666666666669" y="0.0" width="92.333333333333314" height="85"/>
                                                                 <state key="normal" image="next_button"/>
-                                                                <state key="highlighted" image="next_pink"/>
+                                                                <state key="selected" image="next_button_select"/>
+                                                                <state key="highlighted" image="next_button_select"/>
                                                                 <connections>
                                                                     <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ig-pf-wwU"/>
                                                                 </connections>
@@ -163,10 +169,10 @@
     <resources>
         <image name="italy_squid" width="288" height="341"/>
         <image name="next_button" width="68" height="68"/>
-        <image name="next_pink" width="70" height="70"/>
+        <image name="next_button_select" width="68" height="68"/>
         <image name="pause_button" width="79" height="79"/>
         <image name="play_button" width="79" height="79"/>
         <image name="previous_button" width="68" height="68"/>
-        <image name="previous_pink" width="70" height="70"/>
+        <image name="previous_button_select" width="68" height="68"/>
     </resources>
 </document>

@@ -17,11 +17,11 @@ import AVFoundation
 
 // MARK: - Development TODOs:
 
-// TODO: Add song timer
+// TODO: Implement song time
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
-// TODO: Add stars and scale animation for press play to vibe
-// TODO: Center label text over buttons
 // TODO: Add color options
+// TODO: Add dark mode
+
 
 class ViewController: UIViewController {
     
@@ -56,6 +56,7 @@ class ViewController: UIViewController {
     
     let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
     let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
+    let radioDoubleSquid = #colorLiteral(red: 0.1168107167, green: 0.177724719, blue: 0.2031671703, alpha: 1)
     
     // MARK: - viewDidLoad
     
@@ -110,9 +111,9 @@ class ViewController: UIViewController {
             // Text animation
             UIView.animate(withDuration: 0.4, animations: { () -> Void in
                 self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
-                self.artistLabel.textColor = self.radioPink
+                self.artistLabel.textColor = self.radioDoubleSquid
             }) { (finished: Bool) -> Void in
-                self.artistLabel.textColor = self.radioSquid
+                self.artistLabel.textColor = self.radioDoubleSquid
                 UIView.animate(withDuration: 0.4, animations: { () -> Void in
                     self.artistLabel.transform = .identity
                 })
@@ -153,9 +154,9 @@ class ViewController: UIViewController {
             // Text animation
             UIView.animate(withDuration: 0.4, animations: { () -> Void in
                 self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
-                self.artistLabel.textColor = self.radioPink
+                self.artistLabel.textColor = self.radioDoubleSquid
             }) { (finished: Bool) -> Void in
-                self.artistLabel.textColor = self.radioSquid
+                self.artistLabel.textColor = self.radioDoubleSquid
                 UIView.animate(withDuration: 0.4, animations: { () -> Void in
                     self.artistLabel.transform = .identity
                 })

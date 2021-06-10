@@ -1,11 +1,7 @@
 <svg width="79" height="79" viewBox="0 0 79 79" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="39.5" cy="39.5" r="37.75" stroke="#FC2F60" stroke-width="3.5"/>
 <circle cx="39.5" cy="39.5" r="37.75" stroke="url(#paint0_linear)" stroke-width="3.5"/>
-<circle cx="39.5" cy="39.5" r="29.75" stroke="#FC2F60" stroke-width="3.5"/>
 <circle cx="39.5" cy="39.5" r="29.75" stroke="url(#paint1_linear)" stroke-width="3.5"/>
-<rect x="28.5" y="24.5" width="7" height="30" rx="1.5" stroke="#FC2F60" stroke-width="3"/>
 <rect x="28.5" y="24.5" width="7" height="30" rx="1.5" stroke="url(#paint2_linear)" stroke-width="3"/>
-<rect x="44.5" y="24.5" width="7" height="30" rx="1.5" stroke="#FC2F60" stroke-width="3"/>
 <rect x="44.5" y="24.5" width="7" height="30" rx="1.5" stroke="url(#paint3_linear)" stroke-width="3"/>
 <defs>
 <linearGradient id="paint0_linear" x1="39.5" y1="0" x2="39.5" y2="79" gradientUnits="userSpaceOnUse">
