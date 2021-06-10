@@ -49,7 +49,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Info Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="277" height="133.66666666666666"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Summer on a Solitary Beach" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Washington" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK">
                                                                 <rect key="frame" x="0.0" y="0.0" width="277" height="38.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -63,7 +63,7 @@
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Franco Battio" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lucio Dalla" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
                                                                 <rect key="frame" x="0.0" y="49.333333333333329" width="277" height="38.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,10 +157,10 @@
     </scenes>
     <designables>
         <designable name="gMN-PD-bEK">
-            <size key="intrinsicContentSize" width="329.66666666666669" height="38.333333333333336"/>
+            <size key="intrinsicContentSize" width="145.33333333333334" height="38.333333333333336"/>
         </designable>
         <designable name="zrF-bp-D9Q">
-            <size key="intrinsicContentSize" width="155" height="38.333333333333336"/>
+            <size key="intrinsicContentSize" width="123" height="38.333333333333336"/>
         </designable>
     </designables>
     <resources>
