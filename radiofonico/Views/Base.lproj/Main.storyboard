@@ -49,30 +49,35 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Info Stack View">
                                                         <rect key="frame" x="0.0" y="0.0" width="277" height="133.66666666666666"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Washington" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Washington" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                 <rect key="frame" x="0.0" y="0.0" width="277" height="38.333333333333336"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" red="0.090196078431372548" green="0.13333333333333333" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
-                                                                        <real key="value" value="15"/>
-                                                                    </userDefinedRuntimeAttribute>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
                                                                         <real key="value" value="1"/>
                                                                     </userDefinedRuntimeAttribute>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                                                        <real key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lucio Dalla" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lucio Dalla" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                                 <rect key="frame" x="0.0" y="49.333333333333329" width="277" height="38.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
-                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                                                        <real key="value" value="15"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-IV-EOT" userLabel="Time Stamp">
                                                                 <rect key="frame" x="0.0" y="98.666666666666671" width="277" height="35.000000000000014"/>
                                                                 <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="22"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -88,7 +93,7 @@
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
                                                                 <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="85"/>
-                                                                <state key="normal" image="previous_button_unselected"/>
+                                                                <state key="normal" image="previous_button"/>
                                                                 <state key="highlighted" image="previous_pink"/>
                                                                 <connections>
                                                                     <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uti-z4-ZKF"/>
@@ -96,15 +101,15 @@
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-2l-Ziq" userLabel="Play/Pause Button">
                                                                 <rect key="frame" x="92.333333333333314" y="0.0" width="92.333333333333314" height="85"/>
-                                                                <state key="normal" image="play_button_unselected"/>
-                                                                <state key="selected" image="pause_button_black"/>
+                                                                <state key="normal" image="play_button"/>
+                                                                <state key="selected" image="pause_button"/>
                                                                 <connections>
                                                                     <action selector="playPauseRadio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D41-5J-4Hd"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-SI-nJZ" userLabel="Next Button">
                                                                 <rect key="frame" x="184.66666666666669" y="0.0" width="92.333333333333314" height="85"/>
-                                                                <state key="normal" image="next_button_unselected"/>
+                                                                <state key="normal" image="next_button"/>
                                                                 <state key="highlighted" image="next_pink"/>
                                                                 <connections>
                                                                     <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ig-pf-wwU"/>
@@ -155,21 +160,13 @@
             <point key="canvasLocation" x="77.678571428571431" y="105.79710144927537"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="gMN-PD-bEK">
-            <size key="intrinsicContentSize" width="145.33333333333334" height="38.333333333333336"/>
-        </designable>
-        <designable name="zrF-bp-D9Q">
-            <size key="intrinsicContentSize" width="123" height="38.333333333333336"/>
-        </designable>
-    </designables>
     <resources>
         <image name="italy_squid" width="288" height="341"/>
-        <image name="next_button_unselected" width="68" height="68"/>
+        <image name="next_button" width="68" height="68"/>
         <image name="next_pink" width="70" height="70"/>
-        <image name="pause_button_black" width="79" height="79"/>
-        <image name="play_button_unselected" width="79" height="79"/>
-        <image name="previous_button_unselected" width="68" height="68"/>
+        <image name="pause_button" width="79" height="79"/>
+        <image name="play_button" width="79" height="79"/>
+        <image name="previous_button" width="68" height="68"/>
         <image name="previous_pink" width="70" height="70"/>
     </resources>
 </document>
