@@ -99,10 +99,10 @@
 		E8D5AAAC264EF74B00F231B1 /* radiofonico */ = {
 			isa = PBXGroup;
 			children = (
-				E8D5AAE82654416900F231B1 /* Songs */,
-				E8D5AAC1264EF7DC00F231B1 /* Models */,
-				E8D5AAC2264EF7EB00F231B1 /* Views */,
-				E8D5AAC3264EF7ED00F231B1 /* Controllers */,
+				E8D5AAE82654416900F231B1 /* Audio */,
+				E8D5AAC1264EF7DC00F231B1 /* Model Classes */,
+				E8D5AAC2264EF7EB00F231B1 /* View Classes */,
+				E8D5AAC3264EF7ED00F231B1 /* Controller Classes */,
 				E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */,
 				E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */,
 				E8D5AAB6264EF74E00F231B1 /* Assets.xcassets */,
@@ -111,39 +111,39 @@
 			path = radiofonico;
 			sourceTree = "<group>";
 		};
-		E8D5AAC1264EF7DC00F231B1 /* Models */ = {
+		E8D5AAC1264EF7DC00F231B1 /* Model Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */,
 			);
-			path = Models;
+			path = "Model Classes";
 			sourceTree = "<group>";
 		};
-		E8D5AAC2264EF7EB00F231B1 /* Views */ = {
+		E8D5AAC2264EF7EB00F231B1 /* View Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E8D5AAB3264EF74B00F231B1 /* Main.storyboard */,
 				E8D5AAB8264EF74E00F231B1 /* LaunchScreen.storyboard */,
 			);
-			path = Views;
+			path = "View Classes";
 			sourceTree = "<group>";
 		};
-		E8D5AAC3264EF7ED00F231B1 /* Controllers */ = {
+		E8D5AAC3264EF7ED00F231B1 /* Controller Classes */ = {
 			isa = PBXGroup;
 			children = (
 				E8D5AAB1264EF74B00F231B1 /* ViewController.swift */,
 			);
-			path = Controllers;
+			path = "Controller Classes";
 			sourceTree = "<group>";
 		};
-		E8D5AAE82654416900F231B1 /* Songs */ = {
+		E8D5AAE82654416900F231B1 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
 				E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */,
 				E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */,
 				E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */,
 			);
-			path = Songs;
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

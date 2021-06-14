@@ -15,13 +15,17 @@
 import UIKit
 import AVFoundation
 
-// MARK: - Development TODOs:
+// MARK: - Dev TODOs:
+// ---------------------------------- //
+// - - - - - - - DEV TODO - - - - - - //
+// ---------------------------------- //
 
 // TODO: Implement song time
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Add color options
 // TODO: Add dark mode
-
+// TODO: Add favorites, shuffle, repeat, progress bar
+// TODO: Redesign player
 
 class ViewController: UIViewController {
     
