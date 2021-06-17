@@ -83,45 +83,54 @@
                                     <constraint firstItem="Ubs-BM-p2A" firstAttribute="centerY" secondItem="rcz-zj-N1B" secondAttribute="centerY" id="oS0-Nj-2NB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-yM-yLJ" userLabel="Progress View">
-                                <rect key="frame" x="0.0" y="589.33333333333337" width="414" height="108.66666666666663"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-Fu-riW" userLabel="Radio Controls View">
+                                <rect key="frame" x="0.0" y="589.33333333333337" width="414" height="50"/>
                                 <subviews>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-i9-Jjv">
-                                        <rect key="frame" x="132" y="51.666666666666629" width="150" height="4"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs">
-                                        <rect key="frame" x="107" y="-1.3333333333333712" width="124" height="20.333333333333332"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
+                                        <rect key="frame" x="72.666666666666686" y="12" width="269" height="28"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-zv-GV2" userLabel="Separator Label">
-                                                <rect key="frame" x="41.333333333333329" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
-                                                <rect key="frame" x="82.666666666666671" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" progressImage="progress_bubble" trackImage="progress_bar" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-i9-Jjv">
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="20"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="269" id="0B8-gQ-uxe"/>
+                                                    <constraint firstAttribute="height" constant="20" id="dzp-af-3Ea"/>
+                                                </constraints>
+                                            </progressView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
+                                                <rect key="frame" x="0.0" y="12" width="269" height="16"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="16"/>
+                                                        <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
+                                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-zv-GV2" userLabel="Separator Label">
+                                                        <rect key="frame" x="222.66666666666669" y="0.0" width="8.6666666666666572" height="16"/>
+                                                        <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
+                                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3:31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
+                                                        <rect key="frame" x="235.33333333333331" y="0.0" width="33.666666666666686" height="16"/>
+                                                        <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
+                                                        <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-Fu-riW" userLabel="Radio Controls View">
-                                <rect key="frame" x="0.0" y="698" width="414" height="48.333333333333371"/>
-                                <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cej-dO-e1d" firstAttribute="centerY" secondItem="2Nd-Fu-riW" secondAttribute="centerY" id="Dp8-fI-vGV"/>
+                                    <constraint firstItem="cej-dO-e1d" firstAttribute="centerX" secondItem="2Nd-Fu-riW" secondAttribute="centerX" id="aFi-oD-9Yd"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-L7-4n5" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="746.33333333333337" width="414" height="149.66666666666663"/>
+                                <rect key="frame" x="0.0" y="639.33333333333337" width="414" height="256.66666666666663"/>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
@@ -140,5 +149,7 @@
     <resources>
         <image name="album_art" width="343" height="339"/>
         <image name="double_bar" width="423" height="14"/>
+        <image name="progress_bar" width="277" height="11"/>
+        <image name="progress_bubble" width="20" height="20"/>
     </resources>
 </document>
