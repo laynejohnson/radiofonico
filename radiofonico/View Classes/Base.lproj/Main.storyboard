@@ -58,13 +58,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-BM-p2A" userLabel="Song Info Stack View">
                                         <rect key="frame" x="66.666666666666686" y="10.666666666666682" width="281" height="58.666666666666657"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer On A Solitary Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-dr-9Pt" userLabel="Title Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer On A Solitary Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-dr-9Pt" userLabel="Title Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                 <rect key="frame" x="0.0" y="0.0" width="281" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
                                                 <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-4m-g8c" userLabel="Artist Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-4m-g8c" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                 <rect key="frame" x="0.0" y="39.333333333333314" width="281" height="19.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="17"/>
                                                 <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,8 +87,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-Fu-riW" userLabel="Song Progress View">
                                 <rect key="frame" x="0.0" y="574" width="414" height="80"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
-                                        <rect key="frame" x="72.666666666666686" y="26" width="269" height="28"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
+                                        <rect key="frame" x="72.666666666666686" y="25" width="269" height="30"/>
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" progressImage="progress_bubble" trackImage="progress_bar" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-i9-Jjv">
                                                 <rect key="frame" x="0.0" y="0.0" width="269" height="20"/>
@@ -99,21 +99,21 @@
                                                 </constraints>
                                             </progressView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
-                                                <rect key="frame" x="0.0" y="12" width="269" height="16"/>
+                                                <rect key="frame" x="0.0" y="14" width="269" height="16"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
                                                         <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="16"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
                                                         <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-zv-GV2" userLabel="Separator Label">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-zv-GV2" userLabel="Separator Label">
                                                         <rect key="frame" x="222.66666666666669" y="0.0" width="8.6666666666666572" height="16"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
                                                         <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3:31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
                                                         <rect key="frame" x="235.33333333333331" y="0.0" width="33.666666666666686" height="16"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
                                                         <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -179,9 +179,6 @@
                                                 <state key="selected" image="mano_selected"/>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="T9H-pa-jaa" firstAttribute="leading" secondItem="1z3-7w-xYr" secondAttribute="trailing" constant="45" id="31M-AQ-9lh"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -193,10 +190,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Z1-do-3GN"/>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="rcz-zj-N1B" firstAttribute="top" secondItem="aXc-L6-vZ8" secondAttribute="bottom" constant="20" id="nxh-d3-1S3"/>
-                            <constraint firstItem="DAX-Du-OhI" firstAttribute="top" secondItem="2Nd-Fu-riW" secondAttribute="bottom" constant="10" id="ptn-tC-jUA"/>
-                        </constraints>
                     </stackView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
