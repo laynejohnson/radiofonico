@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35BCC5217921C5A5F00D24AB /* Pods_radiofonico.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */; };
+		E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */; };
 		E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */; };
 		E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */; };
 		E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */; };
@@ -25,6 +26,7 @@
 		6A23E89C49CB8A9878C55290 /* Pods-radiofonico.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radiofonico.release.xcconfig"; path = "Target Support Files/Pods-radiofonico/Pods-radiofonico.release.xcconfig"; sourceTree = "<group>"; };
 		A0B731F3374B09F55CC69B43 /* Pods-radiofonico.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radiofonico.debug.xcconfig"; path = "Target Support Files/Pods-radiofonico/Pods-radiofonico.debug.xcconfig"; sourceTree = "<group>"; };
 		CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_radiofonico.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mango-Bella d'Estate.mp3"; sourceTree = "<group>"; };
 		E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla-Washington.mp3"; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		E885545E266660A30056279C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */,
 				E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
@@ -207,6 +210,7 @@
 			files = (
 				E8D5AABA264EF74E00F231B1 /* LaunchScreen.storyboard in Resources */,
 				E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */,
+				E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */,
 				E8D5AAB7264EF74E00F231B1 /* Assets.xcassets in Resources */,
 				E8D5AAB5264EF74B00F231B1 /* Main.storyboard in Resources */,
 				E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */,
