@@ -33,7 +33,9 @@ class ViewController: UIViewController {
     // ---------------------------------- //
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
-
+    
+    @IBOutlet weak var albumArt: UIImageView!
+    
     @IBOutlet weak var songLabel: UILabel!
     
     @IBOutlet weak var artistLabel: UILabel!
@@ -56,7 +58,7 @@ class ViewController: UIViewController {
     let italianRadio = ItalianRadioModel()
     
     let defaultSongLabel = " "
-    let defaultArtistLabel = "Press play to vibe 🤌 🤙 "
+    let defaultArtistLabel = "Press play to vibe 🤙 "
     
     let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
     let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
@@ -70,6 +72,8 @@ class ViewController: UIViewController {
         
         songLabel.text = defaultSongLabel
         artistLabel.text = defaultArtistLabel
+        
+        albumArt.image = nil
     }
     
     //MARK: - Functions
@@ -135,17 +139,21 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
-        // Start animation on play
-        imageItaly.animationImages = animatedImages(for: "radiofonico")
-        imageItaly.animationDuration = 7
-        imageItaly.animationRepeatCount = 0
-        imageItaly.image = imageItaly.animationImages?.first
-        imageItaly.startAnimating()
-        
-        // Stop animation on pause
-        if italianRadio.isPlaying == false {
-            imageItaly.stopAnimating()
+        if italianRadio.isPlaying == true {
+            albumArt.image = #imageLiteral(resourceName: "album_art")
         }
+        
+//        // Start animation on play
+//        imageItaly.animationImages = animatedImages(for: "radiofonico")
+//        imageItaly.animationDuration = 7
+//        imageItaly.animationRepeatCount = 0
+//        imageItaly.image = imageItaly.animationImages?.first
+//        imageItaly.startAnimating()
+//
+//        // Stop animation on pause
+//        if italianRadio.isPlaying == false {
+//            imageItaly.stopAnimating()
+//        }
         
     }
     
