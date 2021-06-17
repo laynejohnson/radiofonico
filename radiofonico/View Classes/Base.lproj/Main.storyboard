@@ -1,165 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="MuseoModerno-VariableFont_wght.ttf">
-            <string>MuseoModerno-SemiBold_Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="radiofonico" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" id="3I3-pd-eyF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-2L-ZRk" userLabel="Screen Stack View">
-                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-47-w8Q" userLabel="Top View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="149.33333333333334"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJT-R6-uLa" userLabel="Left Screen">
-                                        <rect key="frame" x="0.0" y="0.0" width="404" height="393"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="italy_squid" translatesAutoresizingMaskIntoConstraints="NO" id="RIA-bg-Kl1" userLabel="Italy">
-                                                <rect key="frame" x="58" y="26" width="288" height="341"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="273" id="KDd-uQ-vMd"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="306" id="Sed-Hr-dru"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerY" secondItem="yJT-R6-uLa" secondAttribute="centerY" id="Gh4-VC-3sK"/>
-                                            <constraint firstItem="RIA-bg-Kl1" firstAttribute="centerX" secondItem="yJT-R6-uLa" secondAttribute="centerX" id="fPH-m7-l7K"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIe-cN-LPP" userLabel="Right Screen">
-                                        <rect key="frame" x="404" y="0.0" width="404" height="393"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-bm-KYI" userLabel="Radio Stack View">
-                                                <rect key="frame" x="63.666666666666686" y="74.666666666666671" width="277" height="243.66666666666663"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="A1p-Tp-fuU" userLabel="Song Info Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277" height="133.66666666666666"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Washington" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gMN-PD-bEK" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="0.0" y="0.0" width="277" height="38.333333333333336"/>
-                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
-                                                                <color key="textColor" red="0.090196078431372548" green="0.13333333333333333" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
-                                                                        <real key="value" value="15"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lucio Dalla" textAlignment="center" lineBreakMode="characterWrap" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-bp-D9Q" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                                <rect key="frame" x="0.0" y="49.333333333333329" width="277" height="38.333333333333329"/>
-                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="24"/>
-                                                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <userDefinedRuntimeAttributes>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
-                                                                        <real key="value" value="15"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
-                                                                        <real key="value" value="1"/>
-                                                                    </userDefinedRuntimeAttribute>
-                                                                </userDefinedRuntimeAttributes>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-IV-EOT" userLabel="Time Stamp">
-                                                                <rect key="frame" x="0.0" y="98.666666666666671" width="277" height="35.000000000000014"/>
-                                                                <fontDescription key="fontDescription" name="MuseoModerno-SemiBold_Regular" family="MuseoModerno" pointSize="22"/>
-                                                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="zrF-bp-D9Q" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="L1W-wZ-Ska"/>
-                                                            <constraint firstItem="dqm-IV-EOT" firstAttribute="centerX" secondItem="A1p-Tp-fuU" secondAttribute="centerX" id="RXa-Zh-NgA"/>
-                                                            <constraint firstItem="dqm-IV-EOT" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="Umx-AX-58G"/>
-                                                            <constraint firstItem="zrF-bp-D9Q" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="gg4-cP-Ep4"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="e2Y-Lr-wv2" userLabel="Radio Controls Stack View">
-                                                        <rect key="frame" x="0.0" y="158.66666666666669" width="277" height="85"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9A-ca-G46" userLabel="Previous Button">
-                                                                <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="85"/>
-                                                                <state key="normal" image="previous_button"/>
-                                                                <state key="selected" image="previous_button_select"/>
-                                                                <state key="highlighted" image="previous_button_select"/>
-                                                                <connections>
-                                                                    <action selector="playPreviousSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uti-z4-ZKF"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k9W-2l-Ziq" userLabel="Play/Pause Button">
-                                                                <rect key="frame" x="92.333333333333314" y="0.0" width="92.333333333333314" height="85"/>
-                                                                <state key="normal" image="play_button"/>
-                                                                <state key="selected" image="pause_button"/>
-                                                                <state key="highlighted" image="pause_button"/>
-                                                                <connections>
-                                                                    <action selector="playPauseRadio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D41-5J-4Hd"/>
-                                                                </connections>
-                                                            </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJW-SI-nJZ" userLabel="Next Button">
-                                                                <rect key="frame" x="184.66666666666669" y="0.0" width="92.333333333333314" height="85"/>
-                                                                <state key="normal" image="next_button"/>
-                                                                <state key="selected" image="next_button_select"/>
-                                                                <state key="highlighted" image="next_button_select"/>
-                                                                <connections>
-                                                                    <action selector="playNextSong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ig-pf-wwU"/>
-                                                                </connections>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="85" id="enf-FP-fPg"/>
-                                                            <constraint firstAttribute="width" constant="277" id="slG-5w-GUJ"/>
-                                                        </constraints>
-                                                    </stackView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="k9W-2l-Ziq" firstAttribute="centerX" secondItem="gMN-PD-bEK" secondAttribute="centerX" id="Wa9-NJ-GHq"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="YOM-bm-KYI" firstAttribute="centerX" secondItem="gIe-cN-LPP" secondAttribute="centerX" id="AGa-j5-lWO"/>
-                                            <constraint firstItem="YOM-bm-KYI" firstAttribute="centerY" secondItem="gIe-cN-LPP" secondAttribute="centerY" id="yqR-wn-NGE"/>
-                                        </constraints>
-                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="double_bar" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-hY-ymM" userLabel="Double Lines">
+                                        <rect key="frame" x="-5" y="67" width="423" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXc-L6-vZ8" userLabel="Album Art View">
+                                <rect key="frame" x="0.0" y="149.33333333333331" width="414" height="149.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album_art" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-Qw-5RT">
+                                        <rect key="frame" x="35.666666666666657" y="-94.666666666666686" width="343" height="339"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QqW-Qw-5RT" firstAttribute="centerX" secondItem="aXc-L6-vZ8" secondAttribute="centerX" id="cPr-Bg-3NW"/>
+                                    <constraint firstItem="QqW-Qw-5RT" firstAttribute="centerY" secondItem="aXc-L6-vZ8" secondAttribute="centerY" id="sNq-qX-dxj"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcz-zj-N1B" userLabel="Song Info View">
+                                <rect key="frame" x="0.0" y="298.66666666666669" width="414" height="149.33333333333331"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ra3-yM-yLJ" userLabel="Progress View">
+                                <rect key="frame" x="0.0" y="447.99999999999994" width="414" height="149.33333333333331"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-Fu-riW" userLabel="Radio Controls View">
+                                <rect key="frame" x="0.0" y="597.33333333333337" width="414" height="149.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-L7-4n5" userLabel="Footer View">
+                                <rect key="frame" x="0.0" y="746.66666666666663" width="414" height="149.33333333333337"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.9882352941176471" green="0.93333333333333335" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="5Z1-do-3GN"/>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MMo-CD-KbT"/>
-                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PpL-N7-kQ6"/>
-                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wsb-j5-Irm"/>
-                            <constraint firstItem="ZTH-2L-ZRk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e0W-y9-gb0"/>
+                            <constraint firstItem="2Nd-Fu-riW" firstAttribute="centerX" secondItem="3I3-pd-eyF" secondAttribute="centerX" id="46h-Yc-v5M"/>
+                            <constraint firstItem="Ra3-yM-yLJ" firstAttribute="centerX" secondItem="3I3-pd-eyF" secondAttribute="centerX" id="Dnt-OJ-yzh"/>
+                            <constraint firstItem="aXc-L6-vZ8" firstAttribute="centerX" secondItem="3I3-pd-eyF" secondAttribute="centerX" id="fHy-Fm-8kc"/>
+                            <constraint firstItem="rcz-zj-N1B" firstAttribute="centerX" secondItem="3I3-pd-eyF" secondAttribute="centerX" id="hVW-GQ-bhz"/>
+                            <constraint firstItem="9yd-L7-4n5" firstAttribute="centerX" secondItem="3I3-pd-eyF" secondAttribute="centerX" id="mpt-g3-JrZ"/>
                         </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="artistLabel" destination="zrF-bp-D9Q" id="trf-nf-e8h"/>
-                        <outlet property="imageItaly" destination="RIA-bg-Kl1" id="tMf-9t-5kJ"/>
-                        <outlet property="nextButton" destination="sJW-SI-nJZ" id="zLG-ak-PPt"/>
-                        <outlet property="playPauseButton" destination="k9W-2l-Ziq" id="BB6-Kh-zvY"/>
-                        <outlet property="previousButton" destination="W9A-ca-G46" id="qzs-Bk-79x"/>
-                        <outlet property="songLabel" destination="gMN-PD-bEK" id="zcH-mH-4Wv"/>
-                    </connections>
+                    </stackView>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,12 +73,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="italy_squid" width="288" height="341"/>
-        <image name="next_button" width="68" height="68"/>
-        <image name="next_button_select" width="68" height="68"/>
-        <image name="pause_button" width="79" height="79"/>
-        <image name="play_button" width="79" height="79"/>
-        <image name="previous_button" width="68" height="68"/>
-        <image name="previous_button_select" width="68" height="68"/>
+        <image name="album_art" width="343" height="339"/>
+        <image name="double_bar" width="423" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
