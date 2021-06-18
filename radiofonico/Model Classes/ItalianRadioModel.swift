@@ -167,18 +167,28 @@ class ItalianRadioModel {
     
     func addFavorite(song: String) {
         
-        print(myFavorites)
+        print("song from add function: \(song)")
+        
+        print("this is the add favorite function")
+        
+        print("My favorites: \(myFavorites)")
+        
+        // TODO: Index is nil here; add regex
     
         let index = italianRadioSongs.firstIndex(of: "\(song)")
         
+        print(index!)
+        
         if (index != nil) {
         
-        let song = italianRadioSongs[index!]
+        let favorite = italianRadioSongs[index!]
         
-        print(index!)
-        print(song)
+        print("Song index: \(index!)")
+            print("Song: \(song)")
     
-        myFavorites.append(song)
+        myFavorites.append(favorite)
+            
+            print("My favorites: \(myFavorites)")
         }
   
     }

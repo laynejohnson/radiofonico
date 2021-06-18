@@ -196,24 +196,38 @@ class ViewController: UIViewController {
     
     @IBAction func addFavorite(_ sender: UIButton) {
         
-        sender.isSelected.toggle()
+        if songLabel.text == defaultSongLabel {
+            print("This is the first if")
+            // Animation play button
+        }
         
-        if sender.isSelected == true {
+        else if songLabel.text != nil && italianRadio.isPlaying == true {
+            
+            sender.isSelected.toggle()
+        
             let song = songLabel.text
+            
+            print("Songlabel.text: \(song ?? "hello")")
             
             italianRadio.addFavorite(song: song!)
             
         }
         
         else {
-            
-            let song = songLabel.text
-            
-            print("\(String(describing: song))")
-       
-            italianRadio.removeFavorite(song: song!)
-            
+            print("This is the else clause")
         }
+  
+   
+        
+//        else {
+//
+//            let song = songLabel.text
+//
+//            print("\(String(describing: song))")
+//
+//            italianRadio.removeFavorite(song: song!)
+//
+//        }
     
    
     }
