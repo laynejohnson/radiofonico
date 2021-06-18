@@ -1,6 +1,6 @@
 <svg width="277" height="11" viewBox="0 0 277 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.9" filter="url(#filter0_d)">
-<line x1="4" y1="1.5" x2="273" y2="1.5" stroke="#F0F0F3" stroke-width="3"/>
+<line x1="5.5" y1="1.5" x2="271.5" y2="1.5" stroke="#F0F0F3" stroke-width="3" stroke-linecap="round"/>
 </g>
 <defs>
 <filter id="filter0_d" x="0" y="0" width="277" height="11" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

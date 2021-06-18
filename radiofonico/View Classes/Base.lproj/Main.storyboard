@@ -91,33 +91,30 @@
                                         <rect key="frame" x="0.0" y="76" width="414" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
-                                                <rect key="frame" x="72.666666666666686" y="25" width="269" height="30"/>
+                                                <rect key="frame" x="62.666666666666657" y="20" width="289" height="40"/>
                                                 <subviews>
-                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" progressImage="progress_bubble" trackImage="progress_bar" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-i9-Jjv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="269" height="20"/>
-                                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.45000000000000001"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="269" id="0B8-gQ-uxe"/>
-                                                            <constraint firstAttribute="height" constant="20" id="dzp-af-3Ea"/>
-                                                        </constraints>
-                                                    </progressView>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-Wr-ozA">
+                                                        <rect key="frame" x="-2" y="0.0" width="293" height="31"/>
+                                                        <color key="minimumTrackTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </slider>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
-                                                        <rect key="frame" x="0.0" y="14" width="269" height="16"/>
+                                                        <rect key="frame" x="0.0" y="24" width="289" height="16"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="218.66666666666666" height="16"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="238.66666666666666" height="16"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-zv-GV2" userLabel="Separator Label">
-                                                                <rect key="frame" x="222.66666666666669" y="0.0" width="8.6666666666666572" height="16"/>
+                                                                <rect key="frame" x="242.66666666666669" y="0.0" width="8.6666666666666572" height="16"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:31" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
-                                                                <rect key="frame" x="235.33333333333331" y="0.0" width="33.666666666666686" height="16"/>
+                                                                <rect key="frame" x="255.33333333333329" y="0.0" width="33.666666666666657" height="16"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="14"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -260,8 +257,6 @@
         <image name="play_button" width="77" height="77"/>
         <image name="previous_button" width="36" height="33"/>
         <image name="previous_button_highlight" width="36" height="33"/>
-        <image name="progress_bar" width="277" height="11"/>
-        <image name="progress_bubble" width="20" height="20"/>
         <image name="replay_button" width="37" height="38"/>
         <image name="replay_button_selected" width="37" height="38"/>
     </resources>
