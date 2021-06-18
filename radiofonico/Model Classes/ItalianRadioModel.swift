@@ -15,6 +15,8 @@ class ItalianRadioModel {
     
     let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
+    var myFavorites = [String]()
+    
     let defaultSongLabel = " "
     let defaultArtistLabel = "Press play to vibe ✨"
     
@@ -161,5 +163,31 @@ class ItalianRadioModel {
             // Add animation to "Press play to vibe"
             return defaultSongLabel
         }
+    }
+    
+    func addFavorite(song: String) {
+        
+        print(myFavorites)
+    
+        let index = italianRadioSongs.firstIndex(of: "\(song)")
+        
+        if (index != nil) {
+        
+        let song = italianRadioSongs[index!]
+        
+        print(index!)
+        print(song)
+    
+        myFavorites.append(song)
+        }
+  
+    }
+    
+    func removeFavorite(song: String) {
+        
+        if let indexValue = myFavorites.firstIndex(of: song) {
+            myFavorites.remove(at: indexValue)
+        }
+   
     }
 }

@@ -179,20 +179,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-L7-4n5" userLabel="Footer View">
                                 <rect key="frame" x="0.0" y="748" width="414" height="148"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-LC-cZZ" userLabel="Footer Button Stack View">
-                                        <rect key="frame" x="139.66666666666666" y="55" width="134.99999999999997" height="38"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="200" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-LC-cZZ" userLabel="Footer Button Stack View">
+                                        <rect key="frame" x="62.333333333333343" y="55.333333333333371" width="289.33333333333326" height="37.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-7w-xYr" userLabel="Replay Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="37" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37.369999999999997" id="biR-gH-eXr"/>
+                                                </constraints>
                                                 <state key="normal" image="replay_button"/>
                                                 <state key="selected" image="replay_button_selected"/>
+                                                <connections>
+                                                    <action selector="replaySong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJH-2b-DeX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9H-pa-jaa" userLabel="Mano Button">
-                                                <rect key="frame" x="95" y="0.0" width="40" height="38"/>
+                                                <rect key="frame" x="236.99999999999997" y="0.0" width="52.333333333333343" height="37.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74.879999999999995" id="6ZE-jd-I2a"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52.340000000000003" id="DNt-LB-tlE"/>
+                                                    <constraint firstAttribute="width" constant="52.340000000000003" id="Si4-5B-QBo"/>
+                                                    <constraint firstAttribute="height" constant="74.879999999999995" id="Uao-tf-bed"/>
+                                                </constraints>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="-45" maxX="0.0" maxY="0.0"/>
+                                                <size key="titleShadowOffset" width="1" height="0.0"/>
                                                 <state key="normal" image="mano_unselected"/>
                                                 <state key="selected" image="mano_selected"/>
+                                                <connections>
+                                                    <action selector="addFavorite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C30-7L-GEN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="T9H-pa-jaa" firstAttribute="bottom" secondItem="1z3-7w-xYr" secondAttribute="bottom" id="b8D-wa-zPn"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,9 +228,11 @@
                     <connections>
                         <outlet property="albumArt" destination="QqW-Qw-5RT" id="FJu-7u-U7T"/>
                         <outlet property="artistLabel" destination="RNh-4m-g8c" id="zWp-B0-mKG"/>
+                        <outlet property="manoButton" destination="T9H-pa-jaa" id="icQ-1l-DFu"/>
                         <outlet property="nextButton" destination="OtI-oA-M6O" id="rWZ-UL-d2l"/>
                         <outlet property="playPauseButton" destination="WZj-VR-neG" id="TZc-wv-Od6"/>
                         <outlet property="previousButton" destination="z97-l2-YX2" id="g98-XJ-dfi"/>
+                        <outlet property="replayButton" destination="1z3-7w-xYr" id="aVM-gb-lxP"/>
                         <outlet property="songLabel" destination="gEQ-dr-9Pt" id="RKF-EG-xOn"/>
                     </connections>
                 </viewController>
@@ -231,7 +253,7 @@
         <image name="album_art" width="343" height="339"/>
         <image name="double_bar" width="423" height="14"/>
         <image name="mano_selected" width="56" height="84"/>
-        <image name="mano_unselected" width="40" height="35"/>
+        <image name="mano_unselected" width="54" height="76"/>
         <image name="next_button" width="36" height="33"/>
         <image name="next_button_highlight" width="36" height="33"/>
         <image name="pause_button" width="77" height="77"/>

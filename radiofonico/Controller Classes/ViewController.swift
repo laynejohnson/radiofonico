@@ -46,14 +46,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButton: UIButton!
     
-    @IBOutlet weak var imageItaly: UIImageView!
+    @IBOutlet weak var replayButton: UIButton!
+    
+    @IBOutlet weak var manoButton: UIButton!
+    
+    // Outlet for italy animation
+    //    @IBOutlet weak var imageItaly: UIImageView!
     
     
     // MARK: - Variables
     // ---------------------------------- //
     // - - - - - - -  VARS - - - - - - -  //
     // ---------------------------------- //
-
+    
     var audioPlayer: AVAudioPlayer?
     let italianRadio = ItalianRadioModel()
     
@@ -143,17 +148,17 @@ class ViewController: UIViewController {
             albumArt.image = #imageLiteral(resourceName: "album_art")
         }
         
-//        // Start animation on play
-//        imageItaly.animationImages = animatedImages(for: "radiofonico")
-//        imageItaly.animationDuration = 7
-//        imageItaly.animationRepeatCount = 0
-//        imageItaly.image = imageItaly.animationImages?.first
-//        imageItaly.startAnimating()
-//
-//        // Stop animation on pause
-//        if italianRadio.isPlaying == false {
-//            imageItaly.stopAnimating()
-//        }
+        //        // Start animation on play
+        //        imageItaly.animationImages = animatedImages(for: "radiofonico")
+        //        imageItaly.animationDuration = 7
+        //        imageItaly.animationRepeatCount = 0
+        //        imageItaly.image = imageItaly.animationImages?.first
+        //        imageItaly.startAnimating()
+        //
+        //        // Stop animation on pause
+        //        if italianRadio.isPlaying == false {
+        //            imageItaly.stopAnimating()
+        //        }
         
     }
     
@@ -180,6 +185,39 @@ class ViewController: UIViewController {
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         }
     }
-
+    
+    
+    @IBAction func replaySong(_ sender: UIButton) {
+        
+        sender.isSelected.toggle()
+    
+        
+    }
+    
+    @IBAction func addFavorite(_ sender: UIButton) {
+        
+        sender.isSelected.toggle()
+        
+        if sender.isSelected == true {
+            let song = songLabel.text
+            
+            italianRadio.addFavorite(song: song!)
+            
+        }
+        
+        else {
+            
+            let song = songLabel.text
+            
+            print("\(String(describing: song))")
+       
+            italianRadio.removeFavorite(song: song!)
+            
+        }
+    
+   
+    }
+    
+    
 } // End ViewController Class
 
