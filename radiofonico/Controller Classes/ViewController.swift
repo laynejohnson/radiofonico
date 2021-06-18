@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     let italianRadio = ItalianRadioModel()
     
     let defaultSongLabel = " "
-    let defaultArtistLabel = "Press play to vibe 🤙 "
+    let defaultArtistLabel = "Press play to vibe ✨ 🍝 "
     
     let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
     let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
