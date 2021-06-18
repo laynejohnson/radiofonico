@@ -167,30 +167,18 @@ class ItalianRadioModel {
     
     func addFavorite(song: String) {
         
-        print("song from add function: \(song)")
+        // Filter array for song index
+        let indexArray = italianRadioSongs.indices.filter { italianRadioSongs[$0].localizedCaseInsensitiveContains("\(song)") }
         
-        print("this is the add favorite function")
         
-        print("My favorites: \(myFavorites)")
+        let index = indexArray[0]
         
-        // TODO: Index is nil here; add regex
-    
-        let index = italianRadioSongs.firstIndex(of: "\(song)")
+        let favorite = italianRadioSongs[index]
         
-        print(index!)
-        
-        if (index != nil) {
-        
-        let favorite = italianRadioSongs[index!]
-        
-        print("Song index: \(index!)")
-            print("Song: \(song)")
-    
         myFavorites.append(favorite)
-            
-            print("My favorites: \(myFavorites)")
-        }
-  
+        
+        
+        
     }
     
     func removeFavorite(song: String) {
@@ -198,6 +186,6 @@ class ItalianRadioModel {
         if let indexValue = myFavorites.firstIndex(of: song) {
             myFavorites.remove(at: indexValue)
         }
-   
+        
     }
 }
