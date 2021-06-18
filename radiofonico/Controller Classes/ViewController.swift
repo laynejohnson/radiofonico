@@ -110,6 +110,16 @@ class ViewController: UIViewController {
         return images
     }
     
+    func setMano(status: Bool) {
+        
+        if status == true {
+            manoButton.isSelected = true
+        }
+        else {
+            manoButton.isSelected = false
+        }
+    }
+    
     // MARK: - IBOutlets
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - - - //
@@ -136,6 +146,10 @@ class ViewController: UIViewController {
             
             let song = italianRadio.playPreviousSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+            
+            let isFavorite = italianRadio.checkFavorite(song: song)
+            
+            setMano(status: isFavorite)
         }
     }
     
@@ -144,9 +158,15 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
+        let isFavorite = italianRadio.checkFavorite(song: song)
+        
+        setMano(status: isFavorite)
+        
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
         }
+        
+        
         
         //        // Start animation on play
         //        imageItaly.animationImages = animatedImages(for: "radiofonico")
@@ -183,6 +203,10 @@ class ViewController: UIViewController {
             
             let song = italianRadio.playNextSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+            
+            let isFavorite = italianRadio.checkFavorite(song: song)
+            
+            setMano(status: isFavorite)
         }
     }
     
@@ -196,17 +220,11 @@ class ViewController: UIViewController {
     
     @IBAction func addFavorite(_ sender: UIButton) {
         
-//        sender.isSelected.toggle()
-        
         if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
             
             sender.isSelected = true
             
-            print("IBfunc add song to favorites")
-            
             let song = songLabel.text
-            
-            print("Songlabel.text: \(song ?? "hello")")
             
             italianRadio.addFavorite(song: song!)
             
@@ -216,7 +234,9 @@ class ViewController: UIViewController {
             
             sender.isSelected = false
             
-            print("IBfunc remove song from favorites")
+            let song = songLabel.text
+            
+            italianRadio.removeFavorite(song: song!)
         }
         else {
             // Animate play button

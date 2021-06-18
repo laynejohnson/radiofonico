@@ -13,6 +13,9 @@ var audioPlayer: AVAudioPlayer?
 
 class ItalianRadioModel {
     
+//    // Create song class
+//    var italianRadioSongs = [Song]()
+    
     let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
     var myFavorites = [String]()
@@ -120,6 +123,7 @@ class ItalianRadioModel {
             isPlaying = true
             song = italianRadioSongs[0]
             playSound(song)
+            
             return song
             
         } else if sender.isSelected == false {
@@ -170,22 +174,33 @@ class ItalianRadioModel {
         // Filter array for song index
         let indexArray = italianRadioSongs.indices.filter { italianRadioSongs[$0].localizedCaseInsensitiveContains("\(song)") }
         
-        
+        // Retrieve index from filtered array
         let index = indexArray[0]
         
+        // Find favorite song
         let favorite = italianRadioSongs[index]
         
+        // Add song to favorites
         myFavorites.append(favorite)
-        
-        
         
     }
     
     func removeFavorite(song: String) {
         
-        if let indexValue = myFavorites.firstIndex(of: song) {
-            myFavorites.remove(at: indexValue)
-        }
+        // Filter array for song index
+        let indexArray = myFavorites.indices.filter { myFavorites[$0].localizedCaseInsensitiveContains("\(song)") }
         
+        // Retrieve index from filtered array
+        let index = indexArray[0]
+        
+        // Remove song from favorites
+        myFavorites.remove(at: index)
     }
+    
+    func checkFavorite(song: String) -> Bool {
+        
+       myFavorites.contains(song)
+    
+    }
+    
 }

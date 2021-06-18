@@ -13,6 +13,7 @@
 		E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */; };
 		E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */; };
 		E88554682666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */; };
+		E89982F5267CF5C3005C3322 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89982F4267CF5C3005C3322 /* Song.swift */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
 		E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAB1264EF74B00F231B1 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mango-Bella d'Estate.mp3"; sourceTree = "<group>"; };
 		E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla-Washington.mp3"; sourceTree = "<group>"; };
 		E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Franco Battiato-Summer On A Solitary Beach.mp3"; sourceTree = "<group>"; };
+		E89982F4267CF5C3005C3322 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */,
+				E89982F4267CF5C3005C3322 /* Song.swift */,
 			);
 			path = "Model Classes";
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */,
+				E89982F5267CF5C3005C3322 /* Song.swift in Sources */,
 				E8D5AAC7264EF89D00F231B1 /* ItalianRadioModel.swift in Sources */,
 				E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */,
 				E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */,
