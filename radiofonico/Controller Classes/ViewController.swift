@@ -22,10 +22,8 @@ import AVFoundation
 
 // TODO: Implement song time
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
-// TODO: Add color options
-// TODO: Add dark mode
-// TODO: Add favorites, shuffle, repeat, progress bar
-// TODO: Redesign player
+// TODO: Implement repeat func
+// TODO: Implement progress bar and song timer
 
 class ViewController: UIViewController {
     
