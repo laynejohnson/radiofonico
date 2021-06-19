@@ -20,10 +20,11 @@ import AVFoundation
 // - - - - - - - DEV TODO - - - - - - //
 // ---------------------------------- //
 
-// TODO: Implement song time
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
-// TODO: Implement repeat func
+// TODO: Implement repeat function
 // TODO: Implement progress bar and song timer
+// TODO: Refactor with Song class
+// TODO: Add code comments
 
 class ViewController: UIViewController {
     
@@ -71,13 +72,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         
         songLabel.text = ""
         artistLabel.text = ""
         
         albumArt.image = #imageLiteral(resourceName: "premi_play")
-        
         
     }
     
@@ -111,8 +112,7 @@ class ViewController: UIViewController {
         
         if status == true {
             manoButton.isSelected = true
-        }
-        else {
+        } else {
             manoButton.isSelected = false
         }
     }
@@ -125,6 +125,7 @@ class ViewController: UIViewController {
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
         if italianRadio.isPlaying == false {
+            
             songLabel.text = " "
             artistLabel.text = defaultArtistLabel
             
@@ -146,10 +147,10 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         
         if song == defaultSongLabel {
-            // Flash play button
             
-        }
-        else {
+            // Flash play button
+            animateButton(button: playPauseButton)
+        } else {
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
             let isFavorite = italianRadio.checkFavorite(song: song)
@@ -160,8 +161,6 @@ class ViewController: UIViewController {
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
         }
-        
-        
         
         //        // Start animation on play
         //        imageItaly.animationImages = animatedImages(for: "radiofonico")
@@ -180,6 +179,7 @@ class ViewController: UIViewController {
     @IBAction func playNextSong(_ sender: UIButton) {
         
         if italianRadio.isPlaying == false {
+            
             songLabel.text = " "
             artistLabel.text = defaultArtistLabel
             
@@ -196,11 +196,10 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func replaySong(_ sender: UIButton) {
+        // TODO: Implement function
         
         sender.isSelected.toggle()
-        
         
     }
     
@@ -214,8 +213,7 @@ class ViewController: UIViewController {
             
             italianRadio.addFavorite(song: song!)
             
-        }
-        else if songLabel.text != nil && sender.isSelected == true {
+        } else if songLabel.text != nil && sender.isSelected == true {
             // Remove song from favorites
             
             sender.isSelected = false
@@ -223,14 +221,12 @@ class ViewController: UIViewController {
             let song = songLabel.text
             
             italianRadio.removeFavorite(song: song!)
-        }
-        else {
+            
+        } else {
             // Animate play button
+            animateButton(button: playPauseButton)
         }
-        
-        
     }
     
-    
-} // End ViewController Class
+} // END ViewController Class
 

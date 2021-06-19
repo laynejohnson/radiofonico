@@ -13,9 +13,6 @@ var audioPlayer: AVAudioPlayer?
 
 class ItalianRadioModel {
     
-    //    // Create song class
-    //    var italianRadioSongs = [Song]()
-    
     let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
     var myFavorites = [String]()
@@ -50,10 +47,10 @@ class ItalianRadioModel {
             songLabel.text = modifiedSong
             artistLabel.text = artist
         }
-        
     }
     
     func chooseSong() -> String {
+        
         song = italianRadioSongs.randomElement()!
         return song
     }
@@ -108,6 +105,7 @@ class ItalianRadioModel {
                 
                 return song
             }
+            
         } else {
             
             return defaultSongLabel
@@ -182,7 +180,6 @@ class ItalianRadioModel {
         
         // Add song to favorites
         myFavorites.append(favorite)
-        
     }
     
     func removeFavorite(song: String) {
@@ -200,7 +197,6 @@ class ItalianRadioModel {
     func checkFavorite(song: String) -> Bool {
         
         myFavorites.contains(song)
-        
     }
     
-}
+} // END ItalianRadioModel class
