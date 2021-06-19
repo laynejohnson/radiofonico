@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     let italianRadio = ItalianRadioModel()
     
     let defaultSongLabel = " "
-    let defaultArtistLabel = "Press play to vibe ✨ 🍝 "
+    let defaultArtistLabel = " "
     
     let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
     let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
@@ -79,6 +79,8 @@ class ViewController: UIViewController {
         artistLabel.text = ""
         
         albumArt.image = #imageLiteral(resourceName: "premi_play")
+        
+        
     }
     
     //MARK: - Functions
@@ -96,18 +98,15 @@ class ViewController: UIViewController {
         return images
     }
     
-    func animatedImagesReverse(for name: String) -> [UIImage]
-    {
+    func animateButton(button: UIButton) {
         
-        var i = 0
-        var images = [UIImage]()
-        
-        while let image = UIImage(named: "\(i)") {
-            images.append(image)
-            i -= 1
+        UIView.animate(withDuration: 0.4, animations: { () -> Void in
+            button.transform = .init(scaleX: 1.25, y: 1.25)
+        }) { (finished: Bool) -> Void in
+            UIView.animate(withDuration: 0.4, animations: { () -> Void in
+                button.transform = .identity
+            })
         }
-        
-        return images
     }
     
     func setMano(status: Bool) {
@@ -131,16 +130,7 @@ class ViewController: UIViewController {
             songLabel.text = " "
             artistLabel.text = defaultArtistLabel
             
-            // Text animation
-            UIView.animate(withDuration: 0.4, animations: { () -> Void in
-                self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
-                self.artistLabel.textColor = self.radioDoubleSquid
-            }) { (finished: Bool) -> Void in
-                self.artistLabel.textColor = self.radioDoubleSquid
-                UIView.animate(withDuration: 0.4, animations: { () -> Void in
-                    self.artistLabel.transform = .identity
-                })
-            }
+            animateButton(button: playPauseButton)
             
         } else {
             
@@ -156,11 +146,18 @@ class ViewController: UIViewController {
     @IBAction func playPauseRadio(_ sender: UIButton) {
         
         let song = italianRadio.radioOnOff(sender: sender)
-        italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
         
-        let isFavorite = italianRadio.checkFavorite(song: song)
-        
-        setMano(status: isFavorite)
+        if song == defaultSongLabel {
+            // Flash play button
+            
+        }
+        else {
+            italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
+            
+            let isFavorite = italianRadio.checkFavorite(song: song)
+            
+            setMano(status: isFavorite)
+        }
         
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
@@ -188,16 +185,7 @@ class ViewController: UIViewController {
             songLabel.text = " "
             artistLabel.text = defaultArtistLabel
             
-            // Text animation
-            UIView.animate(withDuration: 0.4, animations: { () -> Void in
-                self.artistLabel.transform = .init(scaleX: 1.25, y: 1.25)
-                self.artistLabel.textColor = self.radioDoubleSquid
-            }) { (finished: Bool) -> Void in
-                self.artistLabel.textColor = self.radioDoubleSquid
-                UIView.animate(withDuration: 0.4, animations: { () -> Void in
-                    self.artistLabel.transform = .identity
-                })
-            }
+            animateButton(button: playPauseButton)
             
         } else {
             
@@ -214,7 +202,7 @@ class ViewController: UIViewController {
     @IBAction func replaySong(_ sender: UIButton) {
         
         sender.isSelected.toggle()
-    
+        
         
     }
     
@@ -241,8 +229,8 @@ class ViewController: UIViewController {
         else {
             // Animate play button
         }
-    
-   
+        
+        
     }
     
     

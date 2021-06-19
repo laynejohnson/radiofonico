@@ -13,8 +13,8 @@ var audioPlayer: AVAudioPlayer?
 
 class ItalianRadioModel {
     
-//    // Create song class
-//    var italianRadioSongs = [Song]()
+    //    // Create song class
+    //    var italianRadioSongs = [Song]()
     
     let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
@@ -135,17 +135,16 @@ class ItalianRadioModel {
     
     func playNextSong() -> String {
         
-
         if isPlaying == true {
             // Get index of current song
             print("Current song: \(song)")
             let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
             print("Song index: \(songIndex!)")
-
+            
             // Get index of next song
             var nextSongIndex = songIndex! + 1
             print("Next song index: \(nextSongIndex)")
-
+            
             // Reset index at end of array
             if nextSongIndex > italianRadioSongs.count - 1 {
                 nextSongIndex = 0
@@ -153,7 +152,7 @@ class ItalianRadioModel {
                 song = nextSong
                 playSound(song)
                 return song
-
+                
             } else {
                 // Play next song
                 let nextSong = italianRadioSongs[nextSongIndex]
@@ -161,7 +160,7 @@ class ItalianRadioModel {
                 song = nextSong
                 print("New Current Song: \(song)")
                 playSound(song)
-
+                
                 return song
             }
         } else {
@@ -169,44 +168,6 @@ class ItalianRadioModel {
             return defaultSongLabel
         }
     }
-    
-    
-//    func playNextSong() -> String {
-//
-//
-//        if isPlaying == true {
-//            // Get index of current song
-//            print("Current song: \(song)")
-//            let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-//            print("Song index: \(songIndex!)")
-//
-//            // Get index of next song
-//            var nextSongIndex = songIndex! + 1
-//            print("Next song index: \(nextSongIndex)")
-//
-//            // Reset index at end of array
-//            if nextSongIndex > italianRadioSongs.count - 1 {
-//                nextSongIndex = 0
-//                let nextSong = italianRadioSongs[nextSongIndex]
-//                song = nextSong
-//                playSound(song)
-//                return song
-//
-//            } else {
-//                // Play next song
-//                let nextSong = italianRadioSongs[nextSongIndex]
-//                print("Next song: \(nextSong)")
-//                song = nextSong
-//                print("New Current Song: \(song)")
-//                playSound(song)
-//
-//                return song
-//            }
-//        } else {
-//            // Add animation to "Press play to vibe"
-//            return defaultSongLabel
-//        }
-//    }
     
     func addFavorite(song: String) {
         
@@ -238,8 +199,8 @@ class ItalianRadioModel {
     
     func checkFavorite(song: String) -> Bool {
         
-       myFavorites.contains(song)
-    
+        myFavorites.contains(song)
+        
     }
     
 }
