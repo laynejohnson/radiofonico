@@ -75,10 +75,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        songLabel.text = defaultSongLabel
-        artistLabel.text = defaultArtistLabel
+        songLabel.text = ""
+        artistLabel.text = ""
         
-        albumArt.image = nil
+        albumArt.image = #imageLiteral(resourceName: "premi_play")
     }
     
     //MARK: - Functions
