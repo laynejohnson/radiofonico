@@ -5,6 +5,8 @@
 //  Created by Layne Johnson on 5/14/21.
 //
 
+// TODO: Clean up and code comment
+
 import Foundation
 import UIKit
 import AVFoundation
@@ -12,6 +14,8 @@ import AVFoundation
 var audioPlayer: AVAudioPlayer?
 
 class ItalianRadioModel {
+    
+    // MARK: - Variables
     
     let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
     
@@ -22,6 +26,8 @@ class ItalianRadioModel {
     
     var song = ""
     var isPlaying = false
+    
+    // MARK: - Song Selection & Song Label Functions
     
     func setSongLabel(song: String, songLabel: UILabel, artistLabel: UILabel) {
         
@@ -55,6 +61,8 @@ class ItalianRadioModel {
         return song
     }
     
+    // MARK: - Audio Player
+    
     func playSound(_ soundName: String) {
         
         let path = Bundle.main.path(forResource: soundName, ofType:nil)!
@@ -70,6 +78,8 @@ class ItalianRadioModel {
             print("Could not summon audio player")
         }
     }
+    
+    // MARK: - Radio Controls Functions
     
     func playPreviousSong() -> String {
         
@@ -162,10 +172,13 @@ class ItalianRadioModel {
                 return song
             }
         } else {
+            
             // Add animation to "Press play to vibe"
             return defaultSongLabel
         }
     }
+    
+    // MARK: - Favorite Functions
     
     func addFavorite(song: String) {
         

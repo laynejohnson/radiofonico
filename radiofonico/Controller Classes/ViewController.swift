@@ -133,7 +133,7 @@ class ViewController: UIViewController {
             
             animateButton(button: playPauseButton)
             
-        } else {
+        } else if italianRadio.isPlaying == true {
             
             let song = italianRadio.playPreviousSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
@@ -141,6 +141,11 @@ class ViewController: UIViewController {
             let isFavorite = italianRadio.checkFavorite(song: song)
             
             setMano(status: isFavorite)
+            
+        } else {
+            
+            animateButton(button: playPauseButton)
+
         }
     }
     
@@ -191,7 +196,7 @@ class ViewController: UIViewController {
 
             animateButton(button: playPauseButton)
             
-        } else {
+        } else if italianRadio.isPlaying == true {
             
             // Get next song
             let song = italianRadio.playNextSong()
@@ -202,6 +207,10 @@ class ViewController: UIViewController {
             
             // Set mano
             setMano(status: isFavorite)
+            
+        } else {
+            
+            animateButton(button: playPauseButton)
         }
     }
     
