@@ -129,10 +129,7 @@ class ViewController: UIViewController {
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
-        if italianRadio.isPlaying == false {
-            
-            songLabel.text = " "
-            artistLabel.text = defaultArtistLabel
+        if italianRadio.isPlaying == false && songLabel.text == "" {
             
             animateButton(button: playPauseButton)
             
