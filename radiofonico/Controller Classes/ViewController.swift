@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var manoButton: UIButton!
     
-    // Outlet for italy animation
+    // IBOutlet for italy animation
     //    @IBOutlet weak var imageItaly: UIImageView!
     
     
@@ -82,8 +82,9 @@ class ViewController: UIViewController {
         
     }
     
-    //MARK: - Functions
+    //MARK: - Animations
     
+    // Serial image animation
     func animatedImages(for name: String) -> [UIImage] {
         
         var i = 0
@@ -97,6 +98,7 @@ class ViewController: UIViewController {
         return images
     }
     
+    // Scale animation for buttons
     func animateButton(button: UIButton) {
         
         UIView.animate(withDuration: 0.4, animations: { () -> Void in
@@ -108,6 +110,9 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - UI Functions
+    
+    // Set mano icon
     func setMano(status: Bool) {
         
         if status == true {
@@ -150,17 +155,24 @@ class ViewController: UIViewController {
             
             // Flash play button
             animateButton(button: playPauseButton)
+            
         } else {
+            
+            // Get song
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
+            // Check song favorite status
             let isFavorite = italianRadio.checkFavorite(song: song)
             
+            // Set mano
             setMano(status: isFavorite)
         }
         
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
         }
+        
+        // Italy animation
         
         //        // Start animation on play
         //        imageItaly.animationImages = animatedImages(for: "radiofonico")
@@ -178,27 +190,27 @@ class ViewController: UIViewController {
     
     @IBAction func playNextSong(_ sender: UIButton) {
         
-        if italianRadio.isPlaying == false {
-            
-            songLabel.text = " "
-            artistLabel.text = defaultArtistLabel
-            
+        if italianRadio.isPlaying == false && songLabel.text == "" {
+
             animateButton(button: playPauseButton)
             
         } else {
             
+            // Get next song
             let song = italianRadio.playNextSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
+            // Check favorite status
             let isFavorite = italianRadio.checkFavorite(song: song)
             
+            // Set mano
             setMano(status: isFavorite)
         }
     }
     
     @IBAction func replaySong(_ sender: UIButton) {
-        // TODO: Implement function
         
+        // TODO: Implement replaySong function
         sender.isSelected.toggle()
         
     }
@@ -207,6 +219,7 @@ class ViewController: UIViewController {
         
         if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
             
+            // Favorite current song
             sender.isSelected = true
             
             let song = songLabel.text
@@ -215,12 +228,15 @@ class ViewController: UIViewController {
             
         } else if songLabel.text != nil && sender.isSelected == true {
             // Remove song from favorites
-            
             sender.isSelected = false
             
             let song = songLabel.text
             
             italianRadio.removeFavorite(song: song!)
+            
+        } else if songLabel.text == nil {
+            // Animate play button
+            animateButton(button: playPauseButton)
             
         } else {
             // Animate play button
