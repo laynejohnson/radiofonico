@@ -5,10 +5,13 @@
 //  Created by Layne Johnson on 5/14/21.
 //  Copyright © 2021. All rights reserved.
 
-//  Music credit: Beats in Space Radio
-//  https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
-
-/*  TRACKLIST: 1. Mango - Bella d’estate 2. Lucio Dalla - Washington 3. Franco Battiato - Summer on a Solitary Beach 4. Lucio Battisti - Rilassati ed Ascolta 5. Matia Bazar - Palestina - 1983 Ariston 6. Krisma - Samora Club 7. Paolo Tofani - Un Altro Universo 8. Alice - Chan-Son Egocentrique 9. Giuni Russo - Buenos Aires 10. Enrico Ruggeri - Polvere - 1983 CGD 11. Anna Oxa - Uragano e Nuvole 12. Garbo - A Berlino. Va Bene 13. Righeira - Disco Volante 14. Gaznevada - Agente Speciale 15. Mike Francis - Survivor 16. Marcella Bella - Nell’Aria 17. Teresa De Sio - Voglia E Turna 18. Saint Just - Dolci Momenti Interview with Il Quadro di Troisi (Donato Dozzy + Eva Geist) Il Quadro di Troisi - Non Ricordi Donato Dozzy - K3 Donato Dozzy - Sisterhood
+/*
+ 
+ Music credit: Beats in Space Radio
+ 
+ https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
+ 
+ TRACKLIST: 1. Mango - Bella d’estate 2. Lucio Dalla - Washington 3. Franco Battiato - Summer on a Solitary Beach 4. Lucio Battisti - Rilassati ed Ascolta 5. Matia Bazar - Palestina - 1983 Ariston 6. Krisma - Samora Club 7. Paolo Tofani - Un Altro Universo 8. Alice - Chan-Son Egocentrique 9. Giuni Russo - Buenos Aires 10. Enrico Ruggeri - Polvere - 1983 CGD 11. Anna Oxa - Uragano e Nuvole 12. Garbo - A Berlino. Va Bene 13. Righeira - Disco Volante 14. Gaznevada - Agente Speciale 15. Mike Francis - Survivor 16. Marcella Bella - Nell’Aria 17. Teresa De Sio - Voglia E Turna 18. Saint Just - Dolci Momenti Interview with Il Quadro di Troisi (Donato Dozzy + Eva Geist) Il Quadro di Troisi - Non Ricordi Donato Dozzy - K3 Donato Dozzy - Sisterhood
  
  */
 
@@ -20,11 +23,10 @@ import AVFoundation
 // - - - - - - - DEV TODO - - - - - - //
 // ---------------------------------- //
 
-// TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
-// TODO: Implement repeat function
 // TODO: Implement progress bar and song timer
+// TODO: Implement repeat function
+// TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor with Song class
-// TODO: Add code comments
 
 class ViewController: UIViewController {
     
@@ -145,7 +147,7 @@ class ViewController: UIViewController {
         } else {
             
             animateButton(button: playPauseButton)
-
+            
         }
     }
     
@@ -193,7 +195,7 @@ class ViewController: UIViewController {
     @IBAction func playNextSong(_ sender: UIButton) {
         
         if italianRadio.isPlaying == false && songLabel.text == "" {
-
+            
             animateButton(button: playPauseButton)
             
         } else if italianRadio.isPlaying == true {
@@ -216,14 +218,25 @@ class ViewController: UIViewController {
     
     @IBAction func replaySong(_ sender: UIButton) {
         
-        // TODO: Implement replaySong function
-        sender.isSelected.toggle()
-        
+        if songLabel.text == "" {
+            // Animate play button
+            animateButton(button: playPauseButton)
+        } else {
+            
+            // TODO: Implement replaySong function
+            sender.isSelected.toggle()
+        }
     }
     
     @IBAction func addFavorite(_ sender: UIButton) {
         
-        if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
+        if songLabel.text == "" {
+            // Animate play button
+            animateButton(button: playPauseButton)
+        }
+        
+        
+        else if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
             
             // Favorite current song
             sender.isSelected = true
