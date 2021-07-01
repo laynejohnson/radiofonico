@@ -101,6 +101,9 @@
                                                         </constraints>
                                                         <color key="minimumTrackTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="displaySongProgress:" destination="BYZ-38-t0r" eventType="valueChanged" id="cvr-NA-LIa"/>
+                                                        </connections>
                                                     </slider>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
                                                         <rect key="frame" x="0.0" y="38" width="309" height="18"/>
@@ -226,6 +229,7 @@
                     <connections>
                         <outlet property="albumArt" destination="QqW-Qw-5RT" id="FJu-7u-U7T"/>
                         <outlet property="artistLabel" destination="RNh-4m-g8c" id="zWp-B0-mKG"/>
+                        <outlet property="elapsedTimeLabel" destination="RaQ-be-yzd" id="rET-aE-cL5"/>
                         <outlet property="manoButton" destination="T9H-pa-jaa" id="icQ-1l-DFu"/>
                         <outlet property="nextButton" destination="OtI-oA-M6O" id="rWZ-UL-d2l"/>
                         <outlet property="playPauseButton" destination="WZj-VR-neG" id="TZc-wv-Od6"/>
@@ -233,6 +237,7 @@
                         <outlet property="progressBar" destination="v3b-Wr-ozA" id="pVS-Dy-gE9"/>
                         <outlet property="replayButton" destination="1z3-7w-xYr" id="aVM-gb-lxP"/>
                         <outlet property="songLabel" destination="gEQ-dr-9Pt" id="RKF-EG-xOn"/>
+                        <outlet property="songTimeLabel" destination="rwl-X9-4HX" id="qgQ-TX-gfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

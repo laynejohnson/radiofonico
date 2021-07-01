@@ -43,6 +43,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UISlider!
     
+    @IBOutlet weak var elapsedTimeLabel: UILabel!
+    
+    @IBOutlet weak var songTimeLabel: UILabel!
+    
     @IBOutlet weak var previousButton: UIButton!
     
     @IBOutlet weak var playPauseButton: UIButton!
@@ -63,6 +67,7 @@ class ViewController: UIViewController {
     // ---------------------------------- //
     
     var audioPlayer: AVAudioPlayer?
+    var timer: Timer?
     let italianRadio = ItalianRadioModel()
     
     let defaultSongLabel = " "
@@ -83,6 +88,11 @@ class ViewController: UIViewController {
         artistLabel.text = ""
         
         albumArt.image = #imageLiteral(resourceName: "premi_play")
+        
+        elapsedTimeLabel.text = "00:00"
+        songTimeLabel.text = "00:00"
+        
+        progressBar.value = 0.0
         
     }
     
@@ -156,7 +166,7 @@ class ViewController: UIViewController {
     @IBAction func playPauseRadio(_ sender: UIButton) {
         
         let song = italianRadio.radioOnOff(sender: sender)
-        
+    
         if song == defaultSongLabel {
             
             // Flash play button
