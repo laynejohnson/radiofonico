@@ -41,6 +41,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var artistLabel: UILabel!
     
+    @IBOutlet weak var progressBar: UISlider!
+    
     @IBOutlet weak var previousButton: UIButton!
     
     @IBOutlet weak var playPauseButton: UIButton!
