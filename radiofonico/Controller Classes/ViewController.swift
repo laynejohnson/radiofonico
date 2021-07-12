@@ -141,6 +141,15 @@ class ViewController: UIViewController {
     // - - - - - - - ACTIONS - - - - - - - //
     // ---------------------------------- //
     
+    @IBAction func displaySongProgress(_ sender: UISlider) {
+        
+// TODO: Implement progress bar
+    
+//        elapsedTimeLabel.text = String(audioPlayer?.currentTime)
+//        songTimeLabel.text = String(sender.value)
+        
+    }
+    
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
         if italianRadio.isPlaying == false && songLabel.text == "" {
