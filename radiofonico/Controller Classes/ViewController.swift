@@ -19,6 +19,7 @@ import UIKit
 import AVFoundation
 
 // MARK: - Dev TODOs:
+
 // ---------------------------------- //
 // - - - - - - - DEV TODO - - - - - - //
 // ---------------------------------- //
@@ -31,30 +32,21 @@ import AVFoundation
 class ViewController: UIViewController {
     
     // MARK: - IBOutlets
+    
     // ---------------------------------- //
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
     
     @IBOutlet weak var albumArt: UIImageView!
-    
     @IBOutlet weak var songLabel: UILabel!
-    
     @IBOutlet weak var artistLabel: UILabel!
-    
     @IBOutlet weak var progressBar: UISlider!
-    
     @IBOutlet weak var elapsedTimeLabel: UILabel!
-    
     @IBOutlet weak var songTimeLabel: UILabel!
-    
     @IBOutlet weak var previousButton: UIButton!
-    
     @IBOutlet weak var playPauseButton: UIButton!
-    
     @IBOutlet weak var nextButton: UIButton!
-    
     @IBOutlet weak var replayButton: UIButton!
-    
     @IBOutlet weak var manoButton: UIButton!
     
     // IBOutlet for italy animation
@@ -62,6 +54,7 @@ class ViewController: UIViewController {
     
     
     // MARK: - Variables
+    
     // ---------------------------------- //
     // - - - - - - -  VARS - - - - - - -  //
     // ---------------------------------- //
@@ -73,12 +66,7 @@ class ViewController: UIViewController {
     let defaultSongLabel = " "
     let defaultArtistLabel = " "
     
-    let radioPink = #colorLiteral(red: 0.9166277051, green: 0.4749821424, blue: 0.5771788955, alpha: 1)
-    let radioSquid = #colorLiteral(red: 0.2235294118, green: 0.2274509804, blue: 0.1960784314, alpha: 1)
-    let radioDoubleSquid = #colorLiteral(red: 0.1168107167, green: 0.177724719, blue: 0.2031671703, alpha: 1)
-    
     // MARK: - viewDidLoad
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -137,18 +125,10 @@ class ViewController: UIViewController {
     }
     
     // MARK: - IBOutlets
+    
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - - - //
     // ---------------------------------- //
-    
-    @IBAction func displaySongProgress(_ sender: UISlider) {
-        
-// TODO: Implement progress bar
-    
-//        elapsedTimeLabel.text = String(audioPlayer?.currentTime)
-//        songTimeLabel.text = String(sender.value)
-        
-    }
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
@@ -175,7 +155,7 @@ class ViewController: UIViewController {
     @IBAction func playPauseRadio(_ sender: UIButton) {
         
         let song = italianRadio.radioOnOff(sender: sender)
-    
+        
         if song == defaultSongLabel {
             
             // Flash play button
@@ -255,7 +235,6 @@ class ViewController: UIViewController {
             // Animate play button
             animateButton(button: playPauseButton)
         }
-        
         
         else if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
             
