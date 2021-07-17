@@ -24,10 +24,10 @@ import AVFoundation
 // - - - - - - - DEV TODO - - - - - - //
 // ---------------------------------- //
 
-// TODO: Implement progress bar and song timer
 // TODO: Implement repeat function
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor with Song class
+// TODO: Add animated launch screen
 
 class ViewController: UIViewController {
     
@@ -70,9 +70,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
-        var audioPlayer: AVAudioPlayer?
-        
+
         songLabel.text = ""
         artistLabel.text = ""
         
@@ -208,12 +206,14 @@ class ViewController: UIViewController {
         }
         
         if italianRadio.isPlaying == true {
+            
             albumArt.image = #imageLiteral(resourceName: "album_art")
             
             spotify.value = 0.0
             spotify.maximumValue = Float(audioPlayer!.duration)
             
             timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updatespotify), userInfo: nil, repeats: true)
+            
         }
         
         // Italy animation
@@ -262,10 +262,9 @@ class ViewController: UIViewController {
             // Animate play button
             animateButton(button: playPauseButton)
         } else {
-            
-            // TODO: Implement replaySong function
             sender.isSelected.toggle()
         }
+        
     }
     
     @IBAction func addFavorite(_ sender: UIButton) {
