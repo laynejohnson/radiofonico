@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var albumArt: UIImageView!
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var progressBar: UISlider!
+    @IBOutlet weak var spotify: UISlider!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var songTimeLabel: UILabel!
     @IBOutlet weak var previousButton: UIButton!
@@ -59,9 +59,8 @@ class ViewController: UIViewController {
     // - - - - - - -  VARS - - - - - - -  //
     // ---------------------------------- //
     
-    var audioPlayer: AVAudioPlayer?
-    var timer: Timer?
     let italianRadio = ItalianRadioModel()
+    var timer: Timer?
     
     let defaultSongLabel = " "
     let defaultArtistLabel = " "
@@ -72,6 +71,8 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        var audioPlayer: AVAudioPlayer?
+        
         songLabel.text = ""
         artistLabel.text = ""
         
@@ -80,8 +81,15 @@ class ViewController: UIViewController {
         elapsedTimeLabel.text = "00:00"
         songTimeLabel.text = "00:00"
         
-        progressBar.value = 0.0
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let audioPlayer = audioPlayer else { return }
+        spotify.value = 0.0
+        spotify.maximumValue = Float(audioPlayer.duration)
+        audioPlayer.play()
+        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updatespotify), userInfo: nil, repeats: true)
     }
     
     //MARK: - Animations
@@ -124,11 +132,37 @@ class ViewController: UIViewController {
         }
     }
     
+    func getFormattedTime(timeInterval: TimeInterval) -> String {
+        let mins = timeInterval / 60
+        let secs = timeInterval.truncatingRemainder(dividingBy: 60)
+        let timeformatter = NumberFormatter()
+        timeformatter.minimumIntegerDigits = 2
+        timeformatter.minimumFractionDigits = 0
+        timeformatter.roundingMode = .down
+        guard let minsStr = timeformatter.string(from: NSNumber(value: mins)), let secsStr = timeformatter.string(from: NSNumber(value: secs)) else {
+            return ""
+        }
+        return "\(minsStr):\(secsStr)"
+    }
+    
+    @objc func updatespotify() {
+        guard let audioPlayer = audioPlayer else { return }
+        spotify.value = Float(audioPlayer.currentTime)
+        let remainingTimeInSeconds = audioPlayer.duration - audioPlayer.currentTime
+        songTimeLabel.text = getFormattedTime(timeInterval: remainingTimeInSeconds)
+        elapsedTimeLabel.text = getFormattedTime(timeInterval: audioPlayer.currentTime)
+    }
+    
     // MARK: - IBOutlets
     
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - - - //
     // ---------------------------------- //
+    
+    @IBAction func spotifyValueChanged(_ sender: Any) {
+        audioPlayer?.currentTime = Float64(spotify.value)
+    }
+    
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
@@ -175,6 +209,11 @@ class ViewController: UIViewController {
         
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
+            
+            spotify.value = 0.0
+            spotify.maximumValue = Float(audioPlayer!.duration)
+            
+            timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updatespotify), userInfo: nil, repeats: true)
         }
         
         // Italy animation

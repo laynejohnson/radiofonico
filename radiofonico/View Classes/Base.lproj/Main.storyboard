@@ -102,7 +102,7 @@
                                                         <color key="minimumTrackTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
-                                                            <action selector="displaySongProgress:" destination="BYZ-38-t0r" eventType="valueChanged" id="VfD-ky-HD3"/>
+                                                            <action selector="spotifyValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PvZ-gX-YFa"/>
                                                         </connections>
                                                     </slider>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
@@ -234,10 +234,10 @@
                         <outlet property="nextButton" destination="OtI-oA-M6O" id="rWZ-UL-d2l"/>
                         <outlet property="playPauseButton" destination="WZj-VR-neG" id="TZc-wv-Od6"/>
                         <outlet property="previousButton" destination="z97-l2-YX2" id="g98-XJ-dfi"/>
-                        <outlet property="progressBar" destination="v3b-Wr-ozA" id="pVS-Dy-gE9"/>
                         <outlet property="replayButton" destination="1z3-7w-xYr" id="aVM-gb-lxP"/>
                         <outlet property="songLabel" destination="gEQ-dr-9Pt" id="RKF-EG-xOn"/>
                         <outlet property="songTimeLabel" destination="rwl-X9-4HX" id="qgQ-TX-gfY"/>
+                        <outlet property="spotify" destination="v3b-Wr-ozA" id="pVS-Dy-gE9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
