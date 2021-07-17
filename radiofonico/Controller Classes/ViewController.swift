@@ -28,6 +28,7 @@ import AVFoundation
 // TODO: Implement repeat function
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor with Song class
+// TODO: Refactor to remove song return
 
 class ViewController: UIViewController {
     
@@ -81,7 +82,7 @@ class ViewController: UIViewController {
         songTimeLabel.text = "00:00"
         
         progressBar.value = 0.0
-        
+
     }
     
     //MARK: - Animations
@@ -157,28 +158,28 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         
         if song == defaultSongLabel {
-            
+
             // Flash play button
             animateButton(button: playPauseButton)
-            
+
         } else {
-            
-            // Get song
+
+            // Set song label
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
-            
+
             // Check song favorite status
             let isFavorite = italianRadio.checkFavorite(song: song)
-            
+
             // Set mano
             setMano(status: isFavorite)
         }
-        
+
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
         }
-        
+
         // Italy animation
-        
+
         //        // Start animation on play
         //        imageItaly.animationImages = animatedImages(for: "radiofonico")
         //        imageItaly.animationDuration = 7
