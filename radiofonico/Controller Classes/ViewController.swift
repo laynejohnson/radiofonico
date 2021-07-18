@@ -11,7 +11,7 @@
  
  https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
  
- TRACKLIST: 1. Mango - Bella d’estate 2. Lucio Dalla - Washington 3. Franco Battiato - Summer on a Solitary Beach 4. Lucio Battisti - Rilassati ed Ascolta 5. Matia Bazar - Palestina - 1983 Ariston 6. Krisma - Samora Club 7. Paolo Tofani - Un Altro Universo 8. Alice - Chan-Son Egocentrique 9. Giuni Russo - Buenos Aires 10. Enrico Ruggeri - Polvere - 1983 CGD 11. Anna Oxa - Uragano e Nuvole 12. Garbo - A Berlino. Va Bene 13. Righeira - Disco Volante 14. Gaznevada - Agente Speciale 15. Mike Francis - Survivor 16. Marcella Bella - Nell’Aria 17. Teresa De Sio - Voglia E Turna 18. Saint Just - Dolci Momenti Interview with Il Quadro di Troisi (Donato Dozzy + Eva Geist) Il Quadro di Troisi - Non Ricordi Donato Dozzy - K3 Donato Dozzy - Sisterhood
+ TRACKLIST: 1. Mango-Bella d’estate 2. Lucio Dalla-Washington 3. Franco Battiato-Summer on a Solitary Beach 4. Lucio Battisti-Rilassati ed Ascolta5. Matia Bazar-Palestina-1983 Ariston6. Krisma-Samora Club7. Paolo Tofani-Un Altro Universo8. Alice-Chan-Son Egocentrique9. Giuni Russo-Buenos Aires10. Enrico Ruggeri-Polvere CGD11. Anna Oxa-Uragano e Nuvole12. Garbo-A Berlino Va Bene13. Righeira-Disco Volante14. Gaznevada-Agente Speciale15. Mike Francis-Survivor16. Marcella Bella-Nell’Aria17. Teresa De Sio-Voglia E Turna
  
  */
 
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var albumArt: UIImageView!
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var spotify: UISlider!
+    @IBOutlet weak var progressBar: UISlider!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var songTimeLabel: UILabel!
     @IBOutlet weak var previousButton: UIButton!
@@ -84,27 +84,27 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard let audioPlayer = audioPlayer else { return }
-        spotify.value = 0.0
-        spotify.maximumValue = Float(audioPlayer.duration)
+        progressBar.value = 0.0
+        progressBar.maximumValue = Float(audioPlayer.duration)
         audioPlayer.play()
-        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updatespotify), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
     }
     
     //MARK: - Animations
     
-    // Serial image animation
-    func animatedImages(for name: String) -> [UIImage] {
-        
-        var i = 0
-        var images = [UIImage]()
-        
-        while let image = UIImage(named: "\(i)") {
-            images.append(image)
-            i += 1
-        }
-        
-        return images
-    }
+//    // Serial image animation
+//    func animatedImages(for name: String) -> [UIImage] {
+//
+//        var i = 0
+//        var images = [UIImage]()
+//
+//        while let image = UIImage(named: "\(i)") {
+//            images.append(image)
+//            i += 1
+//        }
+//
+//        return images
+//    }
     
     // Scale animation for buttons
     func animateButton(button: UIButton) {
@@ -131,6 +131,7 @@ class ViewController: UIViewController {
     }
     
     func getFormattedTime(timeInterval: TimeInterval) -> String {
+        
         let mins = timeInterval / 60
         let secs = timeInterval.truncatingRemainder(dividingBy: 60)
         let timeformatter = NumberFormatter()
@@ -143,22 +144,24 @@ class ViewController: UIViewController {
         return "\(minsStr):\(secsStr)"
     }
     
-    @objc func updatespotify() {
+    @objc func updateProgressBar() {
+        
         guard let audioPlayer = audioPlayer else { return }
-        spotify.value = Float(audioPlayer.currentTime)
+        progressBar.value = Float(audioPlayer.currentTime)
         let remainingTimeInSeconds = audioPlayer.duration - audioPlayer.currentTime
         songTimeLabel.text = getFormattedTime(timeInterval: remainingTimeInSeconds)
         elapsedTimeLabel.text = getFormattedTime(timeInterval: audioPlayer.currentTime)
     }
     
-    // MARK: - IBOutlets
+    // MARK: - IBActions
     
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - - - //
     // ---------------------------------- //
     
     @IBAction func spotifyValueChanged(_ sender: Any) {
-        audioPlayer?.currentTime = Float64(spotify.value)
+        
+        audioPlayer?.currentTime = Float64(progressBar.value)
     }
     
     
@@ -209,10 +212,10 @@ class ViewController: UIViewController {
             
             albumArt.image = #imageLiteral(resourceName: "album_art")
             
-            spotify.value = 0.0
-            spotify.maximumValue = Float(audioPlayer!.duration)
+            progressBar.value = 0.0
+            progressBar.maximumValue = Float(audioPlayer!.duration)
             
-            timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updatespotify), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
             
         }
         
