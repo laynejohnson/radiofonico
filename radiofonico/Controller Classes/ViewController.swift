@@ -85,16 +85,17 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        guard let audioPlayer = audioPlayer else { return }
-        progressBar.value = 0.0
-        progressBar.maximumValue = Float(audioPlayer.duration)
-        audioPlayer.play()
-        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
-
-    }
-    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        guard let audioPlayer = audioPlayer else { return }
+//        progressBar.value = 0.0
+//        progressBar.maximumValue = Float(audioPlayer.duration)
+//        audioPlayer.play()
+//        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
+//
+//    }
+//
     //MARK: - Animations
     
 //    // Serial image animation
@@ -164,9 +165,13 @@ class ViewController: UIViewController {
     // - - - - - - - ACTIONS - - - - - - - //
     // ---------------------------------- //
     
-    @IBAction func spotifyValueChanged(_ sender: Any) {
+    @IBAction func progressValueChanged(_ sender: UISlider) {
+        
+        if italianRadio.isPlaying == true {
         
         audioPlayer?.currentTime = Float64(progressBar.value)
+            
+        }
     }
     
     

@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-47-w8Q" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+                                <rect key="frame" x="0.0" y="0.0" width="343" height="101"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="double_line_glow-1" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-hY-ymM" userLabel="Double Lines">
                                         <rect key="frame" x="-5" y="67" width="423" height="14"/>
@@ -34,10 +34,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXc-L6-vZ8" userLabel="Album Art View">
-                                <rect key="frame" x="0.0" y="119" width="414" height="339"/>
+                                <rect key="frame" x="0.0" y="119" width="343" height="339"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album_art" translatesAutoresizingMaskIntoConstraints="NO" id="QqW-Qw-5RT">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="339"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="339"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="339" id="X26-LK-PQY"/>
                                             <constraint firstAttribute="width" constant="343" id="kHR-zq-jsD"/>
@@ -53,13 +53,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="q29-SG-8nI" userLabel="Song Stack View">
-                                <rect key="frame" x="0.0" y="476" width="414" height="156"/>
+                                <rect key="frame" x="0.0" y="476" width="343" height="156"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcz-zj-N1B" userLabel="Song Info View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-BM-p2A" userLabel="Song Info Stack View">
-                                                <rect key="frame" x="51" y="9" width="312" height="62"/>
+                                                <rect key="frame" x="15.666666666666657" y="9" width="312" height="62"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer On A Solitary Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-dr-9Pt" userLabel="Title Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="312" height="22.666666666666668"/>
@@ -88,10 +88,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-Fu-riW" userLabel="Song Progress View">
-                                        <rect key="frame" x="0.0" y="76" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="76" width="343" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
-                                                <rect key="frame" x="52.666666666666657" y="12" width="309" height="56"/>
+                                                <rect key="frame" x="17" y="12" width="309" height="56"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-Wr-ozA">
                                                         <rect key="frame" x="-2" y="0.0" width="313" height="31"/>
@@ -102,11 +102,8 @@
                                                         <color key="minimumTrackTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
-
-                                                            <action selector="spotifyValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PvZ-gX-YFa"/>
-
+                                                            <action selector="progressValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PvZ-gX-YFa"/>
                                                             <action selector="scrubAudio:" destination="BYZ-38-t0r" eventType="valueChanged" id="he5-2s-lKQ"/>
-
                                                         </connections>
                                                     </slider>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
@@ -145,10 +142,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAX-Du-OhI" userLabel="Radio Controls View">
-                                <rect key="frame" x="0.0" y="650" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="650" width="343" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="kxS-PA-Obf" userLabel="Radio Controls Stack View">
-                                        <rect key="frame" x="110.66666666666669" y="1.6666666666666288" width="193" height="77"/>
+                                        <rect key="frame" x="75" y="1.6666666666666288" width="193" height="77"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z97-l2-YX2" userLabel="Previous Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="77"/>
@@ -185,13 +182,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-L7-4n5" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="748" width="414" height="148"/>
+                                <rect key="frame" x="0.0" y="748" width="343" height="148"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-LC-cZZ" userLabel="Footer Button Stack View">
-                                        <rect key="frame" x="132.33333333333331" y="36.666666666666636" width="149.33333333333331" height="74.666666666666686"/>
+                                        <rect key="frame" x="96.666666666666671" y="36.666666666666636" width="149.66666666666663" height="74.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9H-pa-jaa" userLabel="Mano Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="74.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="74.666666666666671"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74.879999999999995" id="6ZE-jd-I2a"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52.340000000000003" id="DNt-LB-tlE"/>
@@ -207,7 +204,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-7w-xYr" userLabel="Replay Button">
-                                                <rect key="frame" x="112.33333333333331" y="0.0" width="37" height="74.666666666666671"/>
+                                                <rect key="frame" x="112.66666666666669" y="0.0" width="37" height="74.666666666666671"/>
                                                 <state key="normal" image="replay_button"/>
                                                 <state key="selected" image="replay_button_selected"/>
                                                 <connections>
