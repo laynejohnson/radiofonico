@@ -102,7 +102,11 @@
                                                         <color key="minimumTrackTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="thumbTintColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <connections>
+
+                                                            <action selector="spotifyValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="PvZ-gX-YFa"/>
+
                                                             <action selector="scrubAudio:" destination="BYZ-38-t0r" eventType="valueChanged" id="he5-2s-lKQ"/>
+
                                                         </connections>
                                                     </slider>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">

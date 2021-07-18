@@ -11,7 +11,7 @@
  
  https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
  
- TRACKLIST: 1. Mango - Bella d’estate 2. Lucio Dalla - Washington 3. Franco Battiato - Summer on a Solitary Beach 4. Lucio Battisti - Rilassati ed Ascolta 5. Matia Bazar - Palestina - 1983 Ariston 6. Krisma - Samora Club 7. Paolo Tofani - Un Altro Universo 8. Alice - Chan-Son Egocentrique 9. Giuni Russo - Buenos Aires 10. Enrico Ruggeri - Polvere - 1983 CGD 11. Anna Oxa - Uragano e Nuvole 12. Garbo - A Berlino. Va Bene 13. Righeira - Disco Volante 14. Gaznevada - Agente Speciale 15. Mike Francis - Survivor 16. Marcella Bella - Nell’Aria 17. Teresa De Sio - Voglia E Turna 18. Saint Just - Dolci Momenti Interview with Il Quadro di Troisi (Donato Dozzy + Eva Geist) Il Quadro di Troisi - Non Ricordi Donato Dozzy - K3 Donato Dozzy - Sisterhood
+ TRACKLIST: 1. Mango-Bella d’estate 2. Lucio Dalla-Washington 3. Franco Battiato-Summer on a Solitary Beach 4. Lucio Battisti-Rilassati ed Ascolta5. Matia Bazar-Palestina-1983 Ariston6. Krisma-Samora Club7. Paolo Tofani-Un Altro Universo8. Alice-Chan-Son Egocentrique9. Giuni Russo-Buenos Aires10. Enrico Ruggeri-Polvere CGD11. Anna Oxa-Uragano e Nuvole12. Garbo-A Berlino Va Bene13. Righeira-Disco Volante14. Gaznevada-Agente Speciale15. Mike Francis-Survivor16. Marcella Bella-Nell’Aria17. Teresa De Sio-Voglia E Turna
  
  */
 
@@ -24,11 +24,14 @@ import AVFoundation
 // - - - - - - - DEV TODO - - - - - - //
 // ---------------------------------- //
 
-// TODO: Implement progress bar and song timer
 // TODO: Implement repeat function
 // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor with Song class
+
+// TODO: Add animated launch screen
+
 // TODO: Refactor to remove song return
+
 
 class ViewController: UIViewController {
     
@@ -60,9 +63,8 @@ class ViewController: UIViewController {
     // - - - - - - -  VARS - - - - - - -  //
     // ---------------------------------- //
     
-    var audioPlayer: AVAudioPlayer?
-    var timer: Timer?
     let italianRadio = ItalianRadioModel()
+    var timer: Timer?
     
     let defaultSongLabel = " "
     let defaultArtistLabel = " "
@@ -72,7 +74,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+
         songLabel.text = ""
         artistLabel.text = ""
         
@@ -81,25 +83,33 @@ class ViewController: UIViewController {
         elapsedTimeLabel.text = "00:00"
         songTimeLabel.text = "00:00"
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        guard let audioPlayer = audioPlayer else { return }
         progressBar.value = 0.0
+        progressBar.maximumValue = Float(audioPlayer.duration)
+        audioPlayer.play()
+        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
 
     }
     
     //MARK: - Animations
     
-    // Serial image animation
-    func animatedImages(for name: String) -> [UIImage] {
-        
-        var i = 0
-        var images = [UIImage]()
-        
-        while let image = UIImage(named: "\(i)") {
-            images.append(image)
-            i += 1
-        }
-        
-        return images
-    }
+//    // Serial image animation
+//    func animatedImages(for name: String) -> [UIImage] {
+//
+//        var i = 0
+//        var images = [UIImage]()
+//
+//        while let image = UIImage(named: "\(i)") {
+//            images.append(image)
+//            i += 1
+//        }
+//
+//        return images
+//    }
     
     // Scale animation for buttons
     func animateButton(button: UIButton) {
@@ -125,11 +135,40 @@ class ViewController: UIViewController {
         }
     }
     
-    // MARK: - IBOutlets
+    func getFormattedTime(timeInterval: TimeInterval) -> String {
+        
+        let mins = timeInterval / 60
+        let secs = timeInterval.truncatingRemainder(dividingBy: 60)
+        let timeformatter = NumberFormatter()
+        timeformatter.minimumIntegerDigits = 2
+        timeformatter.minimumFractionDigits = 0
+        timeformatter.roundingMode = .down
+        guard let minsStr = timeformatter.string(from: NSNumber(value: mins)), let secsStr = timeformatter.string(from: NSNumber(value: secs)) else {
+            return ""
+        }
+        return "\(minsStr):\(secsStr)"
+    }
+    
+    @objc func updateProgressBar() {
+        
+        guard let audioPlayer = audioPlayer else { return }
+        progressBar.value = Float(audioPlayer.currentTime)
+        let remainingTimeInSeconds = audioPlayer.duration - audioPlayer.currentTime
+        songTimeLabel.text = getFormattedTime(timeInterval: remainingTimeInSeconds)
+        elapsedTimeLabel.text = getFormattedTime(timeInterval: audioPlayer.currentTime)
+    }
+    
+    // MARK: - IBActions
     
     // ---------------------------------- //
     // - - - - - - - ACTIONS - - - - - - - //
     // ---------------------------------- //
+    
+    @IBAction func spotifyValueChanged(_ sender: Any) {
+        
+        audioPlayer?.currentTime = Float64(progressBar.value)
+    }
+    
     
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
@@ -175,7 +214,14 @@ class ViewController: UIViewController {
         }
 
         if italianRadio.isPlaying == true {
+            
             albumArt.image = #imageLiteral(resourceName: "album_art")
+            
+            progressBar.value = 0.0
+            progressBar.maximumValue = Float(audioPlayer!.duration)
+            
+            timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
+            
         }
 
         // Italy animation
@@ -224,10 +270,9 @@ class ViewController: UIViewController {
             // Animate play button
             animateButton(button: playPauseButton)
         } else {
-            
-            // TODO: Implement replaySong function
             sender.isSelected.toggle()
         }
+        
     }
     
     @IBAction func addFavorite(_ sender: UIButton) {

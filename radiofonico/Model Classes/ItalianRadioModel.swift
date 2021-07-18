@@ -5,8 +5,6 @@
 //  Created by Layne Johnson on 5/14/21.
 //
 
-// TODO: Clean up and code comment
-
 import Foundation
 import UIKit
 import AVFoundation
