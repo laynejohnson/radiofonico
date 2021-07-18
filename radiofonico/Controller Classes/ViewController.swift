@@ -11,7 +11,7 @@
  
  https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
  
- TRACKLIST: 1. Mango-Bella d’estate 2. Lucio Dalla-Washington 3. Franco Battiato-Summer on a Solitary Beach 4. Lucio Battisti-Rilassati ed Ascolta5. Matia Bazar-Palestina-1983 Ariston6. Krisma-Samora Club7. Paolo Tofani-Un Altro Universo8. Alice-Chan-Son Egocentrique9. Giuni Russo-Buenos Aires10. Enrico Ruggeri-Polvere CGD11. Anna Oxa-Uragano e Nuvole12. Garbo-A Berlino Va Bene13. Righeira-Disco Volante14. Gaznevada-Agente Speciale15. Mike Francis-Survivor16. Marcella Bella-Nell’Aria17. Teresa De Sio-Voglia E Turna
+ TRACKLIST: 1. Mango-Bella d’estate 2. Lucio Dalla-Washington 3. Franco Battiato-Summer on a Solitary Beach 4. Lucio Battisti-Rilassati ed Ascolta 5. Matia Bazar-Palestina-1983 Ariston6. Krisma-Samora Club7. Paolo Tofani-Un Altro Universo 8. Alice-Chan-Son Egocentrique 9. Giuni Russo-Buenos Aires10. Enrico Ruggeri-Polvere CGD11. Anna Oxa-Uragano e Nuvole 12. Garbo-A Berlino Va Bene 13. Righeira-Disco Volante 14. Gaznevada-Agente Speciale 15. Mike Francis-Survivor16. Marcella Bella-Nell’Aria 17. Teresa De Sio-Voglia E Turna
  
  */
 

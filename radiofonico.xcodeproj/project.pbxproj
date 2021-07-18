@@ -13,6 +13,20 @@
 		E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */; };
 		E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */; };
 		E88554682666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */; };
+		E888AA1426A488F40042F986 /* Righeira-Disco Volante.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0626A488F10042F986 /* Righeira-Disco Volante.mp3 */; };
+		E888AA1526A488F40042F986 /* Matia Bazar-Palestina.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0726A488F10042F986 /* Matia Bazar-Palestina.mp3 */; };
+		E888AA1626A488F40042F986 /* Alice-Chan-Son Egocentrique.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0826A488F20042F986 /* Alice-Chan-Son Egocentrique.mp3 */; };
+		E888AA1726A488F40042F986 /* Enrico Ruggeri-Polvere CGD.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0926A488F20042F986 /* Enrico Ruggeri-Polvere CGD.mp3 */; };
+		E888AA1826A488F40042F986 /* Anna Oxa-Uragano e Nuvole.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0A26A488F20042F986 /* Anna Oxa-Uragano e Nuvole.mp3 */; };
+		E888AA1926A488F40042F986 /* Gaznevada-Agente Speciale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0B26A488F20042F986 /* Gaznevada-Agente Speciale.mp3 */; };
+		E888AA1A26A488F40042F986 /* Marcella Bella-Nell’Aria.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0C26A488F30042F986 /* Marcella Bella-Nell’Aria.mp3 */; };
+		E888AA1B26A488F40042F986 /* Giuni Russo-Buenos Aires.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0D26A488F30042F986 /* Giuni Russo-Buenos Aires.mp3 */; };
+		E888AA1C26A488F40042F986 /* Paolo Tofani-Un Altro Universo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0E26A488F30042F986 /* Paolo Tofani-Un Altro Universo.mp3 */; };
+		E888AA1D26A488F40042F986 /* Teresa De Sio-Voglia E Turna.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA0F26A488F30042F986 /* Teresa De Sio-Voglia E Turna.mp3 */; };
+		E888AA1E26A488F40042F986 /* Lucio Battisti-Rilassati ed Ascolta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1026A488F40042F986 /* Lucio Battisti-Rilassati ed Ascolta.mp3 */; };
+		E888AA1F26A488F40042F986 /* Krisma-Samora Club.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */; };
+		E888AA2026A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */; };
+		E888AA2126A488F40042F986 /* Mike Francis-Survivor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */; };
 		E89982F5267CF5C3005C3322 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89982F4267CF5C3005C3322 /* Song.swift */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
@@ -32,6 +46,20 @@
 		E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mango-Bella d'Estate.mp3"; sourceTree = "<group>"; };
 		E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla-Washington.mp3"; sourceTree = "<group>"; };
 		E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Franco Battiato-Summer On A Solitary Beach.mp3"; sourceTree = "<group>"; };
+		E888AA0626A488F10042F986 /* Righeira-Disco Volante.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Righeira-Disco Volante.mp3"; sourceTree = "<group>"; };
+		E888AA0726A488F10042F986 /* Matia Bazar-Palestina.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Matia Bazar-Palestina.mp3"; sourceTree = "<group>"; };
+		E888AA0826A488F20042F986 /* Alice-Chan-Son Egocentrique.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alice-Chan-Son Egocentrique.mp3"; sourceTree = "<group>"; };
+		E888AA0926A488F20042F986 /* Enrico Ruggeri-Polvere CGD.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Enrico Ruggeri-Polvere CGD.mp3"; sourceTree = "<group>"; };
+		E888AA0A26A488F20042F986 /* Anna Oxa-Uragano e Nuvole.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Anna Oxa-Uragano e Nuvole.mp3"; sourceTree = "<group>"; };
+		E888AA0B26A488F20042F986 /* Gaznevada-Agente Speciale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Gaznevada-Agente Speciale.mp3"; sourceTree = "<group>"; };
+		E888AA0C26A488F30042F986 /* Marcella Bella-Nell’Aria.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Marcella Bella-Nell’Aria.mp3"; sourceTree = "<group>"; };
+		E888AA0D26A488F30042F986 /* Giuni Russo-Buenos Aires.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Giuni Russo-Buenos Aires.mp3"; sourceTree = "<group>"; };
+		E888AA0E26A488F30042F986 /* Paolo Tofani-Un Altro Universo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Paolo Tofani-Un Altro Universo.mp3"; sourceTree = "<group>"; };
+		E888AA0F26A488F30042F986 /* Teresa De Sio-Voglia E Turna.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Teresa De Sio-Voglia E Turna.mp3"; sourceTree = "<group>"; };
+		E888AA1026A488F40042F986 /* Lucio Battisti-Rilassati ed Ascolta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Battisti-Rilassati ed Ascolta.mp3"; sourceTree = "<group>"; };
+		E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Krisma-Samora Club.mp3"; sourceTree = "<group>"; };
+		E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Garbo-A Berlino Va Bene.mp3"; sourceTree = "<group>"; };
+		E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mike Francis-Survivor.mp3"; sourceTree = "<group>"; };
 		E89982F4267CF5C3005C3322 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +173,20 @@
 		E8D5AAE82654416900F231B1 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				E888AA0826A488F20042F986 /* Alice-Chan-Son Egocentrique.mp3 */,
+				E888AA0A26A488F20042F986 /* Anna Oxa-Uragano e Nuvole.mp3 */,
+				E888AA0926A488F20042F986 /* Enrico Ruggeri-Polvere CGD.mp3 */,
+				E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */,
+				E888AA0B26A488F20042F986 /* Gaznevada-Agente Speciale.mp3 */,
+				E888AA0D26A488F30042F986 /* Giuni Russo-Buenos Aires.mp3 */,
+				E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */,
+				E888AA1026A488F40042F986 /* Lucio Battisti-Rilassati ed Ascolta.mp3 */,
+				E888AA0C26A488F30042F986 /* Marcella Bella-Nell’Aria.mp3 */,
+				E888AA0726A488F10042F986 /* Matia Bazar-Palestina.mp3 */,
+				E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */,
+				E888AA0E26A488F30042F986 /* Paolo Tofani-Un Altro Universo.mp3 */,
+				E888AA0626A488F10042F986 /* Righeira-Disco Volante.mp3 */,
+				E888AA0F26A488F30042F986 /* Teresa De Sio-Voglia E Turna.mp3 */,
 				E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */,
 				E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */,
 				E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */,
@@ -211,14 +253,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E888AA1826A488F40042F986 /* Anna Oxa-Uragano e Nuvole.mp3 in Resources */,
 				E8D5AABA264EF74E00F231B1 /* LaunchScreen.storyboard in Resources */,
 				E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */,
+				E888AA1926A488F40042F986 /* Gaznevada-Agente Speciale.mp3 in Resources */,
+				E888AA1A26A488F40042F986 /* Marcella Bella-Nell’Aria.mp3 in Resources */,
+				E888AA1626A488F40042F986 /* Alice-Chan-Son Egocentrique.mp3 in Resources */,
+				E888AA1C26A488F40042F986 /* Paolo Tofani-Un Altro Universo.mp3 in Resources */,
 				E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */,
+				E888AA1526A488F40042F986 /* Matia Bazar-Palestina.mp3 in Resources */,
+				E888AA1726A488F40042F986 /* Enrico Ruggeri-Polvere CGD.mp3 in Resources */,
+				E888AA2026A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 in Resources */,
 				E8D5AAB7264EF74E00F231B1 /* Assets.xcassets in Resources */,
+				E888AA1E26A488F40042F986 /* Lucio Battisti-Rilassati ed Ascolta.mp3 in Resources */,
+				E888AA1426A488F40042F986 /* Righeira-Disco Volante.mp3 in Resources */,
+				E888AA1F26A488F40042F986 /* Krisma-Samora Club.mp3 in Resources */,
+				E888AA1D26A488F40042F986 /* Teresa De Sio-Voglia E Turna.mp3 in Resources */,
 				E8D5AAB5264EF74B00F231B1 /* Main.storyboard in Resources */,
 				E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */,
 				E88554682666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 in Resources */,
 				E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */,
+				E888AA2126A488F40042F986 /* Mike Francis-Survivor.mp3 in Resources */,
+				E888AA1B26A488F40042F986 /* Giuni Russo-Buenos Aires.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

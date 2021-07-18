@@ -15,7 +15,7 @@ class ItalianRadioModel {
     
     // MARK: - Variables
     
-    let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3" ]
+    let italianRadioSongs = ["Lucio Dalla-Washington.mp3", "Mango-Bella d'Estate.mp3", "Franco Battiato-Summer On A Solitary Beach.mp3", "Lucio Battisti-Rilassati ed Ascolta.mp3", "Matia Bazar-Palestina.mp3", "Krisma-Samora Club.mp3", "Paolo Tofani-Un Altro Universo.mp3", "Alice-Chan-Son Egocentrique.mp3", "Giuni Russo-Buenos Aires.mp3", "Enrico Ruggeri-Polvere CGD.mp3", "Anna Oxa-Uragano e Nuvole.mp3", "Garbo-A Berlino Va Bene.mp3", "Righeira-Disco Volante.mp3", "Gaznevada-Agente Speciale.mp3", "Mike Francis-Survivor.mp3", "Marcella Bella-Nell’Aria.mp3", "Teresa De Sio-Voglia E Turna.mp3" ]
     
     var myFavorites = [String]()
     
