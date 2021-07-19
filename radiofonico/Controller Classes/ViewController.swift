@@ -85,17 +85,6 @@ class ViewController: UIViewController {
         
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//
-//        guard let audioPlayer = audioPlayer else { return }
-//        progressBar.value = 0.0
-//        progressBar.maximumValue = Float(audioPlayer.duration)
-//        audioPlayer.play()
-//        timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
-//
-//    }
-//
     //MARK: - Animations
     
 //    // Serial image animation
