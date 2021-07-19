@@ -74,7 +74,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-
+        
         songLabel.text = ""
         artistLabel.text = ""
         
@@ -87,19 +87,19 @@ class ViewController: UIViewController {
     
     //MARK: - Animations
     
-//    // Serial image animation
-//    func animatedImages(for name: String) -> [UIImage] {
-//
-//        var i = 0
-//        var images = [UIImage]()
-//
-//        while let image = UIImage(named: "\(i)") {
-//            images.append(image)
-//            i += 1
-//        }
-//
-//        return images
-//    }
+    //    // Serial image animation
+    //    func animatedImages(for name: String) -> [UIImage] {
+    //
+    //        var i = 0
+    //        var images = [UIImage]()
+    //
+    //        while let image = UIImage(named: "\(i)") {
+    //            images.append(image)
+    //            i += 1
+    //        }
+    //
+    //        return images
+    //    }
     
     // Scale animation for buttons
     func animateButton(button: UIButton) {
@@ -143,8 +143,12 @@ class ViewController: UIViewController {
         
         guard let audioPlayer = audioPlayer else { return }
         progressBar.value = Float(audioPlayer.currentTime)
-        let remainingTimeInSeconds = audioPlayer.duration - audioPlayer.currentTime
-        songTimeLabel.text = getFormattedTime(timeInterval: remainingTimeInSeconds)
+        // Remaining time countdown
+        //        let remainingTimeInSeconds = audioPlayer.duration - audioPlayer.currentTime
+        //        songTimeLabel.text = getFormattedTime(timeInterval: remainingTimeInSeconds)
+        let duration = audioPlayer.duration
+        songTimeLabel.text = getFormattedTime(timeInterval: duration)
+        
         elapsedTimeLabel.text = getFormattedTime(timeInterval: audioPlayer.currentTime)
     }
     
@@ -157,8 +161,8 @@ class ViewController: UIViewController {
     @IBAction func progressValueChanged(_ sender: UISlider) {
         
         if italianRadio.isPlaying == true {
-        
-        audioPlayer?.currentTime = Float64(progressBar.value)
+            
+            audioPlayer?.currentTime = Float64(progressBar.value)
             
         }
     }
@@ -191,22 +195,22 @@ class ViewController: UIViewController {
         let song = italianRadio.radioOnOff(sender: sender)
         
         if song == defaultSongLabel {
-
+            
             // Flash play button
             animateButton(button: playPauseButton)
-
+            
         } else {
-
+            
             // Set song label
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
-
+            
             // Check song favorite status
             let isFavorite = italianRadio.checkFavorite(song: song)
-
+            
             // Set mano
             setMano(status: isFavorite)
         }
-
+        
         if italianRadio.isPlaying == true {
             
             albumArt.image = #imageLiteral(resourceName: "album_art")
@@ -217,9 +221,9 @@ class ViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
             
         }
-
+        
         // Italy animation
-
+        
         //        // Start animation on play
         //        imageItaly.animationImages = animatedImages(for: "radiofonico")
         //        imageItaly.animationDuration = 7

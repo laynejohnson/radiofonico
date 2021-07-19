@@ -86,7 +86,7 @@ class ItalianRadioModel {
             
             // Get index of current song
             let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
-        
+            
             // Get index of previous song
             var previousSongIndex = songIndex! - 1
             
@@ -107,9 +107,9 @@ class ItalianRadioModel {
                 
                 // Play previous song
                 let previousSong = italianRadioSongs[previousSongIndex]
-          
+                
                 song = previousSong
-             
+                
                 playSound(song)
                 
                 return song
@@ -163,9 +163,9 @@ class ItalianRadioModel {
                 
                 // Play next song
                 let nextSong = italianRadioSongs[nextSongIndex]
-          
+                
                 song = nextSong
-            
+                
                 playSound(song)
                 
                 return song
@@ -175,7 +175,7 @@ class ItalianRadioModel {
             
             // Add animation to "Press play to vibe"
             return defaultSongLabel
-        
+            
         }
     }
     
