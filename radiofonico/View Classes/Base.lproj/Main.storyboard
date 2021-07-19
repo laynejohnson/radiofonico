@@ -23,7 +23,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-47-w8Q" userLabel="Top View">
                                 <rect key="frame" x="0.0" y="0.0" width="343" height="101"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="double_line_glow-1" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-hY-ymM" userLabel="Double Lines">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="double_lines" translatesAutoresizingMaskIntoConstraints="NO" id="vW2-hY-ymM" userLabel="Double Lines">
                                         <rect key="frame" x="-5" y="67" width="423" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -255,7 +255,7 @@
     </designables>
     <resources>
         <image name="album_art" width="343" height="339"/>
-        <image name="double_line_glow-1" width="414" height="29"/>
+        <image name="double_lines" width="414" height="10"/>
         <image name="mano_selected" width="56" height="84"/>
         <image name="mano_unselected" width="54" height="76"/>
         <image name="next_button" width="36" height="33"/>

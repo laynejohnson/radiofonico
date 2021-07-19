@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         songLabel.text = ""
         artistLabel.text = ""
         
-        albumArt.image = #imageLiteral(resourceName: "premi_play")
+        albumArt.image = #imageLiteral(resourceName: "premi_play_v2")
         
         elapsedTimeLabel.text = "00:00"
         songTimeLabel.text = "00:00"

@@ -27,6 +27,7 @@
 		E888AA1F26A488F40042F986 /* Krisma-Samora Club.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */; };
 		E888AA2026A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */; };
 		E888AA2126A488F40042F986 /* Mike Francis-Survivor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */; };
+		E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */; };
 		E89982F5267CF5C3005C3322 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89982F4267CF5C3005C3322 /* Song.swift */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
@@ -60,6 +61,7 @@
 		E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Krisma-Samora Club.mp3"; sourceTree = "<group>"; };
 		E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Garbo-A Berlino Va Bene.mp3"; sourceTree = "<group>"; };
 		E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mike Francis-Survivor.mp3"; sourceTree = "<group>"; };
+		E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OvertheRainbow-Regular.ttf"; sourceTree = "<group>"; };
 		E89982F4267CF5C3005C3322 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		E885545E266660A30056279C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */,
 				E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */,
 				E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */,
 			);
@@ -258,6 +261,7 @@
 				E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */,
 				E888AA1926A488F40042F986 /* Gaznevada-Agente Speciale.mp3 in Resources */,
 				E888AA1A26A488F40042F986 /* Marcella Bella-Nell’Aria.mp3 in Resources */,
+				E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */,
 				E888AA1626A488F40042F986 /* Alice-Chan-Son Egocentrique.mp3 in Resources */,
 				E888AA1C26A488F40042F986 /* Paolo Tofani-Un Altro Universo.mp3 in Resources */,
 				E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */,
