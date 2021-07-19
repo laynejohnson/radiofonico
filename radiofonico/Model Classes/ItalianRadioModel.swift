@@ -22,6 +22,7 @@ class ItalianRadioModel {
     let defaultSongLabel = ""
     let defaultArtistLabel = ""
     
+    var defaultSong = "Lucio Dalla-Washington.mp3"
     var song = ""
     var isPlaying = false
     
@@ -49,14 +50,13 @@ class ItalianRadioModel {
         }
     }
     
-    func chooseSong() -> String {
+    func isFirstSong() -> Bool {
         
-        // Choose random song
-        song = italianRadioSongs.randomElement()!
-        
-        // Return song
-        return song
-        
+        if isPlaying == false && song == "" {
+            return true
+        } else {
+            return false
+        }
     }
     
     // MARK: - Audio Player

@@ -20,18 +20,24 @@ import AVFoundation
 
 // MARK: - Dev TODOs:
 
+/*
+
 // ---------------------------------- //
 // - - - - - - - DEV TODO - - - - - - //
 // ---------------------------------- //
 
-// TODO: Implement repeat function
-// TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
-// TODO: Refactor with Song class
+Features:
 
+// TODO: Implement repeat function
+// TODO: Configure autoplay
 // TODO: Add animated launch screen
 
+Refactor:
+ // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor to remove song return
-
+// TODO: Refactor with Song class
+ 
+ */
 
 class ViewController: UIViewController {
     
@@ -270,6 +276,14 @@ class ViewController: UIViewController {
         } else {
             sender.isSelected.toggle()
         }
+        
+//        while sender.isSelected {
+//            audioPlayer?.numberOfLoops = -1
+//
+//            if sender.isSelected == false {
+//                break
+//            }
+//        }
         
     }
     
