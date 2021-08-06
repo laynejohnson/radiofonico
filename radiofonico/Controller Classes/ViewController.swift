@@ -37,6 +37,7 @@ Refactor:
  // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor to remove song return
 // TODO: Refactor with Song class
+// TODO: Fix UI double bar
  
  */
 
