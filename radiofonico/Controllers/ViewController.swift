@@ -29,15 +29,13 @@ import AVFoundation
 Features:
 
 // TODO: Implement repeat function
-// TODO: Configure autoplay
-// TODO: Add animated launch screen
+// TODO: Implement autoplay
 // TODO: Add background playback
 
 Refactor:
- // TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
+// TODO: Refactor play/pause to pause/play current song. Do not reset to [0].
 // TODO: Refactor to remove song return
 // TODO: Refactor with Song class
-// TODO: Fix UI double bar
 
  */
 
