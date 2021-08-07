@@ -28,6 +28,8 @@
 		E888AA2026A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */; };
 		E888AA2126A488F40042F986 /* Mike Francis-Survivor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */; };
 		E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */; };
+		E894577226BEBBD900C58F1D /* BenvenutiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */; };
+		E894577426BEBCAE00C58F1D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E894577326BEBCAE00C58F1D /* Constants.swift */; };
 		E89982F5267CF5C3005C3322 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89982F4267CF5C3005C3322 /* Song.swift */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
@@ -62,6 +64,8 @@
 		E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Garbo-A Berlino Va Bene.mp3"; sourceTree = "<group>"; };
 		E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mike Francis-Survivor.mp3"; sourceTree = "<group>"; };
 		E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OvertheRainbow-Regular.ttf"; sourceTree = "<group>"; };
+		E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenvenutiViewController.swift; sourceTree = "<group>"; };
+		E894577326BEBCAE00C58F1D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E89982F4267CF5C3005C3322 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,42 +139,44 @@
 		E8D5AAAC264EF74B00F231B1 /* radiofonico */ = {
 			isa = PBXGroup;
 			children = (
-				E8D5AAE82654416900F231B1 /* Audio */,
-				E8D5AAC1264EF7DC00F231B1 /* Model Classes */,
-				E8D5AAC2264EF7EB00F231B1 /* View Classes */,
-				E8D5AAC3264EF7ED00F231B1 /* Controller Classes */,
 				E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */,
 				E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */,
+				E894577326BEBCAE00C58F1D /* Constants.swift */,
+				E8D5AAE82654416900F231B1 /* Audio */,
+				E8D5AAC1264EF7DC00F231B1 /* Models */,
+				E8D5AAC2264EF7EB00F231B1 /* Views */,
+				E8D5AAC3264EF7ED00F231B1 /* Controllers */,
 				E8D5AAB6264EF74E00F231B1 /* Assets.xcassets */,
 				E8D5AABB264EF74E00F231B1 /* Info.plist */,
 			);
 			path = radiofonico;
 			sourceTree = "<group>";
 		};
-		E8D5AAC1264EF7DC00F231B1 /* Model Classes */ = {
+		E8D5AAC1264EF7DC00F231B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */,
 				E89982F4267CF5C3005C3322 /* Song.swift */,
 			);
-			path = "Model Classes";
+			path = Models;
 			sourceTree = "<group>";
 		};
-		E8D5AAC2264EF7EB00F231B1 /* View Classes */ = {
+		E8D5AAC2264EF7EB00F231B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				E8D5AAB3264EF74B00F231B1 /* Main.storyboard */,
 				E8D5AAB8264EF74E00F231B1 /* LaunchScreen.storyboard */,
 			);
-			path = "View Classes";
+			path = Views;
 			sourceTree = "<group>";
 		};
-		E8D5AAC3264EF7ED00F231B1 /* Controller Classes */ = {
+		E8D5AAC3264EF7ED00F231B1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */,
 				E8D5AAB1264EF74B00F231B1 /* ViewController.swift */,
 			);
-			path = "Controller Classes";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E8D5AAE82654416900F231B1 /* Audio */ = {
@@ -334,6 +340,8 @@
 				E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */,
 				E89982F5267CF5C3005C3322 /* Song.swift in Sources */,
 				E8D5AAC7264EF89D00F231B1 /* ItalianRadioModel.swift in Sources */,
+				E894577226BEBBD900C58F1D /* BenvenutiViewController.swift in Sources */,
+				E894577426BEBCAE00C58F1D /* Constants.swift in Sources */,
 				E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */,
 				E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */,
 			);

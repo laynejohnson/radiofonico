@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uCo-MJ-ndm">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -12,12 +13,30 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Benvenuti View Controller-->
+        <scene sceneID="sed-gb-yEX">
+            <objects>
+                <viewController id="uCo-MJ-ndm" userLabel="Benvenuti View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNn-r5-Tcv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hTJ-La-C2L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ToMusicPlayer" id="Zcd-sq-U38"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ddT-ah-KeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762" y="105"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="radiofonico" customModuleProvider="target" sceneMemberID="viewController">
                     <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" id="3I3-pd-eyF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-47-w8Q" userLabel="Top View">
@@ -181,10 +200,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-L7-4n5" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="748" width="343" height="148"/>
+                                <rect key="frame" x="0.0" y="748" width="343" height="94"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-LC-cZZ" userLabel="Footer Button Stack View">
-                                        <rect key="frame" x="96.666666666666671" y="36.666666666666636" width="149.66666666666663" height="74.666666666666686"/>
+                                        <rect key="frame" x="96.666666666666671" y="9.6666666666666288" width="149.66666666666663" height="74.666666666666671"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9H-pa-jaa" userLabel="Mano Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="52.666666666666664" height="74.666666666666671"/>
@@ -226,6 +245,7 @@
                         <viewLayoutGuide key="safeArea" id="5Z1-do-3GN"/>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                     </stackView>
+                    <navigationItem key="navigationItem" id="z4X-kl-Vda"/>
                     <connections>
                         <outlet property="albumArt" destination="QqW-Qw-5RT" id="FJu-7u-U7T"/>
                         <outlet property="artistLabel" destination="RNh-4m-g8c" id="zWp-B0-mKG"/>
@@ -266,5 +286,8 @@
         <image name="previous_button_highlight" width="36" height="33"/>
         <image name="replay_button" width="37" height="38"/>
         <image name="replay_button_selected" width="37" height="38"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
