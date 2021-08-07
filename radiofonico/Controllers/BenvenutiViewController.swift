@@ -19,6 +19,8 @@ class BenvenutiViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        navigationController?.isNavigationBarHidden = true
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,9 +42,12 @@ class BenvenutiViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             self.performSegue(withIdentifier: Constants.musicPlayerSegue, sender: self )
         })
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
         
-        
-        
+        self.dismiss(animated: false, completion: nil)
     }
     
 }

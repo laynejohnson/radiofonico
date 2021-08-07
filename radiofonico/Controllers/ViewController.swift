@@ -92,6 +92,12 @@ class ViewController: UIViewController {
         songTimeLabel.text = "00:00"
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
 
     //MARK: - Animations
 
