@@ -17,13 +17,17 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mano_lg" translatesAutoresizingMaskIntoConstraints="NO" id="32O-eE-MSV">
                                 <rect key="frame" x="131.5" y="329" width="151" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="B1Z-YM-tH4"/>
+                                    <constraint firstAttribute="width" constant="151" id="ezK-7E-hH1"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="32O-eE-MSV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Mgq-xO-Mkw"/>
-                            <constraint firstItem="32O-eE-MSV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wrg-Jm-g6q"/>
+                            <constraint firstItem="32O-eE-MSV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bkt-4k-tas"/>
+                            <constraint firstItem="32O-eE-MSV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bnT-JP-2kb"/>
                         </constraints>
                     </view>
                 </viewController>
