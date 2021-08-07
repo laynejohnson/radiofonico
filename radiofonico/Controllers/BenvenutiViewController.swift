@@ -7,31 +7,42 @@
 
 import UIKit
 
-class BenvenutiViewController: ViewController {
-
+class BenvenutiViewController: UIViewController {
+    
+    @IBOutlet weak var manoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        // Animation code here + timer
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn , animations: {
+            self.manoImageView.transform = CGAffineTransform(translationX: 0, y: 10)
+        })
         
-        performSegue(withIdentifier: , sender: <#T##Any?#>)
+        UIView.animate(withDuration: 0.1, delay: 0.0, options: .transitionCrossDissolve, animations: {
+            self.manoImageView.transform = CGAffineTransform(scaleX: 1.05, y: 1.05)
+        })
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .transitionCrossDissolve, animations: {
+            self.manoImageView.image = UIImage(named:"mano_heart_lg")
+            
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
+            self.performSegue(withIdentifier: Constants.musicPlayerSegue, sender: self )
+        })
+        
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

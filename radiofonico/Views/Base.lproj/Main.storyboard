@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,14 +15,24 @@
         <!--Benvenuti View Controller-->
         <scene sceneID="sed-gb-yEX">
             <objects>
-                <viewController id="uCo-MJ-ndm" userLabel="Benvenuti View Controller" sceneMemberID="viewController">
+                <viewController id="uCo-MJ-ndm" userLabel="Benvenuti View Controller" customClass="BenvenutiViewController" customModule="radiofonico" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PNn-r5-Tcv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mano_lg" translatesAutoresizingMaskIntoConstraints="NO" id="917-rq-1Hc">
+                                <rect key="frame" x="131.66666666666666" y="329" width="150.99999999999997" height="238"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hTJ-La-C2L"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="917-rq-1Hc" firstAttribute="centerY" secondItem="PNn-r5-Tcv" secondAttribute="centerY" id="agZ-FA-8f4"/>
+                            <constraint firstItem="917-rq-1Hc" firstAttribute="centerX" secondItem="PNn-r5-Tcv" secondAttribute="centerX" id="fZ6-dz-FTk"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="manoImageView" destination="917-rq-1Hc" id="00F-uf-asp"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ToMusicPlayer" id="Zcd-sq-U38"/>
                     </connections>
                 </viewController>
@@ -78,16 +87,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-BM-p2A" userLabel="Song Info Stack View">
-                                                <rect key="frame" x="41" y="8.3333333333333179" width="261.33333333333331" height="63.333333333333343"/>
+                                                <rect key="frame" x="15.666666666666657" y="9" width="312" height="62"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer On A Solitary Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-dr-9Pt" userLabel="Title Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                        <rect key="frame" x="0.0" y="0.0" width="261.33333333333331" height="23.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="22.666666666666668"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-4m-g8c" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                        <rect key="frame" x="0.0" y="42.333333333333314" width="261.33333333333331" height="21"/>
+                                                        <rect key="frame" x="0.0" y="41.666666666666629" width="312" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="18"/>
                                                         <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -110,7 +119,7 @@
                                         <rect key="frame" x="0.0" y="76" width="343" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
-                                                <rect key="frame" x="17" y="11.666666666666625" width="309" height="56.666666666666657"/>
+                                                <rect key="frame" x="17" y="12" width="309" height="56"/>
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-Wr-ozA">
                                                         <rect key="frame" x="-2" y="0.0" width="313" height="31"/>
@@ -125,22 +134,22 @@
                                                         </connections>
                                                     </slider>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
-                                                        <rect key="frame" x="0.0" y="38" width="309" height="18.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="38" width="309" height="18"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
-                                                                <rect key="frame" x="0.0" y="0.0" width="264.33333333333331" height="18.666666666666668"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="252.66666666666666" height="18"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzT-zv-GV2" userLabel="Separator Label">
-                                                                <rect key="frame" x="268.33333333333331" y="0.0" width="5.3333333333333144" height="18.666666666666668"/>
+                                                                <rect key="frame" x="256.66666666666669" y="0.0" width="9.6666666666666856" height="18"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
-                                                                <rect key="frame" x="277.66666666666669" y="0.0" width="31.333333333333314" height="18.666666666666668"/>
+                                                                <rect key="frame" x="270.33333333333331" y="0.0" width="38.666666666666686" height="18"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -267,15 +276,16 @@
     </scenes>
     <designables>
         <designable name="RNh-4m-g8c">
-            <size key="intrinsicContentSize" width="108.66666666666667" height="21"/>
+            <size key="intrinsicContentSize" width="140.66666666666666" height="20.333333333333332"/>
         </designable>
         <designable name="gEQ-dr-9Pt">
-            <size key="intrinsicContentSize" width="261.33333333333331" height="23.333333333333332"/>
+            <size key="intrinsicContentSize" width="312" height="22.666666666666668"/>
         </designable>
     </designables>
     <resources>
         <image name="album_art" width="343" height="339"/>
         <image name="double_lines" width="414" height="10"/>
+        <image name="mano_lg" width="151" height="238"/>
         <image name="mano_selected" width="56" height="84"/>
         <image name="mano_unselected" width="54" height="76"/>
         <image name="next_button" width="36" height="33"/>
@@ -286,8 +296,5 @@
         <image name="previous_button_highlight" width="36" height="33"/>
         <image name="replay_button" width="37" height="38"/>
         <image name="replay_button_selected" width="37" height="38"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
