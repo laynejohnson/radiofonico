@@ -5,9 +5,8 @@
 <img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="207" height="448"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/02.imageset/02.png" alt="premi play screenshot" width="207" height="448"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/03.imageset/03.png" alt="music player screenshot" width="207" height="448"/>| 
-<img src="radiofonico/Assets.xcassets/Screenshots/04.imageset/04.png" alt="music player with active icons screenshot" width="207" height="448"/>|
 
-Music compilation by Beats in Space Radio
+*Music compilation by Beats in Space Radio*
 
 https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
 
