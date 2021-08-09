@@ -1,6 +1,6 @@
 #  Radio Fonico
 
-#### Music for meriggiares ☀️ 🇮🇹
+#### Music for meriggiares. ☀️ 🇮🇹
 
 <img src="radiofonico/Assets.xcassets/Screenshots/appstore.imageset/appstore.png" alt="launch screen screenshot" width="150" height="150"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="premi play screenshot" width="207" height="448"/> |
