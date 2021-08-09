@@ -9,7 +9,7 @@ Music for meriggiares.
 ![music player with active replay icon screenshot](radiofonico/Assets.xcassets/05.imageset/screenshots/05.png=414x896)
 ![music player with active icons screenshot](radiofonico/Assets.xcassets/06.imageset/screenshots/06.png=414x896)
 
-<img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="414" height="896"/>
+<img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="207" height="448"/>
 
 
 
