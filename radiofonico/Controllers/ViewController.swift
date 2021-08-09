@@ -7,7 +7,7 @@
 
 /*
 
- Music credit: Beats in Space Radio
+ Music compilation by Beats in Space Radio:
 
  https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
 

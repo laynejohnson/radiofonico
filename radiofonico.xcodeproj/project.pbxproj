@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		35BCC5217921C5A5F00D24AB /* Pods_radiofonico.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */; };
 		E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */; };
+		E837B1CC26C158AB007A9EF5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E837B1CB26C158AB007A9EF5 /* README.md */; };
 		E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */; };
 		E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */; };
 		E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */; };
@@ -45,6 +46,7 @@
 		A0B731F3374B09F55CC69B43 /* Pods-radiofonico.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-radiofonico.debug.xcconfig"; path = "Target Support Files/Pods-radiofonico/Pods-radiofonico.debug.xcconfig"; sourceTree = "<group>"; };
 		CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_radiofonico.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTMono-Regular.ttf"; sourceTree = "<group>"; };
+		E837B1CB26C158AB007A9EF5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mango-Bella d'Estate.mp3"; sourceTree = "<group>"; };
 		E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla-Washington.mp3"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		E8D5AAA1264EF74B00F231B1 = {
 			isa = PBXGroup;
 			children = (
+				E837B1CB26C158AB007A9EF5 /* README.md */,
 				E885545E266660A30056279C /* Fonts */,
 				E8D5AAAC264EF74B00F231B1 /* radiofonico */,
 				E8D5AAAB264EF74B00F231B1 /* Products */,
@@ -268,6 +271,7 @@
 				E888AA1926A488F40042F986 /* Gaznevada-Agente Speciale.mp3 in Resources */,
 				E888AA1A26A488F40042F986 /* Marcella Bella-Nell’Aria.mp3 in Resources */,
 				E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */,
+				E837B1CC26C158AB007A9EF5 /* README.md in Resources */,
 				E888AA1626A488F40042F986 /* Alice-Chan-Son Egocentrique.mp3 in Resources */,
 				E888AA1C26A488F40042F986 /* Paolo Tofani-Un Altro Universo.mp3 in Resources */,
 				E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */,
