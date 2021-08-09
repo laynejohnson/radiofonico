@@ -2,13 +2,13 @@
 
 Music for meriggiares.
 
-![](Assets.xcassets/Screenshots/01)
-![](Assets.xcassets/screenshots/02)
-![](Assets.xcassets/screenshots/03)
-![](Assets.xcassets/screenshots/04)
-![](Assets.xcassets/screenshots/05)
-![](Assets.xcassets/screenshots/06)
-![](Assets.xcassets/screenshots/07)
+![launch screen screenshot](radiofonico/Assets.xcassets/Screenshots/01)
+![premi play screenshot](radiofonico/Assets.xcassets/screenshots/02)
+![music player screenshot](radiofonico/Assets.xcassets/screenshots/03)
+![music player with active mano icon screenshot](radiofonico/Assets.xcassets/screenshots/04)
+![music player with active replay icon screenshot](radiofonico/Assets.xcassets/screenshots/05)
+![music player with active icons screenshot](radiofonico/Assets.xcassets/screenshots/06)
+
 
 Music compilation by Beats in Space Radio
 
