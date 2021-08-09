@@ -1,17 +1,13 @@
 #  Radio Fonico
 
-Music for meriggiares.
-
-![launch screen screenshot](=414x896)
-![premi play screenshot](radiofonico/Assets.xcassets/screenshots/02.imageset/02.png=414x896)
-![music player screenshot](radiofonico/Assets.xcassets/screenshots/03.imageset/03.png=414x896)
-![music player with active mano icon screenshot](radiofonico/Assets.xcassets/04.imageset/screenshots/04.png=414x896)
-![music player with active replay icon screenshot](radiofonico/Assets.xcassets/05.imageset/screenshots/05.png=414x896)
-![music player with active icons screenshot](radiofonico/Assets.xcassets/06.imageset/screenshots/06.png=414x896)
+*Music for meriggiares.*
 
 <img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="207" height="448"/>
-
-
+<img src="radiofonico/Assets.xcassets/screenshots/02.imageset/02.png" alt="premi play screenshot" width="207" height="448"/>
+<img src="radiofonico/Assets.xcassets/screenshots/03.imageset/03.png" alt="music player screenshot" width="207" height="448"/>
+<img src="radiofonico/Assets.xcassets/04.imageset/screenshots/04.png" alt="music player with active mano icon screenshot" width="207" height="448"/>
+<img src="radiofonico/Assets.xcassets/05.imageset/screenshots/05.png" alt="music player with active replay icon screenshot" width="207" height="448"/>
+<img src="radiofonico/Assets.xcassets/06.imageset/screenshots/06.png" alt="music player with active icons screenshot" width="207" height="448"/>
 
 Music compilation by Beats in Space Radio
 
