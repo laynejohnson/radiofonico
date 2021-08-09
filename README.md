@@ -2,8 +2,9 @@
 
 *Music for meriggiares.*
 
-<img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="207" height="448"/>
+<img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="207" height="448"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/02.imageset/02.png" alt="premi play screenshot" width="207" height="448"/>
+:-------------------------:|:-------------------------:
 <img src="radiofonico/Assets.xcassets/Screenshots/03.imageset/03.png" alt="music player screenshot" width="207" height="448"/>
 <img src="radiofonico/Assets.xcassets/Screenshots/04.imageset/04.png" alt="music player with active mano icon screenshot" width="207" height="448"/>
 <img src="radiofonico/Assets.xcassets/Screenshots/05.imageset/05.png" alt="music player with active replay icon screenshot" width="207" height="448"/>
