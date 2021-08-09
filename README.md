@@ -2,13 +2,13 @@
 
 Music for meriggiares.
 
-![](screenshots/01)
-![](screenshots/02)
-![](screenshots/03)
-![](screenshots/04)
-![](screenshots/05)
-![](screenshots/06)
-![](screenshots/07)
+![](Assets.xcassets/Screenshots/01)
+![](Assets.xcassets/screenshots/02)
+![](Assets.xcassets/screenshots/03)
+![](Assets.xcassets/screenshots/04)
+![](Assets.xcassets/screenshots/05)
+![](Assets.xcassets/screenshots/06)
+![](Assets.xcassets/screenshots/07)
 
 Music compilation by Beats in Space Radio
 
