@@ -28,6 +28,7 @@ import AVFoundation
 
 Features:
 
+// TODO: Add Radio Fonico to launch screen
 // TODO: Implement repeat function
 // TODO: Implement autoplay
 // TODO: Add background playback
