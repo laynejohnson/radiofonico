@@ -1,14 +1,11 @@
 #  Radio Fonico
 
-Music for meriggiares.
+**Music for meriggiares.**
 
-![launch screen screenshot](radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png)
-![premi play screenshot](radiofonico/Assets.xcassets/screenshots/02.imageset/02.png)
-![music player screenshot](radiofonico/Assets.xcassets/screenshots/03.imageset/03.png)
-![music player with active mano icon screenshot](radiofonico/Assets.xcassets/04.imageset/screenshots/04.png)
-![music player with active replay icon screenshot](radiofonico/Assets.xcassets/05.imageset/screenshots/05.png)
-![music player with active icons screenshot](radiofonico/Assets.xcassets/06.imageset/screenshots/06.png)
-
+<img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="launch screen screenshot" width="207" height="448"/> |
+<img src="radiofonico/Assets.xcassets/Screenshots/02.imageset/02.png" alt="premi play screenshot" width="207" height="448"/> |
+<img src="radiofonico/Assets.xcassets/Screenshots/03.imageset/03.png" alt="music player screenshot" width="207" height="448"/>| 
+<img src="radiofonico/Assets.xcassets/Screenshots/04.imageset/04.png" alt="music player with active icons screenshot" width="207" height="448"/>|
 
 Music compilation by Beats in Space Radio
 
