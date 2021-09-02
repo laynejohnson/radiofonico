@@ -127,6 +127,8 @@ class ItalianRadioModel {
             
             isPlaying = false
             audioPlayer?.pause()
+            
+            return song
         }
         
         return defaultSongLabel

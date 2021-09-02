@@ -74,6 +74,7 @@ class ViewController: UIViewController {
     let italianRadio = ItalianRadioModel()
     var timer: Timer?
     
+    let song = " "
     let defaultSongLabel = " "
     let defaultArtistLabel = " "
     
@@ -224,7 +225,6 @@ class ViewController: UIViewController {
             progressBar.maximumValue = Float(audioPlayer!.duration)
             
             timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
-            
         }
     }
     
