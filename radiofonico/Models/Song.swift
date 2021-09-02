@@ -11,7 +11,5 @@ class Song {
     
     let songName = ""
     let songArtist = ""
-    
     let isFavorite = false
-    
 }

@@ -8,5 +8,6 @@
 import Foundation
 
 struct Constants {
+    
     static let musicPlayerSegue = "ToMusicPlayer"
 }

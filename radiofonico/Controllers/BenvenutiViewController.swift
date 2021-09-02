@@ -13,14 +13,12 @@ class BenvenutiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         navigationController?.isNavigationBarHidden = true
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,5 +47,4 @@ class BenvenutiViewController: UIViewController {
         
         self.dismiss(animated: false, completion: nil)
     }
-    
 }

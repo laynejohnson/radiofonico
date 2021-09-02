@@ -38,7 +38,6 @@ class ItalianRadioModel {
             let songInfo = song.components(separatedBy: delimiter)
             
             let song = songInfo[1]
-            
             let artist = songInfo[0]
             
             // Remove .mp3 from song string
@@ -50,18 +49,8 @@ class ItalianRadioModel {
         }
     }
     
-    func isFirstSong() -> Bool {
-        
-        if isPlaying == false && song == "" {
-            return true
-        } else {
-            return false
-        }
-    }
-    
     // MARK: - Audio Player
     
-    // AVFoundation Audio Player
     func playSound(_ soundName: String) {
         
         let path = Bundle.main.path(forResource: soundName, ofType:nil)!
@@ -127,6 +116,7 @@ class ItalianRadioModel {
         sender.isSelected.toggle()
         
         if sender.isSelected == true {
+            
             isPlaying = true
             song = italianRadioSongs[0]
             playSound(song)
@@ -134,6 +124,7 @@ class ItalianRadioModel {
             return song
             
         } else if sender.isSelected == false {
+            
             isPlaying = false
             audioPlayer?.pause()
         }
@@ -175,7 +166,6 @@ class ItalianRadioModel {
             
             // Add animation to "Press play to vibe"
             return defaultSongLabel
-            
         }
     }
     
@@ -212,5 +202,4 @@ class ItalianRadioModel {
         
         myFavorites.contains(song)
     }
-    
-} // END ItalianRadioModel class
+}
