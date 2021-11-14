@@ -1,10 +1,10 @@
 #  Radio Fonico
 
-### iOS music player. Music for meriggiares. ☀️ 🇮🇹
+### iOS music player. Music for meriggiares. 
 
 <img src="radiofonico/Assets.xcassets/Screenshots/appstore.imageset/appstore.png" alt="launch screen screenshot" width="150" height="150"/> 
 
-### **🎶 To Run App:** 
+### **☀️ 🇮🇹 To Run App:** 
 - Run `pod install` inside project directory. (CocoaPods required)
 - `open radiofonico.xcworkspace` in Terminal to open app in XCode.
 
@@ -18,7 +18,7 @@
 
 https://www.mixcloud.com/bisradio/bis-radio-show-1072-with-il-quadro-di-troisi-donato-dozzy-eva-geist/
 
-**TRACKLIST :**
+**🎶TRACKLIST :**
 1. Mango - Bella d’estate 
 2. Lucio Dalla - Washington 
 3. Franco Battiato - Summer on a Solitary Beach 
