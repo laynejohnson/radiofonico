@@ -67,19 +67,19 @@ class ItalianRadioModel {
         }
     }
     
-    // MARK: - Radio Controls Functions
+    // MARK: - Radio Control Functions
     
     func playPreviousSong() -> String {
         
         if isPlaying == true {
             
-            // Get index of current song
+            // Get index of current song.
             let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
             
-            // Get index of previous song
+            // Get index of previous song.
             var previousSongIndex = songIndex! - 1
             
-            // Reset index at end of array
+            // Reset index at end of array.
             if previousSongIndex > italianRadioSongs.count - 1 || previousSongIndex < 0 {
                 
                 previousSongIndex = italianRadioSongs.endIndex - 1
@@ -94,7 +94,7 @@ class ItalianRadioModel {
                 
             } else {
                 
-                // Play previous song
+                // Play previous song.
                 let previousSong = italianRadioSongs[previousSongIndex]
                 
                 song = previousSong
@@ -112,7 +112,7 @@ class ItalianRadioModel {
     
     func radioOnOff(sender: UIButton) -> String {
         
-        // Toggle radio state
+        // Toggle radio state.
         sender.isSelected.toggle()
         
         if sender.isSelected == true {
@@ -138,13 +138,13 @@ class ItalianRadioModel {
         
         if isPlaying == true {
             
-            // Get index of current song
+            // Get index of current song.
             let songIndex = italianRadioSongs.firstIndex(of: "\(song)")
             
-            // Get index of next song
+            // Get index of next song.
             var nextSongIndex = songIndex! + 1
             
-            // Reset index at end of array
+            // Reset index at end of array.
             if nextSongIndex > italianRadioSongs.count - 1 {
                 nextSongIndex = 0
                 let nextSong = italianRadioSongs[nextSongIndex]
@@ -154,7 +154,7 @@ class ItalianRadioModel {
                 
             } else {
                 
-                // Play next song
+                // Play next song.
                 let nextSong = italianRadioSongs[nextSongIndex]
                 
                 song = nextSong
@@ -166,7 +166,7 @@ class ItalianRadioModel {
             
         } else {
             
-            // Add animation to "Press play to vibe"
+            // Add animation to "Press play to vibe".
             return defaultSongLabel
         }
     }
@@ -175,28 +175,28 @@ class ItalianRadioModel {
     
     func addFavorite(song: String) {
         
-        // Filter array for song index
+        // Filter array for song index.
         let indexArray = italianRadioSongs.indices.filter { italianRadioSongs[$0].localizedCaseInsensitiveContains("\(song)") }
         
-        // Retrieve index from filtered array
+        // Retrieve index from filtered array.
         let index = indexArray[0]
         
-        // Find favorite song
+        // Find favorite song.
         let favorite = italianRadioSongs[index]
         
-        // Add song to favorites
+        // Add song to favorites.
         myFavorites.append(favorite)
     }
     
     func removeFavorite(song: String) {
         
-        // Filter array for song index
+        // Filter array for song index.
         let indexArray = myFavorites.indices.filter { myFavorites[$0].localizedCaseInsensitiveContains("\(song)") }
         
-        // Retrieve index from filtered array
+        // Retrieve index from filtered array.
         let index = indexArray[0]
         
-        // Remove song from favorites
+        // Remove song from favorites.
         myFavorites.remove(at: index)
     }
     

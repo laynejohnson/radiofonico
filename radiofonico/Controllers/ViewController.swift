@@ -21,13 +21,7 @@ import AVFoundation
 // MARK: - Dev TODOs:
 
 /*
- 
- // ---------------------------------- //
- // - - - - - - - DEV TODO - - - - - - //
- // ---------------------------------- //
- 
  Features:
- 
  // TODO: Add "Radio Fonico" to launch screen
  // TODO: Implement repeat function
  // TODO: Implement autoplay
@@ -44,21 +38,17 @@ class ViewController: UIViewController {
     
     // MARK: - IBOutlets
     
-    // ---------------------------------- //
-    // - - - - - - -  OUTLETS - - - - - - //
-    // ---------------------------------- //
-    
-    // Song and album view
+    // Song and album view.
     @IBOutlet weak var albumArt: UIImageView!
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     
-    // Progress bar
+    // Progress bar.
     @IBOutlet weak var progressBar: UISlider!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var songTimeLabel: UILabel!
     
-    // Radio controls
+    // Radio controls.
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
@@ -67,10 +57,6 @@ class ViewController: UIViewController {
     
     // MARK: - Variables
     
-    // ---------------------------------- //
-    // - - - - - - -  VARS - - - - - - -  //
-    // ---------------------------------- //
-    
     let italianRadio = ItalianRadioModel()
     var timer: Timer?
     
@@ -78,11 +64,10 @@ class ViewController: UIViewController {
     let defaultSongLabel = " "
     let defaultArtistLabel = " "
     
-    // MARK: - viewDidLoad
+    // MARK: - Lifecycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
         
         songLabel.text = ""
         artistLabel.text = ""
@@ -97,10 +82,11 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        // Hide navigation bar.
         navigationController?.isNavigationBarHidden = true
     }
     
-    //MARK: - Animations
+    // MARK: - Animations
     
     func animateButton(button: UIButton) {
         
@@ -116,15 +102,13 @@ class ViewController: UIViewController {
     
     // MARK: - UI Functions
     
-    // Set mano icon
+    // Set favorite button.
     func setMano(status: Bool) {
         
         if status == true {
-            
             manoButton.isSelected = true
             
         } else {
-            
             manoButton.isSelected = false
         }
     }
@@ -151,19 +135,15 @@ class ViewController: UIViewController {
         
         let duration = audioPlayer.duration
         
-        // Set progress bar
+        // Set progress bar.
         progressBar.value = Float(audioPlayer.currentTime)
         
-        // Set label text
+        // Set label text.
         songTimeLabel.text = getFormattedTime(timeInterval: duration)
         elapsedTimeLabel.text = getFormattedTime(timeInterval: audioPlayer.currentTime)
     }
     
     // MARK: - IBActions
-    
-    // ---------------------------------- //
-    // - - - - - - - ACTIONS - - - - - - - //
-    // ---------------------------------- //
     
     @IBAction func progressValueChanged(_ sender: UISlider) {
         
@@ -173,24 +153,28 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func playPreviousSong(_ sender: UIButton) {
         
+        // Animate play/pause button if no song is playing.
         if italianRadio.isPlaying == false && songLabel.text == "" {
             
             animateButton(button: playPauseButton)
             
         } else if italianRadio.isPlaying == true {
             
+            // Choose song.
             let song = italianRadio.playPreviousSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
+            // Check if song is a favorite.
             let isFavorite = italianRadio.checkFavorite(song: song)
             
+            // Set favorite button.
             setMano(status: isFavorite)
             
         } else {
             
+            // Animate play/pause button if no song is playing.
             animateButton(button: playPauseButton)
             
         }
@@ -198,32 +182,36 @@ class ViewController: UIViewController {
     
     @IBAction func playPauseRadio(_ sender: UIButton) {
         
+        // Choose song.
         let song = italianRadio.radioOnOff(sender: sender)
         
         if song == defaultSongLabel {
             
-            // Flash play button
+            // Flash play button.
             animateButton(button: playPauseButton)
             
         } else {
             
-            // Set song label
+            // Set song label.
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
-            // Check song favorite status
+            // Check song favorite status.
             let isFavorite = italianRadio.checkFavorite(song: song)
             
-            // Set mano
+            // Set favorite button.
             setMano(status: isFavorite)
         }
         
         if italianRadio.isPlaying == true {
             
+            // Set album art image.
             albumArt.image = #imageLiteral(resourceName: "album_art")
             
+            // Set progress bar values.
             progressBar.value = 0.0
             progressBar.maximumValue = Float(audioPlayer!.duration)
             
+            // Initiate timer.
             timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateProgressBar), userInfo: nil, repeats: true)
         }
     }
@@ -232,22 +220,24 @@ class ViewController: UIViewController {
         
         if italianRadio.isPlaying == false && songLabel.text == "" {
             
+            // Animate play/pause button if no song is playing.
             animateButton(button: playPauseButton)
             
         } else if italianRadio.isPlaying == true {
             
-            // Get next song
+            // Get next song.
             let song = italianRadio.playNextSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
-            // Check favorite status
+            // Check favorite status.
             let isFavorite = italianRadio.checkFavorite(song: song)
             
-            // Set mano
+            // Set favorite button.
             setMano(status: isFavorite)
             
         } else {
             
+            // Animate play/pause button.
             animateButton(button: playPauseButton)
         }
     }
@@ -256,10 +246,11 @@ class ViewController: UIViewController {
         
         if songLabel.text == "" {
             
-            // Animate play button
+            // Animate play/pause button if no song is playing.
             animateButton(button: playPauseButton)
         } else {
             
+            // Toggle replay button state.
             sender.isSelected.toggle()
         }
     }
@@ -268,36 +259,40 @@ class ViewController: UIViewController {
         
         if songLabel.text == "" {
             
-            // Animate play button
+            // Animate play button.
             animateButton(button: playPauseButton)
         }
         
         else if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
             
-            // Favorite current song
+            // Set current song as favorite.
             sender.isSelected = true
             
+            // Set song label.
             let song = songLabel.text
             
+            // Add favorite song to favorite songs.
             italianRadio.addFavorite(song: song!)
             
         } else if songLabel.text != nil && sender.isSelected == true {
             
-            // Remove song from favorites
+            // Remove song from favorite songs.
             sender.isSelected = false
             
+            // Set song label.
             let song = songLabel.text
             
+            // Remove song from array.
             italianRadio.removeFavorite(song: song!)
             
         } else if songLabel.text == nil {
             
-            // Animate play button
+            // Animate play button.
             animateButton(button: playPauseButton)
             
         } else {
             
-            // Animate play button
+            // Animate play button.
             animateButton(button: playPauseButton)
         }
     }

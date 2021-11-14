@@ -9,21 +9,28 @@ import UIKit
 
 class BenvenutiViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var manoImageView: UIImageView!
+    
+    // MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        // Hide navigation bar.
         navigationController?.isNavigationBarHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
+        // Animate RadioFonico icon.
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn , animations: {
             self.manoImageView.transform = CGAffineTransform(translationX: 0, y: 10)
         })
@@ -34,17 +41,12 @@ class BenvenutiViewController: UIViewController {
         
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .transitionCrossDissolve, animations: {
             self.manoImageView.image = UIImage(named:"mano_heart_lg")
-            
+
         })
         
+        // Segue to music player.
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
             self.performSegue(withIdentifier: Constants.musicPlayerSegue, sender: self )
         })
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        
-        self.dismiss(animated: false, completion: nil)
     }
 }
