@@ -1,12 +1,13 @@
 #  Radio Fonico
 
-#### Music for meriggiares. ☀️ 🇮🇹
+#### iOS music player. Music for meriggiares. ☀️ 🇮🇹
+
+<img src="radiofonico/Assets.xcassets/Screenshots/appstore.imageset/appstore.png" alt="launch screen screenshot" width="150" height="150"/> |
 
 #### **To Run App:** 
 - Run `pod install` inside project directory. (CocoaPods required)
 - `open radiofonico.xcworkspace` in Terminal to open app in XCode.
 
-<img src="radiofonico/Assets.xcassets/Screenshots/appstore.imageset/appstore.png" alt="launch screen screenshot" width="150" height="150"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/01.imageset/01.png" alt="premi play screenshot" width="207" height="448"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/02.imageset/02.png" alt="music player screenshot" width="207" height="448"/> |
 <img src="radiofonico/Assets.xcassets/Screenshots/03.imageset/03.png" alt="music player with active icons screenshot" width="207" height="448"/>
