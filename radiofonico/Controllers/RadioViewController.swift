@@ -115,6 +115,7 @@ class RadioViewController: UIViewController {
         }
     }
     
+     // TODO: ADD RESUME FROM TIMESTAMP.
     @IBAction func playPauseSong(_ sender: UIButton) {
         let song = italianRadio.playPauseRadio(sender: sender)
         
@@ -153,6 +154,7 @@ class RadioViewController: UIViewController {
         }
     }
     
+     // TODO: IMPLEMENT AUTOPLAY NEXT.
     @IBAction func playNextSong(_ sender: UIButton) {
         if italianRadio.isPlaying == false && songLabel.text == "" {
             animateButton(button: playPauseButton)
@@ -168,7 +170,7 @@ class RadioViewController: UIViewController {
             animateButton(button: playPauseButton)
         }
     }
-    
+      // TODO: IMPLEMENT REPLAY ALL SONGS.
     @IBAction func replayAllSongs(_ sender: UIButton) {
         if songLabel.text == "" {
             animateButton(button: playPauseButton)
