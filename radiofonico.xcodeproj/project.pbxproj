@@ -31,14 +31,13 @@
 		E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */; };
 		E894577226BEBBD900C58F1D /* BenvenutiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */; };
 		E894577426BEBCAE00C58F1D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E894577326BEBCAE00C58F1D /* Constants.swift */; };
-		E89982F5267CF5C3005C3322 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89982F4267CF5C3005C3322 /* Song.swift */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
 		E8D5AAB0264EF74B00F231B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */; };
-		E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAB1264EF74B00F231B1 /* ViewController.swift */; };
+		E8D5AAB2264EF74B00F231B1 /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAB1264EF74B00F231B1 /* RadioViewController.swift */; };
 		E8D5AAB5264EF74B00F231B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D5AAB3264EF74B00F231B1 /* Main.storyboard */; };
 		E8D5AAB7264EF74E00F231B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D5AAB6264EF74E00F231B1 /* Assets.xcassets */; };
 		E8D5AABA264EF74E00F231B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D5AAB8264EF74E00F231B1 /* LaunchScreen.storyboard */; };
-		E8D5AAC7264EF89D00F231B1 /* ItalianRadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */; };
+		E8D5AAC7264EF89D00F231B1 /* RadioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAC6264EF89D00F231B1 /* RadioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,16 +67,15 @@
 		E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OvertheRainbow-Regular.ttf"; sourceTree = "<group>"; };
 		E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenvenutiViewController.swift; sourceTree = "<group>"; };
 		E894577326BEBCAE00C58F1D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E89982F4267CF5C3005C3322 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E8D5AAB1264EF74B00F231B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8D5AAB1264EF74B00F231B1 /* RadioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewController.swift; sourceTree = "<group>"; };
 		E8D5AAB4264EF74B00F231B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8D5AAB6264EF74E00F231B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = /Users/findum/code/laynejohnson/radiofonico/radiofonico/Assets.xcassets; sourceTree = "<absolute>"; };
 		E8D5AAB9264EF74E00F231B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D5AABB264EF74E00F231B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItalianRadioModel.swift; sourceTree = "<group>"; };
+		E8D5AAC6264EF89D00F231B1 /* RadioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +156,7 @@
 		E8D5AAC1264EF7DC00F231B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E8D5AAC6264EF89D00F231B1 /* ItalianRadioModel.swift */,
-				E89982F4267CF5C3005C3322 /* Song.swift */,
+				E8D5AAC6264EF89D00F231B1 /* RadioModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */,
-				E8D5AAB1264EF74B00F231B1 /* ViewController.swift */,
+				E8D5AAB1264EF74B00F231B1 /* RadioViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -341,9 +338,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D5AAB2264EF74B00F231B1 /* ViewController.swift in Sources */,
-				E89982F5267CF5C3005C3322 /* Song.swift in Sources */,
-				E8D5AAC7264EF89D00F231B1 /* ItalianRadioModel.swift in Sources */,
+				E8D5AAB2264EF74B00F231B1 /* RadioViewController.swift in Sources */,
+				E8D5AAC7264EF89D00F231B1 /* RadioModel.swift in Sources */,
 				E894577226BEBBD900C58F1D /* BenvenutiViewController.swift in Sources */,
 				E894577426BEBCAE00C58F1D /* Constants.swift in Sources */,
 				E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */,
