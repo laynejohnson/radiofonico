@@ -116,8 +116,11 @@ class RadioViewController: UIViewController {
         elapsedTimeLabel.text = elapsedTime
         
         // Set accessibility labels.
-        songTimeLabel.accessibilityLabel = "Song length \(duration)"
-        elapsedTimeLabel.accessibilityLabel = "Elapsed time \(elapsedTime)"
+        songTimeLabel.accessibilityLabel = "Song length"
+        songTimeLabel.accessibilityValue = duration
+        
+        elapsedTimeLabel.accessibilityLabel = "Elapsed time"
+        elapsedTimeLabel.accessibilityValue = elapsedTime
     }
     
     // MARK: - IBActions
