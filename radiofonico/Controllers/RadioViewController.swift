@@ -48,6 +48,13 @@ class RadioViewController: UIViewController {
         
         albumArt.image = #imageLiteral(resourceName: "premi_play_v2")
         
+        // Accessibility setup.
+        albumArt.isAccessibilityElement = true
+        albumArt.accessibilityLabel = "Premi play to vibe"
+        albumArt.accessibilityLanguage = "it"
+        
+        playPauseButton.accessibilityLabel = "Play"
+        
         elapsedTimeLabel.text = "00:00"
         songTimeLabel.text = "00:00"
     }
@@ -100,11 +107,17 @@ class RadioViewController: UIViewController {
     @objc func updateProgressBar() {
         guard let audioPlayer = audioPlayer else { return }
         
-        let duration = audioPlayer.duration
+        let duration = getFormattedTime(timeInterval: audioPlayer.duration)
+        let elapsedTime = getFormattedTime(timeInterval: audioPlayer.currentTime)
         
         progressBar.value = Float(audioPlayer.currentTime)
-        songTimeLabel.text = getFormattedTime(timeInterval: duration)
-        elapsedTimeLabel.text = getFormattedTime(timeInterval: audioPlayer.currentTime)
+        
+        songTimeLabel.text = duration
+        elapsedTimeLabel.text = elapsedTime
+        
+        // Set accessibility labels.
+        songTimeLabel.accessibilityLabel = "Song length \(duration)"
+        elapsedTimeLabel.accessibilityLabel = "Elapsed time \(elapsedTime)"
     }
     
     // MARK: - IBActions
@@ -131,6 +144,12 @@ class RadioViewController: UIViewController {
         
         if italianRadio.isPlaying == true {
             albumArt.image = #imageLiteral(resourceName: "album_art")
+            
+            // Set accessibility labels.
+            albumArt.accessibilityLabel = "Il quadro di troisi album art"
+            albumArt.accessibilityLanguage = "it"
+            
+            playPauseButton.accessibilityLabel = "Pause"
             
             progressBar.value = 0.0
             progressBar.maximumValue = Float(audioPlayer!.duration)
