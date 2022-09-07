@@ -20,8 +20,9 @@ class RadioViewController: UIViewController {
     // Progress bar.
     @IBOutlet weak var progressBar: UISlider!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
+    @IBOutlet weak var separatorLabel: UILabel!
     @IBOutlet weak var songTimeLabel: UILabel!
-    
+
     // Radio controls.
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
@@ -43,26 +44,71 @@ class RadioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set default image/labels.
+        albumArt.image = #imageLiteral(resourceName: "premi_play_v2")
         songLabel.text = ""
         artistLabel.text = ""
+        elapsedTimeLabel.text = "00:00"
+        songTimeLabel.text = "00:00"
         
-        albumArt.image = #imageLiteral(resourceName: "premi_play_v2")
-        
-        // Accessibility setup.
+        // Set accessibility labels.
         albumArt.isAccessibilityElement = true
         albumArt.accessibilityLabel = "Premi play to vibe"
         albumArt.accessibilityLanguage = "it"
-        
         playPauseButton.accessibilityLabel = "Play"
         
-        elapsedTimeLabel.text = "00:00"
-        songTimeLabel.text = "00:00"
+        // Setup dynamic type for custom font.
+        guard let customFont = UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "PTMono-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
+        
+        songLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songLabel.adjustsFontForContentSizeCategory = true
+        
+        artistLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        artistLabel.adjustsFontForContentSizeCategory = true
+        
+        elapsedTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        elapsedTimeLabel.adjustsFontForContentSizeCategory = true
+        
+        separatorLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        separatorLabel.adjustsFontForContentSizeCategory = true
+        
+        songTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songTimeLabel.adjustsFontForContentSizeCategory = true
+        
+        
+        // Add observer for change in content size preference.
+        NotificationCenter.default.addObserver(self, selector: #selector(preferredContentSizeChanged(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    // MARK: - Observers
+    
+    @objc func preferredContentSizeChanged(_ notification: Notification) {
+        guard let customFont = UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "PTMono-Regular" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
+        
+        songLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        artistLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        elapsedTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        separatorLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
     }
     
     // MARK: - Animations
@@ -82,7 +128,7 @@ class RadioViewController: UIViewController {
     func setFavorite(status: Bool) {
         if status == true {
             manoButton.isSelected = true
-        
+            
         } else {
             manoButton.isSelected = false
         }
@@ -131,13 +177,13 @@ class RadioViewController: UIViewController {
         }
     }
     
-     // TODO: ADD RESUME FROM TIMESTAMP.
+    // TODO: ADD RESUME FROM TIMESTAMP.
     @IBAction func playPauseSong(_ sender: UIButton) {
         let song = italianRadio.playPauseRadio(sender: sender)
         
         if song == defaultSongLabel {
             animateButton(button: playPauseButton)
-        
+            
         } else {
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             
@@ -176,7 +222,7 @@ class RadioViewController: UIViewController {
         }
     }
     
-     // TODO: IMPLEMENT AUTOPLAY NEXT.
+    // TODO: IMPLEMENT AUTOPLAY NEXT.
     @IBAction func playNextSong(_ sender: UIButton) {
         if italianRadio.isPlaying == false && songLabel.text == "" {
             animateButton(button: playPauseButton)
@@ -185,18 +231,18 @@ class RadioViewController: UIViewController {
             let song = italianRadio.playNextSong()
             italianRadio.setSongLabel(song: song, songLabel: songLabel, artistLabel: artistLabel)
             let isFavorite = italianRadio.checkFavorite(song: song)
-
+            
             setFavorite(status: isFavorite)
             
         } else {
             animateButton(button: playPauseButton)
         }
     }
-      // TODO: IMPLEMENT REPLAY ALL SONGS.
+    // TODO: IMPLEMENT REPLAY ALL SONGS.
     @IBAction func replayAllSongs(_ sender: UIButton) {
         if songLabel.text == "" {
             animateButton(button: playPauseButton)
-       
+            
         } else {
             sender.isSelected.toggle()
         }
@@ -209,7 +255,7 @@ class RadioViewController: UIViewController {
             
         } else if songLabel.text != nil && songLabel.text != defaultSongLabel && sender.isSelected == false {
             sender.isSelected = true
- 
+            
             let song = songLabel.text
             italianRadio.addFavorite(song: song!)
             

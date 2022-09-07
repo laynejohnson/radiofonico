@@ -46,7 +46,7 @@ class BenvenutiViewController: UIViewController {
         
         // Segue to music player.
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            self.performSegue(withIdentifier: Constants.musicPlayerSegue, sender: self )
+            self.performSegue(withIdentifier: Constants.Segues.musicPlayerSegue, sender: self )
         })
     }
 }

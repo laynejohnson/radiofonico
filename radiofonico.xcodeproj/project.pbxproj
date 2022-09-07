@@ -107,6 +107,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E86FA8C828C8E62C006797E4 /* App Support */ = {
+			isa = PBXGroup;
+			children = (
+				E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */,
+				E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */,
+				E894577326BEBCAE00C58F1D /* Constants.swift */,
+			);
+			path = "App Support";
+			sourceTree = "<group>";
+		};
 		E885545E266660A30056279C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +150,7 @@
 		E8D5AAAC264EF74B00F231B1 /* radiofonico */ = {
 			isa = PBXGroup;
 			children = (
-				E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */,
-				E8D5AAAF264EF74B00F231B1 /* SceneDelegate.swift */,
-				E894577326BEBCAE00C58F1D /* Constants.swift */,
+				E86FA8C828C8E62C006797E4 /* App Support */,
 				E8D5AAE82654416900F231B1 /* Audio */,
 				E8D5AAC1264EF7DC00F231B1 /* Models */,
 				E8D5AAC2264EF7EB00F231B1 /* Views */,
