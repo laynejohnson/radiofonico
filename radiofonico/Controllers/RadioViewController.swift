@@ -21,14 +21,14 @@ class RadioViewController: UIViewController {
     @IBOutlet weak var progressBar: UISlider!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var separatorLabel: UILabel!
-    @IBOutlet weak var songTimeLabel: UILabel!
+    @IBOutlet weak var songLengthLabel: UILabel!
 
     // Radio controls.
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var replayButton: UIButton!
-    @IBOutlet weak var manoButton: UIButton!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     // MARK: - Variables
     
@@ -49,14 +49,29 @@ class RadioViewController: UIViewController {
         songLabel.text = ""
         artistLabel.text = ""
         elapsedTimeLabel.text = "00:00"
-        songTimeLabel.text = "00:00"
+        songLengthLabel.text = "00:00"
         
-        // Set accessibility labels.
+        // Set accessibility elements.
         albumArt.isAccessibilityElement = true
-        albumArt.accessibilityLabel = "Premi play to vibe"
-        albumArt.accessibilityLanguage = "it"
-        playPauseButton.accessibilityLabel = "Play"
         
+        // Set accessibility labels. * State dependent accessibility labels set in playPauseSong() & updateProgressBar() functions.
+        albumArt.accessibilityLabel = "Premi play to vibe"
+        progressBar.accessibilityLabel = "Track position"
+            // Labels.
+        elapsedTimeLabel.accessibilityLabel = "Elapsed time"
+        songLengthLabel.accessibilityLabel = "Song length"
+            // Buttons
+        previousButton.accessibilityLabel = "Previous track"
+        playPauseButton.accessibilityLabel = "Play"
+        nextButton.accessibilityLabel = "Next track"
+        favoriteButton.accessibilityLabel = "Favorite"
+        replayButton.accessibilityLabel = "Replay all"
+        
+        // Set accessibility language.
+        albumArt.accessibilityLanguage = "it"
+        songLabel.accessibilityLanguage = "it"
+        artistLabel.accessibilityLanguage = "it"
+
         // Setup dynamic type for custom font.
         guard let customFont = UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize) else {
             fatalError("""
@@ -78,8 +93,8 @@ class RadioViewController: UIViewController {
         separatorLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
         separatorLabel.adjustsFontForContentSizeCategory = true
         
-        songTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
-        songTimeLabel.adjustsFontForContentSizeCategory = true
+        songLengthLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songLengthLabel.adjustsFontForContentSizeCategory = true
         
         
         // Add observer for change in content size preference.
@@ -108,7 +123,7 @@ class RadioViewController: UIViewController {
         artistLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
         elapsedTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
         separatorLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
-        songTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songLengthLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
     }
     
     // MARK: - Animations
@@ -127,10 +142,10 @@ class RadioViewController: UIViewController {
     
     func setFavorite(status: Bool) {
         if status == true {
-            manoButton.isSelected = true
+            favoriteButton.isSelected = true
             
         } else {
-            manoButton.isSelected = false
+            favoriteButton.isSelected = false
         }
     }
     
@@ -158,15 +173,17 @@ class RadioViewController: UIViewController {
         
         progressBar.value = Float(audioPlayer.currentTime)
         
-        songTimeLabel.text = duration
+        songLengthLabel.text = duration
         elapsedTimeLabel.text = elapsedTime
         
         // Set accessibility labels.
-        songTimeLabel.accessibilityLabel = "Song length"
-        songTimeLabel.accessibilityValue = duration
-        
+        songLengthLabel.accessibilityLabel = "Song length"
+        songLengthLabel.accessibilityValue = duration
         elapsedTimeLabel.accessibilityLabel = "Elapsed time"
         elapsedTimeLabel.accessibilityValue = elapsedTime
+        
+        // Set accessibility value.
+        progressBar.accessibilityValue = "\(elapsedTime) of \(duration)"
     }
     
     // MARK: - IBActions
@@ -197,7 +214,6 @@ class RadioViewController: UIViewController {
             // Set accessibility labels.
             albumArt.accessibilityLabel = "Il quadro di troisi album art"
             albumArt.accessibilityLanguage = "it"
-            
             playPauseButton.accessibilityLabel = "Pause"
             
             progressBar.value = 0.0

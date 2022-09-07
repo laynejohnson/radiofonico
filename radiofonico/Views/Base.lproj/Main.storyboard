@@ -134,7 +134,7 @@
                                                 <subviews>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="v3b-Wr-ozA">
                                                         <rect key="frame" x="-2" y="0.0" width="313" height="31"/>
-                                                        <accessibility key="accessibilityConfiguration" label="Track position">
+                                                        <accessibility key="accessibilityConfiguration">
                                                             <accessibilityTraits key="traits" adjustable="YES"/>
                                                         </accessibility>
                                                         <constraints>
@@ -152,7 +152,6 @@
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
                                                                 <rect key="frame" x="0.0" y="0.0" width="252.66666666666666" height="18"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Elapsed time"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -165,7 +164,6 @@
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
                                                                 <rect key="frame" x="270.33333333333331" y="0.0" width="38.666666666666686" height="18"/>
-                                                                <accessibility key="accessibilityConfiguration" label="Song length"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -192,7 +190,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z97-l2-YX2" userLabel="Previous Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="77"/>
-                                                <accessibility key="accessibilityConfiguration" label="Previous track"/>
                                                 <state key="normal" image="previous_button"/>
                                                 <state key="highlighted" image="previous_button_highlight"/>
                                                 <connections>
@@ -209,7 +206,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OtI-oA-M6O" userLabel="Next Button">
                                                 <rect key="frame" x="157" y="0.0" width="36" height="77"/>
-                                                <accessibility key="accessibilityConfiguration" label="Next track"/>
                                                 <state key="normal" image="next_button"/>
                                                 <state key="highlighted" image="next_button_highlight"/>
                                                 <connections>
@@ -234,7 +230,6 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9H-pa-jaa" userLabel="Mano Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="74.666666666666671"/>
-                                                <accessibility key="accessibilityConfiguration" label="Favorite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74.879999999999995" id="6ZE-jd-I2a"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52.340000000000003" id="DNt-LB-tlE"/>
@@ -251,7 +246,6 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-7w-xYr" userLabel="Replay Button">
                                                 <rect key="frame" x="112.33333333333331" y="0.0" width="37" height="74.666666666666671"/>
-                                                <accessibility key="accessibilityConfiguration" label="Replay All"/>
                                                 <state key="normal" image="replay_button"/>
                                                 <state key="selected" image="replay_button_selected"/>
                                                 <connections>
@@ -279,7 +273,7 @@
                         <outlet property="albumArt" destination="QqW-Qw-5RT" id="FJu-7u-U7T"/>
                         <outlet property="artistLabel" destination="RNh-4m-g8c" id="zWp-B0-mKG"/>
                         <outlet property="elapsedTimeLabel" destination="RaQ-be-yzd" id="rET-aE-cL5"/>
-                        <outlet property="manoButton" destination="T9H-pa-jaa" id="icQ-1l-DFu"/>
+                        <outlet property="favoriteButton" destination="T9H-pa-jaa" id="icQ-1l-DFu"/>
                         <outlet property="nextButton" destination="OtI-oA-M6O" id="rWZ-UL-d2l"/>
                         <outlet property="playPauseButton" destination="WZj-VR-neG" id="TZc-wv-Od6"/>
                         <outlet property="previousButton" destination="z97-l2-YX2" id="g98-XJ-dfi"/>
@@ -287,7 +281,7 @@
                         <outlet property="replayButton" destination="1z3-7w-xYr" id="aVM-gb-lxP"/>
                         <outlet property="separatorLabel" destination="WzT-zv-GV2" id="zWJ-bl-WhW"/>
                         <outlet property="songLabel" destination="gEQ-dr-9Pt" id="RKF-EG-xOn"/>
-                        <outlet property="songTimeLabel" destination="rwl-X9-4HX" id="qgQ-TX-gfY"/>
+                        <outlet property="songLengthLabel" destination="rwl-X9-4HX" id="qgQ-TX-gfY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
