@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OCc-B6-fyp">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
-    <accessibilityOverrides isEnabled="YES" dynamicTypePreference="4"/>
+    <accessibilityOverrides isEnabled="YES" dynamicTypePreference="3"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -91,23 +91,23 @@
                                     <constraint firstItem="QqW-Qw-5RT" firstAttribute="centerY" secondItem="aXc-L6-vZ8" secondAttribute="centerY" id="uiE-QJ-3Gn"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="q29-SG-8nI" userLabel="Song Stack View">
-                                <rect key="frame" x="0.0" y="476" width="414" height="156"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q29-SG-8nI" userLabel="Song Stack View">
+                                <rect key="frame" x="0.0" y="476.00000000000006" width="414" height="155.66666666666669"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcz-zj-N1B" userLabel="Song Info View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75.666666666666671"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-BM-p2A" userLabel="Song Info Stack View">
-                                                <rect key="frame" x="51" y="9.6666666666666856" width="312" height="61"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ubs-BM-p2A" userLabel="Song Info Stack View">
+                                                <rect key="frame" x="51" y="4" width="312" height="67.666666666666671"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summer On A Solitary Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-dr-9Pt" userLabel="Title Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="22.666666666666668"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Summer On A Solitary Beach" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-dr-9Pt" userLabel="Title Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                        <rect key="frame" x="0.0" y="0.0" width="312" height="32.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Franco Battio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-4m-g8c" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
-                                                        <rect key="frame" x="0.0" y="41.666666666666686" width="312" height="19.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Franco Battio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNh-4m-g8c" userLabel="Artist Label" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                                        <rect key="frame" x="0.0" y="37.666666666666629" width="312" height="30"/>
                                                         <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="17"/>
                                                         <color key="textColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -121,13 +121,14 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Ubs-BM-p2A" firstAttribute="top" secondItem="rcz-zj-N1B" secondAttribute="top" constant="4" id="DYS-ms-qF0"/>
                                             <constraint firstItem="Ubs-BM-p2A" firstAttribute="centerX" secondItem="rcz-zj-N1B" secondAttribute="centerX" id="Tev-G3-HuY"/>
                                             <constraint firstItem="Ubs-BM-p2A" firstAttribute="centerY" secondItem="rcz-zj-N1B" secondAttribute="centerY" id="oS0-Nj-2NB"/>
-                                            <constraint firstAttribute="height" constant="80" id="tpL-i7-G22"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="tpL-i7-G22"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nd-Fu-riW" userLabel="Song Progress View">
-                                        <rect key="frame" x="0.0" y="76" width="414" height="80"/>
+                                        <rect key="frame" x="0.0" y="75.666666666666629" width="414" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cej-dO-e1d" userLabel="Song Progress Stack View">
                                                 <rect key="frame" x="52.666666666666657" y="12" width="309" height="56"/>
@@ -150,7 +151,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Nqk-3C-JNs" userLabel="Song Time Stack View">
                                                         <rect key="frame" x="0.0" y="38" width="309" height="18"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="RaQ-be-yzd" userLabel="Elapsed Time Label">
                                                                 <rect key="frame" x="0.0" y="0.0" width="252.66666666666666" height="18"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -162,7 +163,7 @@
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="rwl-X9-4HX" userLabel="Song Time Label">
                                                                 <rect key="frame" x="270.33333333333331" y="0.0" width="38.666666666666686" height="18"/>
                                                                 <fontDescription key="fontDescription" name="PTMono-Regular" family="PT Mono" pointSize="16"/>
                                                                 <color key="textColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,10 +184,10 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAX-Du-OhI" userLabel="Radio Controls View">
-                                <rect key="frame" x="0.0" y="650" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="649.66666666666663" width="414" height="80"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="kxS-PA-Obf" userLabel="Radio Controls Stack View">
-                                        <rect key="frame" x="110.66666666666669" y="1.6666666666666288" width="193" height="77"/>
+                                        <rect key="frame" x="110.66666666666669" y="1.6666666666667425" width="193" height="77"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z97-l2-YX2" userLabel="Previous Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="77"/>
@@ -223,13 +224,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yd-L7-4n5" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="748" width="414" height="148"/>
+                                <rect key="frame" x="0.0" y="747.66666666666663" width="414" height="148.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="60" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-LC-cZZ" userLabel="Footer Button Stack View">
-                                        <rect key="frame" x="132.33333333333331" y="36.666666666666636" width="149.33333333333331" height="74.666666666666686"/>
+                                        <rect key="frame" x="132.33333333333331" y="36.666666666666742" width="149.33333333333331" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9H-pa-jaa" userLabel="Mano Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="74.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="75"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="74.879999999999995" id="6ZE-jd-I2a"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52.340000000000003" id="DNt-LB-tlE"/>
@@ -245,7 +246,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1z3-7w-xYr" userLabel="Replay Button">
-                                                <rect key="frame" x="112.33333333333331" y="0.0" width="37" height="74.666666666666671"/>
+                                                <rect key="frame" x="112.33333333333331" y="0.0" width="37" height="75"/>
                                                 <state key="normal" image="replay_button"/>
                                                 <state key="selected" image="replay_button_selected"/>
                                                 <connections>
@@ -261,12 +262,17 @@
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="WNy-LC-cZZ" firstAttribute="centerX" secondItem="9yd-L7-4n5" secondAttribute="centerX" id="Dhv-Lm-A8c"/>
+                                    <constraint firstItem="WNy-LC-cZZ" firstAttribute="top" secondItem="9yd-L7-4n5" secondAttribute="top" constant="36.666666666666629" id="LBp-sq-5FT"/>
+                                    <constraint firstItem="WNy-LC-cZZ" firstAttribute="leading" secondItem="9yd-L7-4n5" secondAttribute="leading" constant="132.33333333333331" id="P8a-zW-hf4"/>
                                     <constraint firstItem="WNy-LC-cZZ" firstAttribute="centerY" secondItem="9yd-L7-4n5" secondAttribute="centerY" id="bZe-2Z-eCL"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Z1-do-3GN"/>
                         <color key="backgroundColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9yd-L7-4n5" firstAttribute="centerX" secondItem="3I3-pd-eyF" secondAttribute="centerX" id="MAd-TD-58A"/>
+                        </constraints>
                     </stackView>
                     <navigationItem key="navigationItem" id="z4X-kl-Vda"/>
                     <connections>

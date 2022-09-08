@@ -10,7 +10,6 @@
 		35BCC5217921C5A5F00D24AB /* Pods_radiofonico.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */; };
 		E81CEDD9267C022300DD6AEA /* PTMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */; };
 		E837B1CC26C158AB007A9EF5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E837B1CB26C158AB007A9EF5 /* README.md */; };
-		E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */; };
 		E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */; };
 		E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */; };
 		E88554682666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */; };
@@ -28,7 +27,6 @@
 		E888AA1F26A488F40042F986 /* Krisma-Samora Club.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */; };
 		E888AA2026A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */; };
 		E888AA2126A488F40042F986 /* Mike Francis-Survivor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */; };
-		E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */; };
 		E894577226BEBBD900C58F1D /* BenvenutiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */; };
 		E894577426BEBCAE00C58F1D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E894577326BEBCAE00C58F1D /* Constants.swift */; };
 		E8D5AAAE264EF74B00F231B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D5AAAD264EF74B00F231B1 /* AppDelegate.swift */; };
@@ -46,7 +44,6 @@
 		CF29AEDDCC0D7A7556986988 /* Pods_radiofonico.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_radiofonico.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTMono-Regular.ttf"; sourceTree = "<group>"; };
 		E837B1CB26C158AB007A9EF5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuseoModerno-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		E8855461266674880056279C /* Mango-Bella d'Estate.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mango-Bella d'Estate.mp3"; sourceTree = "<group>"; };
 		E8855462266674890056279C /* Lucio Dalla-Washington.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lucio Dalla-Washington.mp3"; sourceTree = "<group>"; };
 		E88554672666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Franco Battiato-Summer On A Solitary Beach.mp3"; sourceTree = "<group>"; };
@@ -64,7 +61,6 @@
 		E888AA1126A488F40042F986 /* Krisma-Samora Club.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Krisma-Samora Club.mp3"; sourceTree = "<group>"; };
 		E888AA1226A488F40042F986 /* Garbo-A Berlino Va Bene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Garbo-A Berlino Va Bene.mp3"; sourceTree = "<group>"; };
 		E888AA1326A488F40042F986 /* Mike Francis-Survivor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mike Francis-Survivor.mp3"; sourceTree = "<group>"; };
-		E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OvertheRainbow-Regular.ttf"; sourceTree = "<group>"; };
 		E894577126BEBBD900C58F1D /* BenvenutiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenvenutiViewController.swift; sourceTree = "<group>"; };
 		E894577326BEBCAE00C58F1D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8D5AAAA264EF74B00F231B1 /* radiofonico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = radiofonico.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,9 +116,7 @@
 		E885545E266660A30056279C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				E888AA2226A5B6F70042F986 /* OvertheRainbow-Regular.ttf */,
 				E81CEDD8267C022300DD6AEA /* PTMono-Regular.ttf */,
-				E885545F266660D50056279C /* MuseoModerno-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -275,7 +269,6 @@
 				E8855464266674890056279C /* Mango-Bella d'Estate.mp3 in Resources */,
 				E888AA1926A488F40042F986 /* Gaznevada-Agente Speciale.mp3 in Resources */,
 				E888AA1A26A488F40042F986 /* Marcella Bella-Nell’Aria.mp3 in Resources */,
-				E888AA2326A5B6F70042F986 /* OvertheRainbow-Regular.ttf in Resources */,
 				E837B1CC26C158AB007A9EF5 /* README.md in Resources */,
 				E888AA1626A488F40042F986 /* Alice-Chan-Son Egocentrique.mp3 in Resources */,
 				E888AA1C26A488F40042F986 /* Paolo Tofani-Un Altro Universo.mp3 in Resources */,
@@ -289,7 +282,6 @@
 				E888AA1F26A488F40042F986 /* Krisma-Samora Club.mp3 in Resources */,
 				E888AA1D26A488F40042F986 /* Teresa De Sio-Voglia E Turna.mp3 in Resources */,
 				E8D5AAB5264EF74B00F231B1 /* Main.storyboard in Resources */,
-				E8855460266660D50056279C /* MuseoModerno-VariableFont_wght.ttf in Resources */,
 				E88554682666749E0056279C /* Franco Battiato-Summer On A Solitary Beach.mp3 in Resources */,
 				E8855465266674890056279C /* Lucio Dalla-Washington.mp3 in Resources */,
 				E888AA2126A488F40042F986 /* Mike Francis-Survivor.mp3 in Resources */,

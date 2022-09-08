@@ -57,10 +57,10 @@ class RadioViewController: UIViewController {
         // Set accessibility labels. * State dependent accessibility labels set in playPauseSong() & updateProgressBar() functions.
         albumArt.accessibilityLabel = "Premi play to vibe"
         progressBar.accessibilityLabel = "Track position"
-            // Labels.
+            
         elapsedTimeLabel.accessibilityLabel = "Elapsed time"
         songLengthLabel.accessibilityLabel = "Song length"
-            // Buttons
+            
         previousButton.accessibilityLabel = "Previous track"
         playPauseButton.accessibilityLabel = "Play"
         nextButton.accessibilityLabel = "Next track"
@@ -72,8 +72,8 @@ class RadioViewController: UIViewController {
         songLabel.accessibilityLanguage = "it"
         artistLabel.accessibilityLanguage = "it"
 
-        // Setup dynamic type for custom font.
-        guard let customFont = UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize) else {
+        // Dynamic type setup.
+        guard let customFont = UIFont(name: "PTMono-Regular", size: 20) else {
             fatalError("""
                 Failed to load the "PTMono-Regular" font.
                 Make sure the font file is included in the project and the font name is spelled correctly.
@@ -81,25 +81,28 @@ class RadioViewController: UIViewController {
             )
         }
         
-        songLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+            // Song label.
         songLabel.adjustsFontForContentSizeCategory = true
-        
-        artistLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songLabel.font = UIFontMetrics(forTextStyle: .largeTitle ).scaledFont(for: customFont)
+
+            // Artist label.
         artistLabel.adjustsFontForContentSizeCategory = true
-        
-        elapsedTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        artistLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+
+            // Elapsed time label.
         elapsedTimeLabel.adjustsFontForContentSizeCategory = true
-        
-        separatorLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        elapsedTimeLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+
+            // Separator label.
         separatorLabel.adjustsFontForContentSizeCategory = true
-        
-        songLengthLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        separatorLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+
+            // Song length label.
         songLengthLabel.adjustsFontForContentSizeCategory = true
-        
+        songLengthLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
         
         // Add observer for change in content size preference.
         NotificationCenter.default.addObserver(self, selector: #selector(preferredContentSizeChanged(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,11 +122,11 @@ class RadioViewController: UIViewController {
             )
         }
         
-        songLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
-        artistLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
-        elapsedTimeLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
-        separatorLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
-        songLengthLabel.font = UIFontMetrics.default.scaledFont(for: customFont)
+        songLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+        artistLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+        elapsedTimeLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+        separatorLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+        songLengthLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
     }
     
     // MARK: - Animations
