@@ -22,7 +22,7 @@ class RadioViewController: UIViewController {
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var separatorLabel: UILabel!
     @IBOutlet weak var songLengthLabel: UILabel!
-
+    
     // Radio controls.
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
@@ -57,10 +57,10 @@ class RadioViewController: UIViewController {
         // Set accessibility labels. * State dependent accessibility labels set in playPauseSong() & updateProgressBar() functions.
         albumArt.accessibilityLabel = "Premi play to vibe"
         progressBar.accessibilityLabel = "Track position"
-            
+        
         elapsedTimeLabel.accessibilityLabel = "Elapsed time"
         songLengthLabel.accessibilityLabel = "Song length"
-            
+        
         previousButton.accessibilityLabel = "Previous track"
         playPauseButton.accessibilityLabel = "Play"
         nextButton.accessibilityLabel = "Next track"
@@ -71,62 +71,39 @@ class RadioViewController: UIViewController {
         albumArt.accessibilityLanguage = "it"
         songLabel.accessibilityLanguage = "it"
         artistLabel.accessibilityLanguage = "it"
-
+        
         // Dynamic type setup.
-        guard let customFont = UIFont(name: "PTMono-Regular", size: 20) else {
-            fatalError("""
-                Failed to load the "PTMono-Regular" font.
-                Make sure the font file is included in the project and the font name is spelled correctly.
-                """
-            )
+        
+        // .title2
+        if let monoTitle2 = UIFont(name: "PTMono-Regular", size: 22) {
+            songLabel.font = UIFontMetrics(forTextStyle: .title2 ).scaledFont(for: monoTitle2)
+            
+            songLabel.adjustsFontForContentSizeCategory = true
         }
         
-            // Song label.
-        songLabel.adjustsFontForContentSizeCategory = true
-        songLabel.font = UIFontMetrics(forTextStyle: .largeTitle ).scaledFont(for: customFont)
-
-            // Artist label.
-        artistLabel.adjustsFontForContentSizeCategory = true
-        artistLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-
-            // Elapsed time label.
-        elapsedTimeLabel.adjustsFontForContentSizeCategory = true
-        elapsedTimeLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-
-            // Separator label.
-        separatorLabel.adjustsFontForContentSizeCategory = true
-        separatorLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-
-            // Song length label.
-        songLengthLabel.adjustsFontForContentSizeCategory = true
-        songLengthLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
+        // .title3
+        if let monoTitle3 = UIFont(name: "PTMono-Regular", size: 20) {
+            artistLabel.font = UIFontMetrics(forTextStyle: .title3).scaledFont(for: monoTitle3)
+            
+            artistLabel.adjustsFontForContentSizeCategory = true
+        }
         
-        // Add observer for change in content size preference.
-        NotificationCenter.default.addObserver(self, selector: #selector(preferredContentSizeChanged(_:)), name: UIContentSizeCategory.didChangeNotification, object: nil)
+        // .callout
+        if let monoCallout = UIFont(name: "PTMono-Regular", size: 16) {
+            elapsedTimeLabel.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: monoCallout)
+            separatorLabel.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: monoCallout)
+            songLengthLabel.font = UIFontMetrics(forTextStyle: .callout).scaledFont(for: monoCallout)
+            
+            elapsedTimeLabel.adjustsFontForContentSizeCategory = true
+            separatorLabel.adjustsFontForContentSizeCategory = true
+            songLengthLabel.adjustsFontForContentSizeCategory = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         navigationController?.isNavigationBarHidden = true
-    }
-    
-    // MARK: - Observers
-    
-    @objc func preferredContentSizeChanged(_ notification: Notification) {
-        guard let customFont = UIFont(name: "PTMono-Regular", size: UIFont.labelFontSize) else {
-            fatalError("""
-                Failed to load the "PTMono-Regular" font.
-                Make sure the font file is included in the project and the font name is spelled correctly.
-                """
-            )
-        }
-        
-        songLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-        artistLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-        elapsedTimeLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-        separatorLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
-        songLengthLabel.font = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: customFont)
     }
     
     // MARK: - Animations
